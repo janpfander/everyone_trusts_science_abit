@@ -35,24 +35,9 @@ data_long <- read_csv("data/cleaned_long.csv")
 # read wide version data set
 data_wide <- read_csv("data/cleaned_wide.csv") 
 
-# make a version with averages per participant
-d_avg <- data_long %>% 
-  # make numeric versions
-  mutate(acceptance_num = ifelse(acceptance == "Yes", 1, 0), 
-         knowledge_num = ifelse(knowledge == TRUE, 1, 0)
-  ) %>% 
-  group_by(id) %>% 
-  # calculate by-participant averages
-  summarize(avg_acceptance  = sum(acceptance_num)/n(), 
-            avg_knowledge = sum(knowledge_num)/n()
-  )
-
-# make data frame with average particpant data and wide format
-d <- left_join(data_wide %>% 
-                 select(-c(ends_with("know"), ends_with("accept"))), 
-               d_avg, 
-               by = "id")
-
+# rename d wide
+d <- data_wide
+d_avg <- data_wide
 ```
 
 # RQ1
@@ -116,6 +101,7 @@ ggplot(plot_data, aes(x = avg_knowledge, y = wgm_sciencegeneral, fill = n)) +
   geom_tile() +  # Add black border around tiles for better visibility
   geom_jitter(inherit.aes = FALSE, data = d, aes(x = avg_knowledge, y = wgm_sciencegeneral),
               width = 0.03, height = 0.08) +  # Scatter points within each tile
+    geom_smooth(method = "lm") +
   scale_fill_viridis_c(option = "plasma") +  # Use Viridis color scale (Plasma)
   scale_x_continuous(breaks = seq(0, 1, 0.1)) +
   scale_y_continuous(breaks = 1:5) +
@@ -142,6 +128,38 @@ ggplot(plot_data, aes(x = avg_acceptance, y = wgm_sciencegeneral, fill = n)) +
        y = "Trust in science", 
        fill = "N") +  # Update fill legend title
   theme_minimal() 
+```
+
+## Difference between false and true answer acceptance
+
+```{r}
+# make a version with averages per participant, grouped by false/true ansers 
+veracity_data_avg <- data_long %>% 
+  # make numeric versions
+  mutate(acceptance_num = ifelse(acceptance == "Yes", 1, 0)
+  ) %>% 
+  group_by(id, knowledge) %>% 
+  # calculate by-participant averages
+  summarize(
+    n = n(),
+    n_accepted = sum(acceptance_num),
+    avg_acceptance  = sum(acceptance_num)/n(), 
+    wgm_sciencegeneral = mean(wgm_sciencegeneral)
+  ) %>% 
+  mutate(knowledge = ifelse(knowledge == FALSE, "False answers", "Correct answers"))
+
+# make data frame with average particpant data and wide format
+# false_data <- left_join(false_data, false_data_avg, by = "id")
+
+ggplot(veracity_data_avg, aes(x = avg_acceptance, y = wgm_sciencegeneral)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  labs(x = "Average consensus acceptance", 
+       y = "Average trust in science") +  # Update fill legend title
+  theme_minimal() +
+  facet_wrap(~knowledge)
+
 ```
 
 
@@ -268,7 +286,7 @@ ggplot(plot_data, aes(x = reorder(subject, share_accepted), y = share_accepted))
 levels(as.factor(d$comments))
 ```
 
-## Is the share of correct responses associated with the share of acceptance ?  
+## Is the share of correct responses associated with the share of acceptance ?
 
 ```{r}
 plot_data <- d %>% 
@@ -289,7 +307,7 @@ ggplot(plot_data, aes(x = avg_knowledge, y = avg_acceptance, fill = n)) +
   theme_minimal() 
 ```
 
-# What were the acceptance rates among true and false answers? 
+## What were the acceptance rates among true and false answers? 
 
 ```{r}
 plot_data <- data_long %>% 
@@ -333,5 +351,5 @@ ggplot(BCTI_data, aes(x = reorder(BCTI_item, avg_score), y = avg_score)) +
   coord_flip()
 ```
 
-
+# Redo all analyses without tree question
 

@@ -1,0 +1,153 @@
+# Experiment 1 {#exp1}
+
+## Materials
+
+\FloatBarrier
+
+### Conspiracy scales
+
+Beside Belief in Conspiracy Theory Inventory (BCTI) by @pennycookOverconfidentlyConspiratorialConspiracy2022 which report in the main study, we also assessed two other consipiracy thinking measures: 
+
+1. The conspiracy mentality questionnaire (CMQ) by @bruderMeasuringIndividualDifferences2013:
+I think that . . .
+
+-   ... many very important things happen in the world, which the public is never informed about. - politicians usually do not tell us the true motives for their decisions.
+-   ... government agencies closely monitor all citizens.
+-   ... events which superficially seem to lack a connection are often the result of secret activities.
+-   ... there are secret organizations that greatly influence political decisions.
+
+[0% - 100%; 0 = certainly not, 100 = certain]
+
+2.  The Single Item Conspiracy Beliefs Scale (SICBS) by @lantianMeasuringBeliefConspiracy2016 :
+
+-   I think that the official version of the events given by the authorities very often hides the truth. [1-9; 1 = Completely false, 5 = Unsure, 9 = Completely true]
+
+### Trust in science
+
+We rely on three items
+
+1. How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
+
+2. In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
+
+3. How much confidence do you have in scientists to act in the best interests of the public? [1-5; 1 = No confidence at all, 5 = A great deal of confidence]
+
+## Comparing items
+
+Make correlation table
+
+### Conspiracy theories
+
+Table \@ref(tab:correlation-conspiracy) shows the correlations of the three different scales assessing conspiracy thinking.
+
+```{r correlation-conspiracy}
+correlation_matrix <- exp1_wide %>%
+  select(BCTI_avg, CMQ_avg, SICBS) %>% 
+  rename(BCTI = BCTI_avg, 
+         CMQ = CMQ_avg) %>% 
+  cor()
+
+apa_table(correlation_matrix, 
+          caption = "Correlations of the three different scales assessing conspiracy thinking",
+          placement = "h")
+```
+
+### Trust in science
+
+Table \@ref(tab:correlation-trust) shows the correlations of the three different items measuring trust in science.
+
+```{r correlation-trust}
+correlation_matrix <- exp1_wide %>%
+  select(wgm_sciencegeneral, wgm_scientists, pew) %>% 
+  cor()
+
+apa_table(correlation_matrix, 
+          caption = "Correlations of the three different items measuring trust in science",
+          placement = "h")
+```
+
+## Correlations with alternative measures
+
+Table \@ref(tab:correlations-outcomes) shows the correlations between knowledge and acceptance, respectively, and outcome variables.
+
+```{r}
+# Standardize all variables. Linear regression on standardized variables is equivalent to correlation
+standardized_variables <- exp1_wide %>% 
+  select(avg_acceptance, avg_knowledge, BCTI_avg, CMQ_avg, SICBS, wgm_scientists, wgm_sciencegeneral, pew) %>% 
+  mutate(across(everything(), ~scale(.x)))
+```
+
+```{r}
+# run models to get correlation coefficient
+
+# Define the function to run regression and tidy results
+run_regression <- function(data, dependent_var, independent_var) {
+  lm(as.formula(paste(dependent_var, "~", independent_var)), data = data) %>%
+    tidy() %>%
+    filter(term == independent_var) %>%
+    mutate(outcome = {{dependent_var}}) %>% 
+    select(outcome, term, estimate)
+}
+
+# List of variables
+variables <- c("BCTI_avg", "CMQ_avg", "SICBS", "wgm_scientists", "wgm_sciencegeneral", "pew")
+
+# Run regression for each variable and store results in a list
+results_list_knowledge <- map(variables, ~ run_regression(standardized_variables, .x, "avg_knowledge"))
+results_list_acceptance <- map(variables, ~ run_regression(standardized_variables, .x, "avg_acceptance"))
+```
+
+```{r correlations-outcomes}
+# as data frame/output table
+results <- bind_rows(list(results_list_knowledge, results_list_acceptance))
+results %>% 
+  pivot_wider(names_from = term, 
+              values_from = estimate) %>% 
+  rename(`Correlation with knowledge` = avg_knowledge, 
+         `Correlation with acceptance` = avg_acceptance, 
+         ) %>% 
+  mutate_if(is.numeric, round, digits = 2) %>% 
+  mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
+                             outcome == "CMQ_avg" ~ "CMQ", 
+                             outcome == "SICBS" ~ "SICBS", 
+                             outcome == "wgm_scientists" ~ "WGM trust scientists",
+                             outcome == "wgm_sciencegeneral" ~ "WGM trust general \n(main trust measure)",
+                             outcome == "pew" ~ "PEW trust scientists",
+                             )) %>% 
+  apa_table(caption = "Correlations between knowledge and acceptance, respectively, and outcome variables")
+```
+
+## Results conditional on false responses
+
+Table \@ref(tab:false-response-regression) shows the correlations between acceptance and outcome variables based on linear regression models on standardized values.
+
+```{r}
+# Standardize all variables. Linear regression on standardized variables is equivalent to correlation
+standardized_variables <- exp1_false_knowledge %>% 
+  select(avg_acceptance, BCTI_avg, CMQ_avg, SICBS, wgm_scientists, wgm_sciencegeneral, pew) %>% 
+  mutate(across(everything(), ~scale(.x)))
+```
+
+```{r}
+# Define the function to run regression and tidy results
+run_regression <- function(data, dependent_var, independent_var) {
+  lm(as.formula(paste(dependent_var, "~", independent_var)), data = data) 
+}
+
+# run models to get correlation coefficient
+
+# List of variables
+variables <- c("BCTI_avg", "CMQ_avg", "SICBS", "wgm_scientists", "wgm_sciencegeneral", "pew")
+
+# Run regression for each variable and store results in a list
+results_list <- setNames(map(variables, ~ run_regression(standardized_variables, .x, "avg_acceptance")), variables)
+```
+
+```{r false-response-regression}
+modelsummary(results_list, 
+             stars = TRUE,
+             caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") 
+```
+
+
+
