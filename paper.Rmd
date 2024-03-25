@@ -10,32 +10,22 @@ author:
   - name          : "Jan Pfänder"
     affiliation   : "1"
     role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
-      - "Conceptualization"
-      - "Data collection"
-      - "Statistical Analyses"
-      - "Writing - Original Draft"
-      - "Writing - Review & Editing"
+
   - name          : "Lou Kerzreho"
     affiliation   : "1"
-    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
-      - "Models and Simulations"
-      - "Writing - Review & Editing"
+    role:         
+
   - name          : "Hugo Mercier"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
     email         : "hugo.mercier@gmail.com"
     address: " "
     role:
-      - "Conceptualization"
-      - "Writing - Original Draft"
-      - "Writing - Review & Editing"
-      - "Supervision"
+
 
 affiliation:
   - id            : "1"
     institution   : "Institut Jean Nicod, Département d’études cognitives, ENS, EHESS, PSL University, CNRS, France"
-  - id            : "2"
-    institution   : "Max Planck Institute for the Study of Crime, Security and Law, Freiburg im Breisgau, Germany"
 
 authornote: |
   HM received funding from the ANR (SCALUP, ANR-21-CE28-0016-01), and from the John Tempelton Foundation ("An Evolutionary and Cultural Perspective on Intellectual Humility via Intellectual Curiosity and Epistemic Deference"). The ANR also supported this project through FrontCog (ANR-17-EURE-0017), and PSL (ANR-10-IDEX-0001-02). 
@@ -57,7 +47,7 @@ tablelist         : no
 footnotelist      : no
 
 classoption       : "doc" # "doc" for nice look, "man" for manuscripty
-output            : papaja::apa6_doc # "_doc" for word; however, note that some of the features of kableExtra are not available for word and will yield errors. For example to knit to word, you'll have to comment out all "add_header_above()" functions for model output tables, or e.g. set always allow html as true in the yaml heading
+output            : papaja::apa6_pdf # "_doc" for word; however, note that some of the features of kableExtra are not available for word and will yield errors. For example to knit to word, you'll have to comment out all "add_header_above()" functions for model output tables, or e.g. set always allow html as true in the yaml heading
 
 always_allow_html: true
 
@@ -347,7 +337,7 @@ Regarding RQ1 and RQ2, participants answered on average `r exp1_descriptives$mea
 
 Fig. \@ref(fig:exp1-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In most cases (`r exp1_descriptives$conditional_acceptance$false$Yes$share`), participants readily accepted the scientific consensus after having given the wrong answer to a question. In very few cases (`r exp1_descriptives$conditional_acceptance$true$No$share`), participants who gave the correct response afterwards rejected the scientific consensus, thereby contradicting their own initial response. We believe this might have been due to inattention.
 
-(ref:exp1-conditional-acceptance) **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus  **B** Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus
+(ref:exp1-conditional-acceptance) Acceptance rates of scientific consensus, based on whether the initial response to the knowledge question was false or true.
 
 ```{r exp1-conditional-acceptance, fig.cap="(ref:exp1-conditional-acceptance)"}
 plot_data <- exp1_long %>% 

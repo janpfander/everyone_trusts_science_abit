@@ -20,6 +20,7 @@
 # Ingore other files
 *.aux
 *.toc
+*.tex
 
 # Ignore text files
 *.rtf
