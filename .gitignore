@@ -24,3 +24,6 @@
 
 # Ignore text files
 *.rtf
+
+# ignore folders
+liquin*/
