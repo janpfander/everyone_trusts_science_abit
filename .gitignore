@@ -11,6 +11,9 @@
 *.doc
 *.docx
 
+# Ignore DS store files
+.DS_Store
+
 # Ignore HTML files
 *.html
 
