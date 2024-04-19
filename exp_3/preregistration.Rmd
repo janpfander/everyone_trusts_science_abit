@@ -30,7 +30,7 @@ library("png")         # for image plots
 
 # Introduction
 
-In two previous studies (https://osf.io/8utsj/) we tested whether participants would accept the scientific consensus on basic science facts. We first asked participants to answer basic science questions in a multiple choice format. After they had provided their answer, we presented participants with the scientific consensus on the question. Most participants did accept this consensus, even after having provided the wrong answers - but not for all the questions. In the second study, we provided participants with more extensive explanations and sources for the scientific consensus, as we anticipated that this might increase acceptance.  For cases in which participants still did not accept the consensus, we asked them to explain why. Both study 1 and 2 were run on convenience samples. Here, we will run study 2-–with some minor modifications-–on a sample of people holding anti-vaccination beliefs (see below). By contrast to study 2, after asking participants an open question about why they did not accept the consensus (in case they didn’t), we provide them with an explicit opportunity to change their answer. Based on the answers to the open questions we got in study 2, we also propose a categorization scheme of reasons why people rejected the consensus.
+In two previous studies (https://osf.io/8utsj/) we tested whether participants would accept the scientific consensus on basic science facts. We first asked participants to answer basic science questions in a multiple choice format. After they had provided their answer, we presented participants with the scientific consensus on the question. Most participants did accept this consensus, even after having provided the wrong answers - but not for all the questions. In the second study, we provided participants with more extensive explanations and sources for the scientific consensus, as we anticipated that this might increase acceptance.  For cases in which participants still did not accept the consensus, we asked them to explain why. Both study 1 and 2 were run on convenience samples. Here, we will run study 2-–with some minor modifications-–on a sample of people holding anti-vaccination beliefs (see below). By contrast to study 2, after asking participants an open question about why they did not accept the consensus (in case they didn’t), we provide them with an explicit opportunity to change their answer. Based on the answers to the open questions we got in study 2, we also propose a categorization scheme of reasons why people rejected the consensus. Finally, we also ask participants about why they agree with the scientific consensus on certain questions, in case they do. We want to know if participants perceive that this is because of trust, or other factors.
 
 # Data collection
 
@@ -63,6 +63,12 @@ knitr::include_graphics("materials/example_explanation_study3.png")
 ```
 
 After that, participants answer questions on conspiracy thinking and trust in science (see next section).
+
+Finally, we ask participants the following question: 
+
+> *For the questions in which you agreed with the scientific consensus, would you say that: * A: You mostly agree with the consensus because, on that question, you trust scientists; B: You mostly agree with the consensus because you have been able to independently verify it; C: Other [Open ended text] 
+
+For participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, we ask them an additional open-ended question: "Could you please tell us how you independently verified the information?".
 
 # Materials
 
@@ -163,6 +169,10 @@ Based on the results of our last study, we propose 5 categories of justification
 5. Motivated rejection for religious reasons  (e.g. "I believe God make it they way it is and if He wanted it changed, He would have done it")
 
 When answers fall in category 2, we expect people to change their answers and accept the scientific consensus when asked a second time. Those answers will be counted in the analysis as acceptance of the consensus. 
+
+-  **RQ4: In case they agree with the scientific consensus, do people feel that this is because of trust?**
+
+We will calculate the share of participants answering the question "For the questions in which you agreed with the scientific consensus, would you say that...?" with "You mostly agree with the consensus because, on that question, you trust scientists" and the share of participants answering with "You mostly agree with the consensus because you have been able to independently verify it". We will also qualitatively investigate a third, open-ended answer option ("Other"). For participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, we will also qualitatively look at their answers to the open-ended follow-up question: "Could you please tell us how you independently verified the information?". 
 
 # Hypotheses
 
