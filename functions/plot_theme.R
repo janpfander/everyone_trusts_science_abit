@@ -9,5 +9,7 @@ plot_theme <- theme_minimal(base_size = 12) +
     # Bold axis titles
     axis.title = element_text(face = "bold"), 
     # Bold legend labels
-    legend.text = element_text(face = "bold")
+    legend.text = element_text(face = "bold"),
+    # Increase facet wrap titles
+    strip.text = element_text(face = "bold")
     )

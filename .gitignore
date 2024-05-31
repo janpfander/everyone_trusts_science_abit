@@ -24,9 +24,11 @@
 *.aux
 *.toc
 *.tex
+author_info*
 
 # Ignore text files
 *.rtf
 
 # ignore folders
 liquin*/
+lou*/

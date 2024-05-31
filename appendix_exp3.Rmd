@@ -1,60 +1,19 @@
-# Experiment 1 {#exp1}
+# Experiment 3 {#exp3}
 
 ## Materials
 
 \FloatBarrier
 
-```{r questions-with-sources}
-# items <- read_csv("exp_1/materials/knowledge_items.csv") %>% 
-#   mutate(id = 1:nrow(.)) %>% 
-#   select(id, Question, `Scientific consensus`, `Reference(s)`)
-# 
-# # Output the table
-# kbl(items, booktabs = T, longtable = TRUE,
-#     caption = "Science knowledge items", 
-#     full_width = T) %>%
-#   column_spec(1, width = "1em") %>%
-#   column_spec(2, width = "10em") %>%
-#   column_spec(3, width = "10em") %>%
-#   column_spec(4, width = "15em") 
-```
-
-### Conspiracy scales
-
-Beside Belief in Conspiracy Theory Inventory (BCTI) by @pennycookOverconfidentlyConspiratorialConspiracy2022 which report in the main study, we also assessed two other consipiracy thinking measures: 
-
-1. The conspiracy mentality questionnaire (CMQ) by @bruderMeasuringIndividualDifferences2013:
-I think that . . .
-
--   ... many very important things happen in the world, which the public is never informed about. - politicians usually do not tell us the true motives for their decisions.
--   ... government agencies closely monitor all citizens.
--   ... events which superficially seem to lack a connection are often the result of secret activities.
--   ... there are secret organizations that greatly influence political decisions.
-
-[0% - 100%; 0 = certainly not, 100 = certain]
-
-2.  The Single Item Conspiracy Beliefs Scale (SICBS) by @lantianMeasuringBeliefConspiracy2016 :
-
--   I think that the official version of the events given by the authorities very often hides the truth. [1-9; 1 = Completely false, 5 = Unsure, 9 = Completely true]
-
-### Trust in science
-
-We rely on three items
-
-1. How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
-
-2. In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
-
-3. How much confidence do you have in scientists to act in the best interests of the public? [1-5; 1 = No confidence at all, 5 = A great deal of confidence]
+See Appendix \@ref(exp1). 
 
 ## Comparing items
 
 ### Conspiracy theories
 
-Table \@ref(tab:correlation-conspiracy) shows the correlations of the three different scales assessing conspiracy thinking.
+Table \@ref(tab:exp3-correlation-conspiracy) shows the correlations of the three different scales assessing conspiracy thinking.
 
-```{r correlation-conspiracy}
-correlation_matrix <- exp1_wide %>%
+```{r exp3-correlation-conspiracy}
+correlation_matrix <- exp3_wide %>%
   select(BCTI_avg, CMQ_avg, SICBS) %>% 
   rename(BCTI = BCTI_avg, 
          CMQ = CMQ_avg) %>% 
@@ -67,10 +26,10 @@ apa_table(correlation_matrix,
 
 ### Trust in science
 
-Table \@ref(tab:correlation-trust) shows the correlations of the three different items measuring trust in science.
+Table \@ref(tab:exp3-correlation-trust) shows the correlations of the three different items measuring trust in science.
 
-```{r correlation-trust}
-correlation_matrix <- exp1_wide %>%
+```{r exp3-correlation-trust}
+correlation_matrix <- exp3_wide %>%
   select(wgm_sciencegeneral, wgm_scientists, pew) %>% 
   cor()
 
@@ -81,11 +40,11 @@ apa_table(correlation_matrix,
 
 ## Correlations with alternative measures
 
-Table \@ref(tab:correlations-outcomes) shows the correlations between knowledge and acceptance, respectively, and outcome variables.
+Table \@ref(tab:exp3-correlations-outcomes) shows the correlations between knowledge and acceptance, respectively, and outcome variables.
 
 ```{r}
 # Standardize all variables. Linear regression on standardized variables is equivalent to correlation
-standardized_variables <- exp1_wide %>% 
+standardized_variables <- exp3_wide %>% 
   select(avg_acceptance, avg_knowledge, BCTI_avg, CMQ_avg, SICBS, wgm_scientists, wgm_sciencegeneral, pew) %>% 
   mutate(across(everything(), ~scale(.x)))
 ```
@@ -99,20 +58,17 @@ results_list_knowledge <- map(variables, ~ run_regression(standardized_variables
 results_list_acceptance <- map(variables, ~ run_regression(standardized_variables, .x, "avg_acceptance"))
 ```
 
-```{r correlations-outcomes}
+```{r exp3-correlations-outcomes}
 # as data frame/output table
 results <- bind_rows(list(results_list_knowledge, results_list_acceptance))
 results %>% 
   filter(term != "intercept") %>%
-    mutate_if(is.numeric, round, digits = 2) %>% 
-  # make a combined variable of estimate and p.value
-  mutate(estimate = paste0(estimate, " (p", p.value, ")")) %>% 
-  select(outcome, term, estimate) %>% 
   pivot_wider(names_from = term, 
               values_from = estimate) %>% 
   rename(`Correlation with knowledge` = avg_knowledge, 
          `Correlation with acceptance` = avg_acceptance, 
-         ) %>% 
+  ) %>% 
+  mutate_if(is.numeric, round, digits = 2) %>% 
   mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
                              outcome == "CMQ_avg" ~ "CMQ", 
                              outcome == "SICBS" ~ "SICBS", 
@@ -125,11 +81,11 @@ results %>%
 
 ## Results conditional on false responses
 
-Table \@ref(tab:false-response-regression) shows the correlations between acceptance and outcome variables based on linear regression models on standardized values.
+Table \@ref(tab:exp3-false-response-regression) shows the correlations between acceptance and outcome variables based on linear regression models on standardized values.
 
 ```{r}
 # Standardize all variables. Linear regression on standardized variables is equivalent to correlation
-standardized_variables <- exp1_false_knowledge %>% 
+standardized_variables <- exp3_false_knowledge %>% 
   select(avg_acceptance, BCTI_avg, CMQ_avg, SICBS, wgm_scientists, wgm_sciencegeneral, pew) %>% 
   mutate(across(everything(), ~scale(.x)))
 ```
@@ -139,7 +95,7 @@ standardized_variables <- exp1_false_knowledge %>%
 results_list <- setNames(map(variables, ~ run_regression(standardized_variables, .x, "avg_acceptance", return = "model")), variables)
 ```
 
-```{r false-response-regression}
+```{r exp3-false-response-regression}
 modelsummary(results_list, 
              stars = TRUE,
              caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") 
@@ -149,7 +105,7 @@ modelsummary(results_list,
 
 ```{r}
 # calculate share
-plot_data <- exp1_long %>% 
+plot_data <- exp3_long %>% 
   group_by(subject) %>% 
   summarize(share_true = sum(knowledge == TRUE, na.rm = TRUE)/n(),
             share_accepted = sum(acceptance == "Yes", na.rm = TRUE)/n()) 
@@ -157,9 +113,9 @@ plot_data <- exp1_long %>%
 
 ### Knowledge
 
-(ref:exp1-questions-knowledge) Distribution of correct answers by question. 
+(ref:exp3-questions-knowledge) Distribution of correct answers by question. 
 
-```{r exp1-questions-knowledge, fig.cap="(ref:exp1-questions-knowledge)"}
+```{r exp3-questions-knowledge, fig.cap="(ref:exp3-questions-knowledge)"}
 # plot knowledge
 ggplot(plot_data, aes(x = reorder(subject, share_true), y = share_true)) +
   geom_col() +
@@ -168,11 +124,9 @@ ggplot(plot_data, aes(x = reorder(subject, share_true), y = share_true)) +
   coord_flip()
 ```
 
-### Acceptance
+(ref:exp3-questions-acceptance) Distribution of consensus acceptance by question. 
 
-(ref:exp1-questions-acceptance) Distribution of consensus acceptance by question. 
-
-```{r exp1-questions-acceptance, fig.cap="(ref:exp1-questions-acceptance)"}
+```{r exp3-questions-acceptance, fig.cap="(ref:exp3-questions-acceptance)"}
 # plot acceptance
 ggplot(plot_data, aes(x = reorder(subject, share_accepted), y = share_accepted)) +
   geom_col() +
@@ -183,11 +137,11 @@ ggplot(plot_data, aes(x = reorder(subject, share_accepted), y = share_accepted))
 
 ## Trust in science
 
-(ref:exp1-trust-scientists) Distribution of trust in scientists. 
+(ref:exp3-trust-scientists) Distribution of trust in scientists. 
 
-```{r exp1-trust-scientists, fig.cap="(ref:exp1-trust-scientists)"}
+```{r exp3-trust-scientists, fig.cap="(ref:exp3-trust-scientists)"}
 # calculate share
-plot_data <- exp1_wide %>% 
+plot_data <- exp3_wide %>% 
   group_by(wgm_scientists) %>% 
   summarize(n = n()) %>% 
   ungroup() %>% 
@@ -206,29 +160,27 @@ ggplot(plot_data, aes(x = wgm_scientists, y = share)) +
 
 ## Conspiracy thinking
 
-### Distribution
+(ref:exp3-conspiracy-distribution) Distribution of conspiracy thinking. 
 
-(ref:exp1-conspiracy-distribution) Distribution of conspiracy thinking. 
-
-```{r exp1-conspiracy-distribution, fig.cap="(ref:exp1-conspiracy-distribution)"}
+```{r exp3-conspiracy-distribution, fig.cap="(ref:exp3-conspiracy-distribution)"}
 # plot knowledge
-ggplot(exp1_wide, aes(x = BCTI_avg)) +
+ggplot(exp3_wide, aes(x = BCTI_avg)) +
   geom_histogram() +
   labs(x = "Average conspiracy thinking (BCTI)", y = "N")
 ```
 
 ### By-item variation
 
-(ref:exp1-conspiracy-items) Distribution of conspiracy thinking by item. 
+(ref:exp3-conspiracy-items) Distribution of conspiracy thinking by item. 
 
-```{r exp1-conspiracy-items, fig.cap="(ref:exp1-conspiracy-items)"}
-BCTI_data <- exp1_long %>% 
+```{r exp3-conspiracy-items, fig.cap="(ref:exp3-conspiracy-items)"}
+BCTI_data <- exp3_long %>% 
   # bring to long format
   pivot_longer(cols = BCTI_apollo:BCTI_evolution, 
                names_to = "BCTI_item", values_to = "score") %>% 
   select(id, c(starts_with("BCTI"), score)) %>% 
   group_by(BCTI_item) %>% 
-  summarize(avg_score = mean(score)) %>% 
+  summarize(avg_score = mean(score, na.rm=TRUE)) %>% 
   ungroup()
 
 ggplot(BCTI_data, aes(x = reorder(BCTI_item, avg_score), y = avg_score)) +
@@ -241,18 +193,73 @@ ggplot(BCTI_data, aes(x = reorder(BCTI_item, avg_score), y = avg_score)) +
   coord_flip()
 ```
 
-## Open ended comments
-```{r}
-# levels(as.factor(exp1_wide$comments))
-table <- exp1_wide %>% 
-  drop_na(comments) %>% 
-  select(id, comments)
+## Reasons for consensus rejection
+
+### All raw answers
+
+```{r exp3-reasons-rejection}
+# store all variables
+reasons_rejection <- c("electrons", "antibiotics", "continents", "sex", "lasers", 
+               "orbit", "diamonds", "speed", "salt", "water")
+
+
+table <- exp3_wide %>% 
+  select(id, all_of(reasons_rejection)) %>% 
+  pivot_longer(all_of(reasons_rejection), 
+               names_to = "question",
+               values_to = "answer") %>% 
+  drop_na(answer) %>% 
+  arrange(id)
+
+# apa_table(table,
+#           align = c("m{1cm}", "m{3cm}", "m{10cm}"), 
+#           longtable = TRUE
+#           )
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Reasons for consensus rejection") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2) %>%
+  column_spec(3, width = "30em") 
+
+```
+
+## Why do people accept the scientific consensus:
+
+### Participants who answered "other"
+
+```{r exp3-other-reasons-acceptance}
+# store all variables
+table <- exp3_wide %>% 
+  select(id, other_reason_agreement) %>% 
+  drop_na(other_reason_agreement) %>% 
+  arrange(id)
 
 kbl(table, booktabs = T, longtable = TRUE,
     caption = "Reasons for consensus rejection") %>%
   kable_paper(full_width = F) %>% 
   column_spec(1) %>%
-  column_spec(2, width = "40em") 
+  column_spec(2, width = "30em")
 ```
+
+## How did participants independently verifiy?
+
+### Participants who answered "other"
+
+```{r exp3-independent-verification}
+# store all variables
+table <- exp3_wide %>% 
+  select(id, reason_followup) %>% 
+  drop_na(reason_followup) %>% 
+  arrange(id)
+
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Reasons for consensus rejection") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2, width = "30em")
+```
+
+
 
 

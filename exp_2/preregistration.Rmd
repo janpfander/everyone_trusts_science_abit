@@ -1,10 +1,10 @@
 ---
 title: "Pre-registration Study 2 \n Who does not trust basic science?"
 output:
-  bookdown::pdf_document2: default
-  bookdown::word_document2: default
   bookdown::html_document2:
       keep_md: yes
+  bookdown::word_document2: default
+  bookdown::pdf_document2: default
 always_allow_html: true
 bibliography: ../references.bib
 ---

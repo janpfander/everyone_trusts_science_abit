@@ -36,7 +36,7 @@ d <- d %>%
 table(d$attention_check)
 ```
 
-There are 6 failed attention checks. 
+There are 11 failed attention checks. 
 
 ```{r}
 # filter to only valid attention check responses
@@ -146,6 +146,52 @@ d_wide <- left_join(d_wide %>%
                  select(-c(ends_with("know"), ends_with("accept"))), 
                d_avg, 
                by = "id")
+```
+
+## Justifications
+
+### Extract justifications
+
+```{r}
+# questions <- c("electrons", "antibiotics", "continents", "sex", "lasers", "orbit", "diamonds", "speed", "salt", "water")
+# 
+# justifications <- exp2_wide %>% 
+#   select(id, all_of(questions)) %>% 
+#   pivot_longer(all_of(questions), 
+#                names_to = "question", 
+#                values_to = "answer") %>% 
+#   drop_na(answer) %>% 
+#   arrange(id)
+# 
+# write_csv(justifications, "data/justifications.csv")
+```
+
+### Clean justifications
+
+Note that we had used the following coding scheme (where 4 would be the top-category for 5 and 6, i.e. 4 has never been coded):
+
+1	- no justification provided / no clear justification	
+2	- mistake, they actually accept the consensus	
+3	- not convinced by the explanation provided	
+4	- motivated rejection of the belief	
+5	-- do to personal convictions	
+6	-- for religious reasons	
+
+```{r}
+justifications <- read_csv("data/justifications_coded.csv")
+
+# Research questions
+justifications <- justifications %>%
+  mutate(category = case_when(category == 1 ~ "No justification",
+                              category  == 2 ~  "Mistake",
+                              category  == 3 ~ "Not convinced",
+                              category  == 5 ~ "Personal convictions",
+                              category  == 6 ~ "Religious Beliefs",
+                              TRUE ~ NA_character_
+  )
+  )
+
+write_csv(justifications, "data/justifications_clean.csv")
 ```
 
 
