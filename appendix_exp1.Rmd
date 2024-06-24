@@ -4,6 +4,12 @@
 
 \FloatBarrier
 
+(ref:stimulus-example) Example of a science question, the scientific consensus and the corresponding acceptance question.
+
+```{r stimulus-example, echo=FALSE, out.width= "100%", fig.align="left", fig.show="hold", fig.cap="(ref:stimulus-example)"}
+knitr::include_graphics("./figures/study1_question_example.png")
+```
+
 ```{r questions-with-sources}
 # items <- read_csv("exp_1/materials/knowledge_items.csv") %>% 
 #   mutate(id = 1:nrow(.)) %>% 
@@ -255,4 +261,162 @@ kbl(table, booktabs = T, longtable = TRUE,
   column_spec(2, width = "40em") 
 ```
 
+## Additional plots
 
+(ref:exp1-conditional-acceptance) Acceptance rates of scientific consensus, based on whether the initial response to the knowledge question was false or true.
+
+```{r exp1-conditional-acceptance, fig.cap="(ref:exp1-conditional-acceptance)"}
+plot_data <- exp1_long %>% 
+  group_by(knowledge, acceptance) %>% 
+  count() %>% 
+  group_by(knowledge) %>% 
+  mutate (share = n/sum(n)) %>% 
+  mutate_if(is.numeric, round, digits = 3)
+
+absolute_numbers <- plot_data %>% 
+  group_by(knowledge) %>% 
+  summarise(n = sum(n))
+
+
+ggplot(plot_data, aes(x = knowledge, y = share, fill = acceptance)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
+  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
+            position = position_dodge(width = 0.9),
+            vjust = -0.5, size = 3) +
+  scale_fill_viridis_d(option = "cividis") +
+  labs(x = "Knowledge answer", fill = "Acceptance \nof consensus") +
+  plot_theme +
+  geom_bracket(data = absolute_numbers,
+               aes(xmin = as.numeric(factor(knowledge)) - 0.4, 
+                   xmax = as.numeric(factor(knowledge)) + 0.4, 
+                   y.position = 1.05, label =  paste0("n = ", n)),
+               inherit.aes = FALSE,
+               step.increase = 0)
+```
+
+(ref:exp1-plot-overview) **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus **B** Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus
+
+```{r exp1-plot-overview, fig.cap="(ref:exp1-plot-overview)", fig.height= 10, fig.width=10}
+# Plot distributions of knowledge and acceptance and their mean
+
+mean_value_knowledge <- mean(exp1_wide$avg_knowledge)
+max_n <- max(table(exp1_wide$avg_acceptance))
+
+knowledge_mean <- ggplot(exp1_wide, aes(x = avg_knowledge)) +
+  geom_bar() + 
+  geom_vline(xintercept = mean_value_knowledge, color = "red", linetype = "dashed") +
+  geom_text(aes(x = mean_value_knowledge, y = 40, label = paste("Mean =", round(mean_value_knowledge, 2))), 
+            vjust = -0.5, hjust = 1.2, check_overlap = TRUE) +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(breaks = seq(0, max_n, 10)) +
+  coord_cartesian(xlim = c(0, 1), 
+                  ylim = c(0, max_n)) +
+  labs(x = "Average science knowledge", 
+       y = "N")
+
+mean_value <- mean(exp1_wide$avg_acceptance)
+
+acceptance_mean <- ggplot(exp1_wide, aes(x = avg_acceptance)) +
+  geom_bar() + 
+  geom_vline(xintercept = mean_value, color = "red", linetype = "dashed") +
+  geom_text(aes(x = mean_value, y = 60, label = paste("Mean =", round(mean_value, 2))), 
+            vjust = -0.5, hjust = 1.2, check_overlap = TRUE) +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(breaks = seq(0, max_n, 10)) +
+  coord_cartesian(xlim = c(0, 1), 
+                  ylim = c(0, max_n)) +
+  labs(x = "Average consensus acceptance", 
+       y = "N")
+
+# Trust in science plots
+plot_data <- exp1_wide %>% 
+  group_by(wgm_sciencegeneral, avg_knowledge) %>% 
+  summarise(n = n())
+
+trust_knowledge <- ggplot(plot_data, aes(x = avg_knowledge, y = wgm_sciencegeneral, fill = n)) +
+  geom_tile() +  # Add black border around tiles for better visibility
+  geom_jitter(inherit.aes = FALSE, data = exp1_wide, aes(x = avg_knowledge, y = wgm_sciencegeneral),
+              width = 0.03, height = 0.08) +  # Scatter points within each tile
+  scale_fill_viridis_c(option = "plasma") +  # Use Viridis color scale (Plasma)
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  coord_cartesian(xlim = c(0, 1)) +
+  scale_y_continuous(breaks = 1:5) +
+  labs(x = "Average science knowledge", 
+       y = "Trust in science", 
+       fill = "N")
+
+plot_data <- exp1_wide %>% 
+  group_by(wgm_sciencegeneral, avg_acceptance) %>% 
+  summarise(n = n())
+
+
+trust_acceptance <- ggplot(plot_data, aes(x = avg_acceptance, y = wgm_sciencegeneral, fill = n)) +
+  geom_tile() +  
+  geom_jitter(inherit.aes = FALSE, data = exp1_wide, aes(x = avg_acceptance, y = wgm_sciencegeneral),
+              width = 0.03, height = 0.08) + 
+  scale_fill_viridis_c(option = "plasma") + 
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  coord_cartesian(xlim = c(0, 1)) +
+  scale_y_continuous(breaks = 1:5) +
+  labs(x = "Average consensus Acceptance", 
+       y = "Trust in science", 
+       fill = "N") +
+  theme(legend.position = "top")
+
+# Conspiracy Thinking plots
+
+conspiracy_knowledge <- ggplot(exp1_wide, aes(x = avg_knowledge, y = BCTI_avg)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(breaks = 1:9) +
+  coord_cartesian(xlim = c(0, 1), 
+                  ylim = c(0, 9)) +
+  labs(x = "Average science knowledge", 
+       y = "Average conspiracy thinking")
+
+conspiracy_acceptance <- ggplot(exp1_wide, aes(x = avg_acceptance, y = BCTI_avg)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(breaks = 1:9) +
+  coord_cartesian(xlim = c(0, 1), 
+                  ylim = c(0, 9)) +
+  labs(x = "Average consensus acceptance", 
+       y = "Average conspiracy thinking") +
+  theme(legend.position = "top")
+
+# Combine plots
+
+# distributions
+distributions <- ggarrange(knowledge_mean + 
+                             rremove("xlab") , 
+                           acceptance_mean + 
+                             rremove("xlab") +
+                             rremove("ylab")) 
+
+# trust
+trust <- ggarrange(trust_knowledge + 
+                             rremove("xlab") +
+                             guides(fill = "none") +
+                             labs(caption = NULL) , 
+                           trust_acceptance + 
+                             rremove("xlab") +
+                             rremove("ylab"), 
+                   common.legend = TRUE) 
+
+# conspiracy
+conspiracy <- ggarrange(conspiracy_knowledge, 
+                           conspiracy_acceptance + 
+                             rremove("ylab"), 
+                   common.legend = TRUE) 
+
+
+# common plot
+patchwork <- (distributions / trust / conspiracy) + 
+  plot_annotation(tag_levels = 'A')  
+
+patchwork
+
+```
