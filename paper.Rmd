@@ -273,19 +273,36 @@ After providing their consent to participate in the study, participants were giv
 Table \@ref(tab:knowledge) shows all questions, their scientifically consensual answer, and their source. All but two questions were selected from existing science knowledge questionnaires. We tried to select non-political questions.
 
 ```{r knowledge}
-items <- read_csv("exp_3/materials/overview_questions.csv") %>% 
-  mutate(id = 1:nrow(.)) %>% 
-  select(id, "Question", "Scientific consensus (Study 1)", "Explanation (Study 2 & 3)") 
+# Function to replace special characters in all cells of a data frame
+replace_special_characters <- function(df) {
+  df %>%
+    mutate(across(everything(), ~ gsub("\u2013|\u2014|\u2212", "-", .))) %>% # Replace en-dash, em-dash, and Unicode minus with ASCII hyphen-minus
+    mutate(across(everything(), ~ iconv(., from = "UTF-8", to = "ASCII//TRANSLIT"))) # Ensure all text is ASCII
+}
+
+# Read the CSV file
+items <- read_csv("exp_4/materials/overview_questions.csv")
+
+# Replace special characters
+items_cleaned <- replace_special_characters(items) %>% 
+  mutate(id = 1:nrow(.)) %>%
+  select(id, everything())  # Ensure 'id' is the first column
+
+# add footnote for the tree items
+items_cleaned[11, 2] <- paste0("*", 
+                               items_cleaned[11, 2])
+  
 
 # Output the table
-kbl(items, booktabs = T, longtable = TRUE,
+knitr::kable(items_cleaned, booktabs = T, longtable = TRUE,
     caption = "Science knowledge items", 
-    full_width = T) %>%
-  kable_styling(font_size = 8) %>% 
-  column_spec(1, width = "1em") %>%
-  column_spec(2, width = "10em") %>%
-  column_spec(3, width = "10em") %>%
-  column_spec(4, width = "23em") 
+    full_width = T, 
+    col.names = c("", "Study 1-3", "Study 4")) %>%
+  kable_styling(font_size = 8) %>%
+  column_spec(1, width = "2em") %>%
+  column_spec(2, width = "22em")%>%
+  column_spec(3, width = "22em") %>% 
+  footnote(symbol = "Only used in Study 1")
 ```
 
 #### Conspiracy scales

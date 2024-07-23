@@ -10,6 +10,24 @@
 knitr::include_graphics("figures/study3_example_explanation.png")
 ```
 
+Table \@ref(tab:knowledge-overview) shows all questions, their scientifically consensual answer, and their source. All but two questions were selected from existing science knowledge questionnaires. We tried to select non-political questions.
+
+```{r knowledge-overview}
+items <- read_csv("exp_3/materials/overview_questions.csv") %>% 
+  mutate(id = 1:nrow(.)) %>% 
+  select(id, "Question", "Scientific consensus (Study 1)", "Explanation (Study 2 & 3)") 
+
+# Output the table
+kbl(items, booktabs = T, longtable = TRUE,
+    caption = "Science knowledge items", 
+    full_width = T) %>%
+  kable_styling(font_size = 8) %>% 
+  column_spec(1, width = "1em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "23em") 
+```
+
 ## Comparing items
 
 ### Conspiracy theories
