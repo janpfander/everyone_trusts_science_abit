@@ -7,6 +7,9 @@
 # Ignore all elements in subfolders called "data"
 **/data/*
 
+# ignore all figures in .pdf format
+output*/figures/*.pdf
+
 # Ignore Word files
 *.doc
 *.docx
