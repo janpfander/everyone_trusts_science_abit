@@ -18,7 +18,7 @@ library(kableExtra)    # for tables
 
 ## Import data
 ```{r import, message=FALSE}
-d <- read_csv("data/test.csv")
+d <- read_csv("data/qualtrics.csv")
 names(d)
 ```
 
@@ -36,7 +36,7 @@ d <- d %>%
 table(d$attention_check)
 ```
 
-There are % failed attention checks. 
+There are 2 failed attention checks. 
 
 ```{r}
 # filter to only valid attention check responses
@@ -132,7 +132,6 @@ Make long format data.
 We use the initial acceptance question and the confirmation question (only participants who did not accept the consensus for the intial question answered the confirmation question) to make a final acceptance question. This final acceptance will take on the initial answer in case of initial acceptance, and the answer of the confirmation question in case of initial non-acceptance. The final question will simply be named `acceptance`. 
 
 ```{r}
-
 d_long <- d_wide %>% 
   # bring to long format
   pivot_longer(cols = c(
@@ -205,6 +204,21 @@ d_wide %>%
 ```
 
 ## Clean justifications
+
+```{r}
+# Extract justifications
+# questions <- unique(data_long$subject)
+# 
+# justifications <- d_wide %>%
+#   select(id, all_of(questions)) %>%
+#   pivot_longer(all_of(questions),
+#                names_to = "question",
+#                values_to = "answer") %>%
+#   drop_na(answer) %>%
+#   arrange(id)
+# 
+# write_csv(justifications, "data/justifications.csv")
+```
 
 ```{r}
 justifications <- read_csv("data/justifications_coded.csv")

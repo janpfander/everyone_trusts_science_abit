@@ -1,10 +1,10 @@
 ---
 title: "Analysis Study 4"
 output:
-  bookdown::pdf_document2: default
-  bookdown::word_document2: default
   bookdown::html_document2:
       keep_md: yes
+  bookdown::word_document2: default
+  bookdown::pdf_document2: default
 always_allow_html: true
 bibliography: ../references.bib
 ---
@@ -154,9 +154,30 @@ ggplot(plot_data, aes(x = BCTI_avg_binned, y = share, fill = acceptance)) +
 plot_data
 ```
 
+# Link clicks
+
+```{r}
+# general overview 
+data_long %>% 
+  group_by(id) %>% 
+  summarize(n_clicks = sum(link_clicks)) %>% 
+  group_by(n_clicks) %>% 
+  summarize(n_participants = n_distinct(id))
+```
 
 
+```{r}
+# plot if link clicks and independent had a relationship
+plot_data <- data_long %>% 
+  group_by(id, reason_agreement) %>% 
+  summarize(n_clicks = sum(link_clicks)) %>% 
+  group_by(n_clicks, reason_agreement) %>% 
+  summarize(n_participants = n_distinct(id))
 
+ggplot(plot_data, aes(x = n_clicks, y = n_participants)) +
+  geom_col() +
+  facet_wrap(~reason_agreement)
+```
 
 
 

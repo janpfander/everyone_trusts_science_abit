@@ -38,6 +38,7 @@ appendix:
   - "appendix_exp1.Rmd"
   - "appendix_exp2.Rmd"
   - "appendix_exp3.Rmd"
+  - "appendix_exp4.Rmd"
 
 bibliography: references.bib
 ---
@@ -116,27 +117,31 @@ source("functions/own_functions.R")
 
 How much do people trust and accept science? The recent COVID pandemic has highlighted the importance of this question, with trust in science being the best predictor of people’s proclivity to follow health guidelines [@alganTrustScientistsTimes2021].
 
-Unfortunately, trust in science is far from being at ceiling [@wellcomeglobalmonitorWellcomeGlobalMonitor2018; @wellcomeglobalmonitorWellcomeGlobalMonitor2020], and there are suggestions that it has recently been dropping in some countries [@alganTrustScientistsTimes2021] and that it is increasingly politicized in the US [@gauchatPoliticizationSciencePublic2012; @krauseTrendsAmericansTrust2019a; @liPolarizationPublicTrust2022].
+Unfortunately, trust in science is far from being at ceiling [@wellcomeglobalmonitorWellcomeGlobalMonitor2018; @wellcomeglobalmonitorWellcomeGlobalMonitor2020], and there are suggestions that it has recently been dropping in some countries [@alganTrustScientistsTimes2021], including the US [@brianAmericansTrustScientists2023], where it is also increasingly politicized [@gauchatPoliticizationSciencePublic2012; @krauseTrendsAmericansTrust2019a; @liPolarizationPublicTrust2022].
 
-This relative lack of trust in science could mean different things. It could mean that some people reject science wholesale, or at least to a significant extent. Or it could mean that they maintain a high degree of trust in most of science, and only question specific results that happen to contradict specific other beliefs they have (creationism, etc.), or beliefs that are associated with disliked behaviors (vaccination, acting for climate change).
+This relative lack of trust in science could mean different things. It could mean that some people reject science wholesale, or at least to a significant extent. Or it could mean that they maintain a high degree of trust in most of science, and only question specific results that happen to contradict specific other beliefs they have (e.g. creationism), or beliefs that are associated with disliked behaviors (e.g. vaccination, acting for climate change).
 
-We answer this question by looking at how much Americans accept basic scientific knowledge. We’ll pay special attention to two groups of participants: people who say they don’t trust science (much, or at all), and people who endorse science-related conspiracy theories (CTs), or have a CT mindset, since this has been linked with a low degree of trust in science, and that many CTs imply a mistrust of at least some science (vaccination, hydroxychloroquine, etc.).
+We answer this question by looking at how much Americans accept basic scientific knowledge. We pay special attention to two groups of participants: people who say they don’t trust science (much, or at all), and people who endorse science-related conspiracy theories (CTs), or have a CT mindset, since this has been linked with a low degree of trust in science, and that many CTs imply a mistrust of at least some science (vaccination, hydroxychloroquine, etc.).
 
-We presently briefly review work on trust in science, and science knowledge, before turning to work on CT and trust in science.
+We briefly review work on trust in science, and science knowledge, before turning to work on CT and trust in science.
 
 ## Trust in science
 
-Across the globe, most people say they trust science at least to some extent. In 2018, the Wellcome Global Monitor (WGM) surveyed of over 140'000 people in over 140 countries on trust in science [@wellcomeglobalmonitorWellcomeGlobalMonitor2018] . In 2020, during the first year of the Covid pandemic, a follow up survey was made in 113 countries, involving 119'000 participants [@wellcomeglobalmonitorWellcomeGlobalMonitor2020]. Across all countries, in 2018, 32% of participants said they trust science "a lot" (41% in 2020), 45% trust "some" science (39% in 2020), and only 13% percent trust science "not much/ not at all" (13% in 2020), while 10% indicated "don't know" (7% in 2020) (<https://wellcome.org/reports/wellcome-global-monitor-covid-19/2020#gid=6acd&pid=0>).
+Across the globe, most people say they trust science at least to some extent. In 2018, the Wellcome Global Monitor (WGM) surveyed of over 140'000 people in over 140 countries on trust in science [@wellcomeglobalmonitorWellcomeGlobalMonitor2018]. In 2020, during the first year of the Covid pandemic, a follow up survey was made in 113 countries, involving 119'000 participants [@wellcomeglobalmonitorWellcomeGlobalMonitor2020]. Across all countries, in 2018, 32% of participants said they trust science "a lot" (41% in 2020), 45% trust "some" science (39% in 2020), and only 13% percent trust science "not much/ not at all" (13% in 2020), while 10% indicated "don't know" (7% in 2020)[^1].
 
-Trust in science also appears to be relatively stable in the US [@funkPublicConfidenceScientists2020]. However, there are some potentially worrying trends: The US might be increasingly polarized on trust in science [@gauchatPoliticizationSciencePublic2012]. For example, the partisan divide on the question of whether climate change is a major threat to societey [has been growing in the last decade](https://www.pewresearch.org/short-reads/2023/08/09/what-the-data-says-about-americans-views-of-climate-change/) [@kennedyWhatDataSays2023]. And while by some measures only about half of the US population believes in anthropogenic climate change, people do mostly not seem to change their mind on on the issue [@mottaChangingMindsChanging2021].
+[^1]: <https://wellcome.org/reports/wellcome-global-monitor-covid-19/2020#gid=6acd&pid=0>\>
 
-Trust in science is typically measured in three ways: either asking explictly about general trust in science or scientists, by asking about science attitudes (e.g. XX), or asking questions about specific, typically contentious, science topics (e.g. vaccines, climate change, GMOs). It is unclear to which extent these measures capture trust in basic science. To assess this, we can look at the literature on science knowledge.
+Trust in science also appears to be relatively stable in the US [@funkPublicConfidenceScientists2020]. However, there are some potentially worrying trends: Recently, trust in US has dropped [@brianAmericansTrustScientists2023], and some evidence suggests increasing polarization of trust in science along political lines [@gauchatPoliticizationSciencePublic2012]. For example, the partisan divide on the question of whether climate change is a major threat to society has been growing in the last decade[^2] [@kennedyWhatDataSays2023]. A recent study suggests that by some measure, only about half of the US population believes in anthropogenic climate change, and that individuals do mostly not seem to change their mind on on the issue [@mottaChangingMindsChanging2021].
+
+[^2]: <https://www.pewresearch.org/short-reads/2023/08/09/what-the-data-says-about-americans-views-of-climate-change/>
+
+Trust in science is typically measured in three ways: either asking explicitly about general trust in science or scientists, by asking about science attitudes (e.g. support for public funding of science), or asking questions about specific, typically contentious, science topics (e.g. vaccines, climate change, GMOs). It is unclear to which extent these measures capture trust in basic science. To assess this, we can look at the literature on science knowledge.
 
 ## Science knowledge
 
-A lot of research has been conducted on the public understanding of science. Part of this research are surveys measuring to which extent people have basic science knowledge (e.g. "Does the Earth go around the Sun, or does the Sun go around the Earth?"). For us, these surveys provide a lower bound to how much people trust basic science: people who give the right answer (and not by chance) supposedly trust science on that question. Unfortunately, that lower bound has often been indeed pretty low: researchers have pointed out the deficit in basic science knowledge [@millerPublicUnderstandingAttitudes2004; @millerMeasurementCivicScientific1998a]. For example, only 55% in the US (in 2014) and only 46% in the EU (in 2005) knew that antibiotics kill only bacteria but not viruses [@committeeonscienceliteracyandpublicperceptionofscienceScienceLiteracyConcepts2016]. A question that remains is whether people do not provide the right answers because they are not familiar with the scientific consensus, or because they explicitly reject that consensus.
+Much of the research on public understanding of science measures to which extent people have basic science knowledge (e.g. "Does the Earth go around the Sun, or does the Sun go around the Earth?"). For us, these surveys provide a lower bound to how much people trust basic science: people who give the right answer (and not by chance) supposedly trust science on that question. Unfortunately, that lower bound has often been indeed pretty low: researchers have pointed out the deficit in basic science knowledge [@millerPublicUnderstandingAttitudes2004; @millerMeasurementCivicScientific1998a]. For example, only 55% in the US (in 2014) and only 46% in the EU (in 2005) knew that antibiotics kill only bacteria and not viruses [@committeeonscienceliteracyandpublicperceptionofscienceScienceLiteracyConcepts2016]. A question that remains is whether people do not provide the right answers because they are not familiar with the scientific consensus, or because they explicitly reject that consensus.
 
-[To do: Make a descriptive overview of science knowledge across time/countries. This is a crucial point: if there are questions with specific scientific answers that just about everyone already knows, then in a sense our point is already proven. But there are enough questions where people's knowledge appears quite poor anyways]
+[To do: Make a descriptive overview of science knowledge across time/countries.]
 
 ## CT and TiS
 
@@ -144,17 +149,15 @@ Recently, the relationship of one group to trust in science (TiS) has been parti
 
 ## The present studies
 
-In a series of studies, we ask basic science knowledge questions, inform people of the scientific consensus, and see if they accept it. Of particular interest are people who are low in TiS, and CTists.
+In a series of four pre-registered studies (n = 782), we asked participants about basic (studies 1, 2 and 3) and recent/advanced (study 4) science knowledge questions, informed them of the scientific consensus, and aked if they accept it. Of particular interest were people who are low in TiS, and CTists. Our main hypotheses were:
 
-In study 1, we plainly inform participants of the scientific consensus and ask if they accept it. We use a subset of questions on basic science knowledge that have been used in numerous public opinion surveys [@allumScienceKnowledgeAttitudes2008; @durantPublicUnderstandingScience1989; @millerMeasurementCivicScientific1998a] sometimes referred to as the "Oxford scale" [@gauchatCulturalAuthorityScience2011]. In study 2, we remove a problematic science question and present people with a more elaborated explanation of the scientific consensus, as well as additional sources. This allows us to remove the issue that participants might simply not have trusted us to correctly report the scientific consensus in study 1. Study 3 follows essentially the same design as study 2, but is run on a vaccine-skeptic sample. Further, we provided participants with an explicit option to revise their answer, in case they rejected the consensus. We also asked follow-up questions on why participants accepted the scientific consensus, namely whether they thought it was because they trust scientists or because they verified independently. Study 4 uses the same design as study 3, but asking science questions that people are less likely to have encountered before, and that they would be less likely to be able to verify (or even understand) themselves [on an anti-vaxx sample again?].
+**H1: Higher trust in science is associated with more science knowledge and more acceptance of the scientific consensus**
 
-Then: replications in other countries?
+**H2: Higher conspiracy thinking/belief is associated with less science knowledge and less acceptance of the scientific consensus**
 
-# Overview of experiments
+In study 1, we plainly inform participants of the scientific consensus and ask if they accept it. We use a subset of questions on basic science knowledge that have been used in numerous public opinion surveys [@allumScienceKnowledgeAttitudes2008; @durantPublicUnderstandingScience1989; @millerMeasurementCivicScientific1998a] sometimes referred to as the "Oxford scale" [@gauchatCulturalAuthorityScience2011]. In study 2, we remove a problematic science question and present people with a more elaborated explanation of the scientific consensus, as well as additional sources. This allows us to remove the issue that participants might simply not have trusted us to correctly report the scientific consensus in study 1. Study 3 follows essentially the same design as study 2, but is run on a vaccine-skeptic sample. Further, we provided participants with an explicit option to revise their answer, in case they rejected the consensus. We also asked follow-up questions on why participants accepted the scientific consensus, namely whether they thought it was because they trust scientists or because they verified independently. Study 4 uses the same design as study 3, but using a set of more recent, advance science questions that participants are less likely to have encountered before, and that they would be less likely to be able to verify (or even understand) themselves. Just as study 3, study 4 is run on a sample of vaccine-skeptic participants.
 
-The goal is to see to which extent people do not accept basic science.
-
-# Experiment 1
+# Methods
 
 ```{r exp1}
 # Analyze data of experiments and store results
@@ -246,122 +249,6 @@ exp1_descriptives <- list(
 )
 ```
 
-The main goal of experiment one was to test whether people would accept the scientific consensus on basic knowledge questions. Additionally, we wanted to know if both science knowledge and acceptance of the scientific consensus are associated with trust in science and conspiracy thinking. We had the following research questions:
-
-**RQ1: What is the average science knowledge score (1)?**
-
-**RQ2: What is the average acceptance of the scientific consensus (2)?**
-
-**RQ3: What is the relationship between trust in science and, respectively, (1) and (2)?**
-
-**RQ4: What is the relationship between conspiracy thinking and, respectively, (1) and (2)?**
-
-## Methods
-
-### Participants
-
-We recruited 200 participants from the US via prolific. 6 participants failed our attention check, resulting in a final sample of `r exp1_descriptives$n_subj` participants (`r exp1_descriptives$gender$female$n` female, `r exp1_descriptives$gender$male$n` male; $age_\text{mean}$: `r exp1_descriptives$age$mean`, $age_\text{sd}$: `r exp1_descriptives$age$sd`, $age_\text{median}$: `r exp1_descriptives$age$median`). Since we did not have any prior assumptions on effect sizes, we did not do a power analysis.
-
-### Procedure
-
-After providing their consent to participate in the study, participants were given an attention check "While watching the television, have you ever had a fatal heart attack?" [1-6; 1 = Never, 6 = Often]. All participants who did not answer "1 = Never" were excluded. Participants then read the following instructions:"We will ask you 11 questions about science. After each question, we will provide you with the scientifically consensual answer and ask whether you accept it." Next, participants answered a set of 10 basic science questions, which were randomly selected from a pool of 11 questions, in random order. After each question, participants were presented with an answer reflecting the scientific consensus. Participants were asked to choose whether they accept the answer or not, before proceeding to the next question. Figure \@ref(fig:stimulus-example) displays the survey for an example science question. Finally, participants answered questions on conspiracy thinking and trust in science.
-
-### Materials
-
-#### Science knowledge and acceptance
-
-Table \@ref(tab:knowledge) shows all questions, their scientifically consensual answer, and their source. All but two questions were selected from existing science knowledge questionnaires. We tried to select non-political questions.
-
-```{r knowledge}
-# Function to replace special characters in all cells of a data frame
-replace_special_characters <- function(df) {
-  df %>%
-    mutate(across(everything(), ~ gsub("\u2013|\u2014|\u2212", "-", .))) %>% # Replace en-dash, em-dash, and Unicode minus with ASCII hyphen-minus
-    mutate(across(everything(), ~ iconv(., from = "UTF-8", to = "ASCII//TRANSLIT"))) # Ensure all text is ASCII
-}
-
-# Read the CSV file
-items <- read_csv("exp_4/materials/overview_questions.csv")
-
-# Replace special characters
-items_cleaned <- replace_special_characters(items) %>% 
-  mutate(id = 1:nrow(.)) %>%
-  select(id, everything())  # Ensure 'id' is the first column
-
-# add footnote for the tree items
-items_cleaned[11, 2] <- paste0("*", 
-                               items_cleaned[11, 2])
-  
-
-# Output the table
-knitr::kable(items_cleaned, booktabs = T, longtable = TRUE,
-    caption = "Science knowledge items", 
-    full_width = T, 
-    col.names = c("", "Study 1-3", "Study 4")) %>%
-  kable_styling(font_size = 8) %>%
-  column_spec(1, width = "2em") %>%
-  column_spec(2, width = "22em")%>%
-  column_spec(3, width = "22em") %>% 
-  footnote(symbol = "Only used in Study 1")
-```
-
-#### Conspiracy scales
-
-To measure conspiracy thinking, we selected 10 science/health related conspiracy theories from the Belief in Conspiracy Theory Inventory (BCTI) by @pennycookOverconfidentlyConspiratorialConspiracy2022 (Table \@ref(tab:conspiracy)). Participants were asked: "Below is a list of events for which the official version has been disputed. For each event, we would like you to indicate to what extent you believe the cover-up version of events is true or false. [1-9; labels: 1 - completly false, 5 - unsure, 9 - completely true]". 
-
-```{r conspiracy, echo=FALSE}
-# Create the data frame
-items <- c(
-  "The Apollo moon landings never happened and were staged in a Hollywood film studio.",
-  "A cure for cancer was discovered years ago, but this has been suppressed by the pharmaceutical industry and the U.S. Food and Drug Administration (FDA).",
-  "The spread of certain viruses and/or diseases is the result of the deliberate, concealed efforts of vested interests.",
-  "The claim that the climate is changing due to emissions from fossil fuels is a hoax perpetrated by corrupt scientists who want to spend more taxpayer money on climate research.",
-  "The Earth is flat (not spherical) and this fact has been covered up by scientists and vested interests.",
-  "There is a causal link between vaccination and autism that has been covered up by the pharmaceutical industry.",
-  "In the 1950s and 1960s more than 100 million Americans received a polio vaccine contaminated with a potentially cancer-causing virus.",
-  "Proof of alien contact is being concealed from the public.",
-  "Hydroxychloroquine has been demonstrated to be a safe and effective treatment of COVID and this information is being suppressed.",
-  "Dinosaurs never existed, evolution is not real, and scientists have been faking the fossil record.")
-
-conspiracy_items <- data.frame(id = 1:length(items), items = items)
-
-# Output the table
-kbl(conspiracy_items, booktabs = T, longtable = T, col.names = NULL, 
-    caption = "Conspiracy items", 
-    full_width = F) %>%
-  kable_styling(font_size = 8) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "40em")
-```
-
-To cross-check our results with alternative measures, we also assessed the conspiracy mentality questionnaire (CMQ) by @bruderMeasuringIndividualDifferences2013 and the Single Item Conspiracy Beliefs Scale (SICBS) by @lantianMeasuringBeliefConspiracy2016 (see Appendix \@ref(exp1)).
-
-#### Trust in science
-
-Our main item for measuring trust in science is selected from the Wellcome Global Monitor survey: "In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]"
-
-We also included two additional trust questions, one also from the Wellcome Global Monitor (WGM) survey ("How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]"), the other from the Pew research center ("How much confidence do you have in scientists to act in the best interests of the public? [1-5; 1 = No confidence at all, 5 = A great deal of confidence]"). We selected these items so that we could compare the ratings in our sample to global survey results. The WGM survey has been administered in over 140 countries and included over 140000 respondents. The Pew question has recently been used by a world-wide many labs study in 67 countries with 71417 respondents [@colognaTrustScientistsTheir2024].
-
-## Results
-
-Regarding RQ1 and RQ2, participants answered on average `r exp1_descriptives$means$knowledge_mean` (sd = `r exp1_descriptives$means$knowledge_sd`) of the questions correctly, and accepted the scientific consensus on average for `r exp1_descriptives$means$acceptance_mean` (sd = `r exp1_descriptives$means$acceptance_sd`) of the questions.
-
-Fig. \@ref(fig:exp1-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In most cases (`r exp1_descriptives$conditional_acceptance$false$Yes$share`), participants readily accepted the scientific consensus after having given the wrong answer to a question. In very few cases (`r exp1_descriptives$conditional_acceptance$true$No$share`), participants who gave the correct response afterwards rejected the scientific consensus, thereby contradicting their own initial response. We believe this might have been due to inattention.
-
-For RQ3, we find a positive but small correlation between both science knowledge and trust in science (r = `r exp1_descriptives$cor_trust_knowledge$estimate`, p `r exp1_descriptives$cor_trust_knowledge$p.value`), and acceptance of scientific consensus and trust in science (r = `r exp1_descriptives$cor_trust_acceptance$estimate`, p `r exp1_descriptives$cor_trust_acceptance$p.value`). The more people are knowledgeable about science and the more they tend to accept the scientific consensus, the more they tend to trust science. These correlations are relatively weak, which might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp1-plot), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates.
-
-For RQ4, we find a negative correlation of similar magnitude between conspiracy thinking and science knowledge (r = `r exp1_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp1_descriptives$cor_conspiracy_knowledge$p.value`), and conspiracy thinking and acceptance of scientific consensus (r = `r exp1_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$cor_conspiracy_acceptance$p.value`).
-
-In Appendix \@ref(exp1), we show that these associations are robust when using alternative measures of trust and conspiracy thinking. Appendix \@ref(exp1) also includes more descriptive statistics, such as knowledge and acceptance by science questions.
-
-Are trust in science and conspiracy thinking, respectively, associated with being more easily convinced of the scientific consensus? In our main analyses, we looked at correlations of acceptance across all observations. One possibility is that the associations between trust in science/conspiracy thinking and acceptance of scientific consensus are explained by science knowledge: People who give the right answer in the first place are more ready to accept the consensus, and trust in science/conspiracy thinking are mostly associated with this knowledge, but not with willingness to accept the consensus. To addressed this potential confound, in a non-preregistered analysis, we restricted our sample to cases where participants gave the wrong answer to the knowledge question. We than calculated the correlation between trust in science and average acceptance rate by participant. We find no statistically significant correlation of acceptance with neither conspiracy thinking (r = `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$p.value`), nor with trust in science (r = `r exp1_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_trust_acceptance$p.value`).
-
-## Discussion
-
-These results suggest that most people accept the scientific consensus most of the time. Even when people do not know the correct answer to a science question, they tend to mostly accept the scientific consensus afterwards. Yet, in `r exp1_descriptives$conditional_acceptance$false$No$share` of the cases, participants rejected the scientific consensus after having given the wrong answer, suggesting that simply stating the consensus is not sufficient to convince participants sometimes. In general, people with lower trust in science and who believe more in conspiracy theories tend to both know less about science and accept the scientific consensus less.
-
-# Experiment 2
-
 ```{r exp2}
 # Analyze data of experiments and store results
 
@@ -410,15 +297,13 @@ exp2_false_knowledge <- exp2_long %>%
 # H1b
 # conditional on false answers
 false_answers_cor_trust_acceptance <- cor.test(exp2_false_knowledge$wgm_sciencegeneral, exp2_false_knowledge$avg_acceptance) %>% text_ready()
-
-# pooled across all cases
+# pooled across all cases (in line with all other studies' analysis)
 cor_trust_acceptance <- cor.test(exp2_wide$wgm_sciencegeneral, exp2_wide$avg_acceptance) %>% text_ready()
 
 # H2b
 # conditional on false answers
 false_answers_cor_conspiracy_acceptance <- cor.test(exp2_false_knowledge$BCTI_avg, exp2_false_knowledge$avg_acceptance) %>% text_ready()
-
-# pooled across all cases
+# pooled across all cases (in line with all other studies' analysis)
 cor_conspiracy_acceptance <- cor.test(exp2_wide$BCTI_avg, exp2_wide$avg_acceptance) %>% text_ready()
 
 
@@ -476,75 +361,6 @@ exp2_descriptives <- list(
     split(.$category)
 )
 ```
-
-In experiment 1, we tested whether participants would accept the scientific consensus on basic science facts. In most instances they did, but not always. In experiment 2, we wanted to test whether this reluctance was because of participants not trusting us as a source of consensual science knowledge. To do so, we added an explanation and sources to each consensus statement, instead of only stating the consensus. To better understand reasons for consensus rejection, after having answered all questions, we asked participants an open-ended question to explain why they rejected the consensus, for each question on which they did so. We also excluded the where do trees their materials from, as this question clearly seemed to be an outlier where most participants would get the answer wrong (see Appendix \@ref(exp1)).
-
-Based on experiment 1, we formulated the following hypotheses:
-
-**H1a: Higher trust in science is associated with more science knowledge?**
-
-**H1b: Higher trust in science is associated with more acceptance of the scientific consensus, for participants who did not already know it?**
-
-**H2a: Higher conspiracy thinking is associated with less science knowledge?**
-
-**H2b: Higher conspiracy thinking is associated with less acceptance of the scientific consensus, for participants who did not already know it?**
-
-We had the following research questions:
-
-**RQ1: What is the average science knowledge score?**
-
-**RQ2: When a participant’s answer does not match the consensus, how often do they change their mind and accept the consensus?**
-
-**RQ3: What reasons do participants provide to justify their rejection of the scientific consensus?**
-
-## Methods
-
-### Participants
-
-We recruited 201 participants from the US via prolific. 11 participants failed our attention check, resulting in a final sample of `r exp2_descriptives$n_subj` participants (`r exp2_descriptives$gender$female$n` female, `r exp2_descriptives$gender$male$n` male; $age_\text{mean}$: `r exp2_descriptives$age$mean`, $age_\text{sd}$: `r exp2_descriptives$age$sd`, $age_\text{median}$: `r exp2_descriptives$age$median`). Since we did not have any prior assumptions on effect sizes and our analyses were descriptive, we did not do a power analysis.
-
-### Procedure
-
-The procedure was the same as in experiment 1, with the difference that, instead of just stating the scientific consensus, participants were presented with a short explanation which we wrote, partly based on explanations generated by ChatGPT, and three links to authoritative sources supporting the answer (Fig. \@ref(fig:exp2-stimulus-example).
-
-### Materials
-
-We relied on the same items as in experiment 1. The only difference was that we removed the question on trees.
-
-## Results
-
-As in experiment 1, we find a positive but small correlation between science knowledge and trust in science (H1a: r = `r exp2_descriptives$cor_trust_knowledge$estimate`, p `r exp2_descriptives$cor_trust_knowledge$p.value`) and a small negative correlation between science knowledge and conspiracy thinking (H2a: r = `r exp2_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp2_descriptives$cor_conspiracy_knowledge$p.value`). By contrast to experiment 1, we conditioned on initially false answers when looking at the relationship of consensus acceptance with trust in science and conspiracy thinking, respectively. For trust in science, we find no statistically significant correlation (r = `r exp2_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp2_descriptives$false_answers_cor_trust_acceptance$p.value`). For conspiracy thinking we find a small negative one (r = `r exp2_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp2_descriptives$false_answers_cor_conspiracy_acceptance$p.value`).
-
-
-Confirming results from experiment 1, we find that the more people are knowledgeable about science and the more they tend to accept the scientific consensus even when they are not that knowledgeable in science, the more they tend to trust science. These correlations are relatively weak, which might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp2-plot), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates. In Appendix \@ref(exp2) we show that these results hold for our alternative measures of trust and conspiracy thinking. We also include more descriptive statistics, such as knowledge and acceptance by science questions.
-
-Regarding RQ1, participants answered on average `r exp2_descriptives$means$knowledge_mean` (sd = `r exp2_descriptives$means$knowledge_sd`) of the questions correctly, and accepted the scientific consensus on average for `r exp2_descriptives$means$acceptance_mean` (sd = `r exp2_descriptives$means$acceptance_sd`) of the questions. Fig. \@ref(fig:exp2-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In response to RQ2, in most cases (`r exp2_descriptives$conditional_acceptance$false$Yes$share`), participants readily accepted the scientific consensus after having initially given the wrong answer to a question. In very few cases (`r exp2_descriptives$conditional_acceptance$true$No$share`), participants who gave the correct response afterwards rejected the scientific consensus, thereby contradicting their own initial response.
-
-For RQ3, we got `r exp2_descriptives$justifications_n` answers from `r exp2_descriptives$justifications_n_participants` different participants to the open-ended questions on why they had rejected the scientific consensus on a particular question. Table \@ref(tab:exp2-justifications) summarizes these answers by five categories. All answers can be read in Appendix \@ref(exp2).
-
-```{r exp2-justifications}
-exp2_justifications %>%
-  group_by(category)%>%
-  summarize(n = n(), 
-            n_subjects = n_distinct(id)) %>%
-  mutate(Share = n/sum(n)) %>%
-  mutate_if(is.numeric, round, digits=3) %>% 
-  mutate(Share = paste0(Share*100, "%")) %>% 
-  arrange(desc(n)) %>% 
-  select(category, n, Share, n_subjects) %>% 
-  rename(Category = category,
-         `N (instances)` = n, 
-         `Share (instances)` = Share, 
-         `N (unique participants)` = n_subjects
-         ) %>% 
-  apa_table(caption = "Justifications by category")
-```
-
-## Discussion
-
-Similar to experiment 1, most people (i) do know and agree with the scientific consensus, and (ii) tend to accept the scientific consent even if they were not previously aware of it (i.e. answered the knowledge question wrongly). The share of these latter is considerably larger in experiment 2 (`r exp2_descriptives$conditional_acceptance$false$Yes$share`) than in experiment 1 (`r exp1_descriptives$conditional_acceptance$false$Yes$share`). While this could be just sampling variation, it might be that adding explanations and sources convinced people more than merely stating the consensus. We also show, again, that people with lower trust in science and who believe more in conspiracy theories tend to both know less about science and accept the scientific consensus less.
-
-# Experiment 3
 
 ```{r exp3}
 # Analyze data of experiments and store results
@@ -687,7 +503,228 @@ exp3_descriptives <- list(
 
 ```
 
-(ref:summary-plot) Points represent the average share of acceptance as a function of the **A** level of trust in science ("In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]"); **B** average conspiracy thinking (CMQ, 5 items on a scale from 0 to 100); **C** belief in a specific conspiracy theory. Participants were asked to rate their belief in the conspiracy on a scale from 1 to 9, with the labels: "1 - completly false, 5 - unsure, 9 - completely true". Averages are only based on participants who believed at least to some degree in the conspiracy theory. We consider a believer as anyone scoring higher than the scale midpoint, i.e. \>5. Number labels in plots represent the number of participants for the corresponding data point. 
+```{r exp4}
+# Analyze data of experiments and store results
+
+# Experiment 4
+
+# read the cleaned long version data set
+exp4_long <- read_csv("exp_4/data/cleaned_long.csv")
+
+# read wide version data set
+exp4_wide <- read_csv("exp_4/data/cleaned_wide.csv") 
+
+# read coded justifications
+exp4_justifications <- read_csv("exp_4/data/justifications_clean.csv")
+
+# Research questions
+
+# H1
+cor_trust_knowledge <- cor.test(exp4_wide$wgm_sciencegeneral, exp4_wide$avg_knowledge,
+  use = "complete.obs") %>% text_ready()
+cor_trust_acceptance <- cor.test(exp4_wide$wgm_sciencegeneral, exp4_wide$avg_acceptance,
+  use = "complete.obs") %>% text_ready()
+
+# H2
+cor_conspiracy_knowledge <- cor.test(exp4_wide$BCTI_avg, exp4_wide$avg_knowledge,
+  use = "complete.obs") %>% text_ready()
+cor_conspiracy_acceptance <- cor.test(exp4_wide$BCTI_avg, exp4_wide$avg_acceptance,
+  use = "complete.obs") %>% text_ready()
+
+# Exploratory: Acceptance and trust in science/conspiracy thinking conditional on false answers only
+exp4_false_knowledge <- exp4_long %>% 
+  # make numeric versions
+  mutate(acceptance_num = ifelse(acceptance == "Yes", 1, 0)
+  ) %>% 
+  group_by(id, knowledge) %>% 
+  # calculate by-participant averages
+  summarize(
+    n = n(),
+    n_accepted = sum(acceptance_num),
+    avg_acceptance  = sum(acceptance_num)/n(), 
+    wgm_sciencegeneral = mean(wgm_sciencegeneral), 
+    BCTI_avg = mean(BCTI_avg), 
+    # add additonal measures for robustness checks
+    CMQ_avg = mean(CMQ_avg), 
+    SICBS = mean(SICBS),
+    wgm_scientists = mean(wgm_scientists), 
+    pew = mean(pew)
+  ) %>% 
+  # filter to only false responses
+  filter(knowledge == FALSE) %>% 
+  ungroup()
+
+# H1b conditional on false answers
+false_answers_cor_trust_acceptance <- cor.test(exp4_false_knowledge$wgm_sciencegeneral, exp4_false_knowledge$avg_acceptance,
+  use = "complete.obs") %>% 
+  text_ready()
+
+# H2b conditional on false answers
+false_answers_cor_conspiracy_acceptance <- cor.test(exp4_false_knowledge$BCTI_avg, exp4_false_knowledge$avg_acceptance,
+  use = "complete.obs") %>% 
+  text_ready()
+
+# extract descriptives for inline reporting
+exp4_descriptives <- list(
+  # Demographics
+  n_subj = n_distinct(exp4_wide$id),
+  n_subject_by_outcome = exp4_wide %>% 
+    summarize(across(c("wgm_sciencegeneral", "reason_agreement", "BCTI_avg"), 
+                     ~sum(!is.na(.x)
+                     )
+    )
+    ),
+  gender = exp4_wide %>% group_by(gender) %>% summarize(n = n_distinct(id)) %>% split(.$gender),
+  age = exp4_wide %>% summarize(across(age,list(mean = mean, median = median, sd = sd), 
+                                       .names = "{.fn}")) %>% rounded_numbers(),
+  # RQ1 & RQ2
+  means = exp4_wide %>% 
+    summarize(across(c(avg_knowledge, avg_acceptance, avg_acceptance_initial), 
+                     list(mean = mean, sd = sd), 
+                     .names = "{.col}_{.fn}")) %>%
+    rename_with(~sub("^avg_", "", .), everything()) %>% 
+    mutate_if(is.numeric, round, digits = 2) %>% 
+  mutate(across(ends_with("_mean"), ~paste0(.*100, " %"))) ,
+  # H1
+  # a
+  cor_trust_knowledge = cor_trust_knowledge,
+  # b (conditional on false responses)
+  false_answers_cor_trust_acceptance = false_answers_cor_trust_acceptance,
+  # b (all cases)
+  cor_trust_acceptance = cor_trust_acceptance,
+  # H2
+  # a
+  cor_conspiracy_knowledge = cor_conspiracy_knowledge,
+  # b (conditional on false responses)
+  false_answers_cor_conspiracy_acceptance = false_answers_cor_conspiracy_acceptance,
+  # b(all cases)
+  cor_conspiracy_acceptance = cor_conspiracy_acceptance, 
+  # Exploratory
+  # acceptance and knowledge
+  conditional_acceptance = exp4_long %>% 
+    pivot_longer(c(acceptance, acceptance_initial), 
+                 names_to = "measure", 
+                 values_to = "acceptance") %>% 
+    group_by(knowledge, measure, acceptance) %>% 
+    count() %>% 
+    group_by(knowledge, measure) %>% 
+    mutate (share = n/sum(n), 
+            # rename knowledge values
+            knowledge = ifelse(knowledge == FALSE, "false", "true")) %>% 
+    mutate_if(is.numeric, round, digits = 3) %>% 
+    mutate (share = paste0(share*100, " %")) %>% 
+    super_split(knowledge,  measure, acceptance),
+  # Justifications
+  justifications_n = nrow(exp4_justifications), 
+  justifications_n_participants = n_distinct(exp4_justifications$id),
+  justification_by_category = exp4_justifications %>%
+    group_by(category)%>%
+    summarize(n = n(), 
+              n_subjects = n_distinct(id)) %>%
+    mutate(share = n/sum(n)) %>%
+    mutate_if(is.numeric, round, digits=3) %>% 
+    mutate(share = paste0(share*100, "%")) %>% 
+    split(.$category),
+  # Consensus acceptance
+  acceptance_n = exp4_wide %>% 
+    filter(!is.na(reason_agreement)) %>% 
+    nrow(.),
+  acceptance_by_reason = exp4_wide %>% 
+    group_by(reason_agreement) %>% 
+    summarize(n = n()) %>%
+    drop_na(reason_agreement) %>% 
+    mutate(share = n/sum(n)) %>%
+    mutate_if(is.numeric, round, digits=3) %>% 
+    mutate(share = paste0(share*100, "%")) %>% 
+    split(.$reason_agreement),
+  reason_followup_n = exp4_wide %>% 
+    filter(!is.na(reason_followup)) %>% 
+    nrow(.)
+)
+
+```
+
+## Procedure
+
+After providing their consent to participate in the study, participants were given an attention check "While watching the television, have you ever had a fatal heart attack?" [1-6; 1 = Never, 6 = Often]. All participants who did not answer "1 = Never" were excluded. Participants then read the following instructions:"We will ask you 10 questions about science. After each question, we will provide you with the scientifically consensual answer and ask whether you accept it." Next, participants answered a set of 10 basic science questions (in study 1 they were randomly selected from a pool of 11 questions) in random order. After each question, participants were presented with an answer reflecting the scientific consensus. In study 2 and 3, participants additionally saw a short explanation which we wrote, partly based on explanations generated by ChatGPT, and three links to authoritative sources supporting the answer. In study 4, we provided only two links and no explanation. Participants were asked to choose whether they accept the answer or not, before proceeding to the next question. Participants then answered questions on conspiracy thinking, conspiracy beliefs and trust in science.
+
+In study 2, 3 and 4, we presented participants with open-ended questions to explain cases where they rejected the scientific consensus. In study 3 and 4, we additionally gave participants the option to change their answer and accept the scientific consensus. Finally, at the end of study 3 and 4, we asked participants: "For the questions in which you agreed with the scientific consensus, would you say that...?" The answer options were: (i) "You mostly agree with the consensus because, on that question, you trust scientists", (ii) "You mostly agree with the consensus because you have been able to independently verify it", and (iii) "Other", with a text box for participants to explain. Participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, were asked the open-ended follow-up question: "Could you please tell us how you independently verified the information?".
+
+## Participants
+
+We recruited a total of `r exp1_descriptives$n_subj + exp2_descriptives$n_subj + exp3_descriptives$n_subj + exp4_descriptives$n_subj` (`r exp1_descriptives$n_subj` in study 1, `r exp2_descriptives$n_subj` in study 2, `r exp3_descriptives$n_subj` in study 3, `r exp4_descriptives$n_subj` in study 4) participants in the US via prolific. Details and demographics can be found in the online supplemental material. While samples for study 1 and 2 were convenience samples, study 3 and 4 were run on a sample holding vaccine-skeptic beliefs (see OSM for details).
+
+## Materials
+
+Table \@ref(tab:knowledge) shows all questions and their answer options used in the four studies.
+
+```{r knowledge}
+# Function to replace special characters in all cells of a data frame
+replace_special_characters <- function(df) {
+  df %>%
+    mutate(across(everything(), ~ gsub("\u2013|\u2014|\u2212", "-", .))) %>% # Replace en-dash, em-dash, and Unicode minus with ASCII hyphen-minus
+    mutate(across(everything(), ~ iconv(., from = "UTF-8", to = "ASCII//TRANSLIT"))) # Ensure all text is ASCII
+}
+
+# Read the CSV file
+items <- read_csv("exp_4/materials/overview_questions.csv")
+
+# Replace special characters
+items_cleaned <- replace_special_characters(items) %>% 
+  mutate(id = 1:nrow(.)) %>%
+  select(id, everything())  # Ensure 'id' is the first column
+
+# add footnote for the tree items
+items_cleaned[11, 2] <- paste0("*", 
+                               items_cleaned[11, 2])
+  
+
+# Output the table
+knitr::kable(items_cleaned, booktabs = T, longtable = TRUE,
+    caption = "Science knowledge items", 
+    full_width = T, 
+    col.names = c("", "Study 1-3", "Study 4")) %>%
+  kable_styling(font_size = 8) %>%
+  column_spec(1, width = "2em") %>%
+  column_spec(2, width = "22em")%>%
+  column_spec(3, width = "22em") %>% 
+  footnote(symbol = "Only used in Study 1")
+```
+
+Our main measure of conspiracy belief was asking participants about specific conspiracy theories. We selected 10 science/health related conspiracy theories from the Belief in Conspiracy Theory Inventory (BCTI) [@pennycookOverconfidentlyConspiratorialConspiracy2022] (Table \@ref(tab:conspiracy)). Participants were asked: "Below is a list of events for which the official version has been disputed. For each event, we would like you to indicate to what extent you believe the cover-up version of events is true or false. [1-9; labels: 1 - completly false, 5 - unsure, 9 - completely true]".
+
+As a robustness check, we also used established scales on conspiracy thinking, namely the four-item conspiracy mentality questionnaire (CMQ) [@bruderMeasuringIndividualDifferences2013] and the single item conspiracy beliefs scale (SICBS) [@lantianMeasuringBeliefConspiracy2016]. Details and comparisons between the scales can be found in the OSM.
+
+```{r conspiracy, echo=FALSE}
+# Create the data frame
+items <- c(
+  "The Apollo moon landings never happened and were staged in a Hollywood film studio.",
+  "A cure for cancer was discovered years ago, but this has been suppressed by the pharmaceutical industry and the U.S. Food and Drug Administration (FDA).",
+  "The spread of certain viruses and/or diseases is the result of the deliberate, concealed efforts of vested interests.",
+  "The claim that the climate is changing due to emissions from fossil fuels is a hoax perpetrated by corrupt scientists who want to spend more taxpayer money on climate research.",
+  "The Earth is flat (not spherical) and this fact has been covered up by scientists and vested interests.",
+  "There is a causal link between vaccination and autism that has been covered up by the pharmaceutical industry.",
+  "In the 1950s and 1960s more than 100 million Americans received a polio vaccine contaminated with a potentially cancer-causing virus.",
+  "Proof of alien contact is being concealed from the public.",
+  "Hydroxychloroquine has been demonstrated to be a safe and effective treatment of COVID and this information is being suppressed.",
+  "Dinosaurs never existed, evolution is not real, and scientists have been faking the fossil record.")
+
+conspiracy_items <- data.frame(id = 1:length(items), items = items)
+
+# Output the table
+kbl(conspiracy_items, booktabs = T, longtable = T, col.names = NULL, 
+    caption = "Conspiracy items", 
+    full_width = F) %>%
+  kable_styling(font_size = 8) %>% 
+  column_spec(1) %>%
+  column_spec(2, width = "40em")
+```
+
+Our main item for measuring trust in science was selected from the Wellcome Global Monitor survey: "In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]". We also included two additional trust questions, one also from the Wellcome Global Monitor (WGM) survey ("How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]"), the other from the Pew research center ("How much confidence do you have in scientists to act in the best interests of the public? [1-5; 1 = No confidence at all, 5 = A great deal of confidence]"). We selected these items so that we could compare the ratings in our sample to global survey results. The WGM survey has been administered in over 140 countries and included over 140000 respondents. The Pew question has recently been used by a world-wide many labs study in 67 countries with 71417 respondents [@colognaTrustScientistsTheir2024].
+
+# Results
+
+(ref:summary-plot) Points represent the average share of acceptance as a function of the **A** level of trust in science ("In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]"); **B** average conspiracy thinking (CMQ, 5 items on a scale from 0 to 100); **C** belief in a specific conspiracy theory. Participants were asked to rate their belief in the conspiracy on a scale from 1 to 9, with the labels: "1 - completly false, 5 - unsure, 9 - completely true". Averages are only based on participants who believed at least to some degree in the conspiracy theory. We consider a believer as anyone scoring higher than the scale midpoint, i.e. \>5. Number labels in plots represent the number of participants for the corresponding data point.
 
 ```{r summary-plot, fig.cap="(ref:summary-plot)", fig.height= 10, fig.width=10}
 # combine data of all three studies
@@ -696,7 +733,9 @@ combined_data <- bind_rows(exp1_long %>%
                            exp2_long %>% 
                              mutate(study = "study 2"), 
                            exp3_long %>% 
-                             mutate(study = "study 3")
+                             mutate(study = "study 3"),
+                           exp4_long %>% 
+                             mutate(study = "study 4")
                            )
 
 # make plot data for trust
@@ -814,7 +853,7 @@ conspiracy_thinking <- conspiracy_thinking +
   theme(axis.title.y = element_blank(),
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank()) 
-  #guides(color = "none", shape = "none") +
+  #guides(color = "none", shape = "none") 
 
 conspiracy <- conspiracy +
   rremove("ylab") +
@@ -836,62 +875,32 @@ wrap_elements(patchwork) +
   )
 ```
 
-Study 3 is essentially a replication-–with some minor modifications-–of study 2, but on a different type of sample. Both study 1 and 2 were run on convenience samples. For study 3, we recruited a sample of people holding anti-vaccination beliefs (see below). By contrast to study 2, after asking participants an open question about why they did not accept the consensus (in cases where they didn't), we provide them with an explicit opportunity to change their answer (Fig. \@ref(fig:exp3-explanation-example)). Based on the answers to the open-ended questions, we also pre-registered a categorization scheme of reasons why people rejected the consensus. Finally, we also ask participants about why they agree with the scientific consensus on certain questions, in case they do. We want to know if participants perceive that this is because of trust, or other factors.
+Across all studies we find that almost all participants trust basic and recent/advance science facts almost all the time. That is true even for participants who expressed low general trust in science, and those who have a tendency to conspiracy think or hold science-related conspiracy beliefs (Fig. \@ref(fig:summary-plot)).
 
-As for study 2 (but without conditioning on wrong answers, as we did in study 1), we had the following hypotheses:
+Our results suggest that the more people tend to trust science, the more they tend to know about science and accept the scientific consensus. In study 2 and 3, we find a positive but small correlation between trust in science and both science knowledge (study 1: r = `r exp1_descriptives$cor_trust_knowledge$estimate`, p `r exp1_descriptives$cor_trust_knowledge$p.value`; study 2: r = `r exp2_descriptives$cor_trust_knowledge$estimate`, p `r exp2_descriptives$cor_trust_knowledge$p.value`), and acceptance of scientific consensus (study 1: r = `r exp1_descriptives$cor_trust_acceptance$estimate`, p `r exp1_descriptives$cor_trust_acceptance$p.value`; study 2: r = `r exp2_descriptives$cor_trust_acceptance$estimate`, p `r exp2_descriptives$cor_trust_acceptance$p.value`). In study 3 and 4--both run on vaccine-skeptic samples--we find no statistically significant correlation between science knowledge and trust in science (study 3: r = `r exp3_descriptives$cor_trust_knowledge$estimate`, p `r exp3_descriptives$cor_trust_knowledge$p.value`; study 4: r = `r exp4_descriptives$cor_trust_knowledge$estimate`, p `r exp4_descriptives$cor_trust_knowledge$p.value`), but a small positive correlation between acceptance of scientific consensus and trust in science (study 3: r = `r exp3_descriptives$cor_trust_acceptance$estimate`, p `r exp3_descriptives$cor_trust_acceptance$p.value`; study 4: r = `r exp4_descriptives$cor_trust_acceptance$estimate`, p `r exp4_descriptives$cor_trust_acceptance$p.value`).
 
-**H1a: Higher trust in science is associated with more science knowledge?**
+As for conspiracy beliefs, results are mixed. In studies 1 and 2, we find a small negative correlation between conspiracy thinking and both science knowledge (study 1: r = `r exp1_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp1_descriptives$cor_conspiracy_knowledge$p.value`; study 2: r = `r exp2_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp2_descriptives$cor_conspiracy_knowledge$p.value`), and acceptance of scientific consensus (study 1: r = `r exp1_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$cor_conspiracy_acceptance$p.value`; study 2: r = `r exp2_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp2_descriptives$cor_conspiracy_acceptance$p.value`). However, in study 3 and 4, we do not find a statistically significant correlation with neither science knowledge (study 3: r = `r exp3_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp3_descriptives$cor_conspiracy_knowledge$p.value`; study 4: r = `r exp4_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp4_descriptives$cor_conspiracy_knowledge$p.value`), and between nor acceptance of scientific consensus (study 3: r = `r exp3_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp3_descriptives$cor_conspiracy_acceptance$p.value`; study 4: r = `r exp4_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp4_descriptives$cor_conspiracy_acceptance$p.value`).
 
-**H1b: Higher trust in science is associated with more acceptance of the scientific consensus.**
+Overall, the correlations we find are relatively weak, which might be partly due to ceiling effects. This was the case in particular for acceptance: In all studies, in the vast majority of cases, participants accepted accepted science facts. The absence of correlations between conspiracy beliefs and science knowledge or acceptance in studies 3 and 4 might be explained by our sample selection. For these studies, we recruited samples scoring considerably higher in conspiracy belief than the convenience samples of study 1 and 2 (see OSM). The presence of effects in study 1 and 2, and the absence in study 3 and 4 might be because differences between moderate and high conspiracy thinking might not matter, while, differences between low and moderate/high conspiracy thinking do matter.
 
-**H2a: Higher conspiracy thinking is associated with less science knowledge?**
+Did participants who had initially gotten it wrong change their minds towards the scientific consensus? Yes. In most cases (study 1: `r exp1_descriptives$conditional_acceptance$false$Yes$share`; study 2: `r exp2_descriptives$conditional_acceptance$false$Yes$share`; study 3: `r exp3_descriptives$conditional_acceptance$false$acceptance$Yes$share`; study 4: `r exp4_descriptives$conditional_acceptance$false$acceptance$Yes$share`), participants readily accepted the scientific consensus after having initially given the wrong answer to a question. Only in study 4 do we find evidence[^3] that changing one's mind towards the scientific consensus is associated with (more) trust in science (study 1: r = `r exp1_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_trust_acceptance$p.value`; study 2: r = `r exp2_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp2_descriptives$false_answers_cor_trust_acceptance$p.value`; study 3: r = `r exp3_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp3_descriptives$false_answers_cor_trust_acceptance$p.value`; study 4: r = `r exp4_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp4_descriptives$false_answers_cor_trust_acceptance$p.value`) and only in study 2 evidence that it is associated with (less) conspiracy thinking (study 1: r = `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$p.value`; study 2: r = `r exp2_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp2_descriptives$false_answers_cor_conspiracy_acceptance$p.value`; study 3: r = `r exp3_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp3_descriptives$false_answers_cor_conspiracy_acceptance$p.value`; study 4: r = `r exp4_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp4_descriptives$false_answers_cor_conspiracy_acceptance$p.value`). In very few cases, participants changed their mind away from the scientific consensus. These participants initially gave the correct response, but rejected the scientific consensus right after, thereby contradicting their own initial response (study 1: `r exp1_descriptives$conditional_acceptance$true$No$share`; study 2: `r exp2_descriptives$conditional_acceptance$true$No$share`; study 3: `r exp3_descriptives$conditional_acceptance$true$acceptance$No$share`; study 4: `r exp4_descriptives$conditional_acceptance$true$acceptance$No$share`).
 
-**H2b: Higher conspiracy thinking is associated with less acceptance of the scientific consensus.**
+[^3]: For this analysis, we restricted our data to those cases in which participants initially gave the wrong answer.
 
-We had the following research questions:
+Why did participants reject the scientific consensus? We got a total of `r exp4_descriptives$justifications_n + exp3_descriptives$justifications_n + exp2_descriptives$justifications_n` answers (study 2: `r exp2_descriptives$justifications_n`; study 3: `r exp3_descriptives$justifications_n`; study 4: `r exp4_descriptives$justifications_n`) from `r exp4_descriptives$justifications_n_participants + exp3_descriptives$justifications_n_participants + exp2_descriptives$justifications_n_participants` (study 2: `r exp2_descriptives$justifications_n_participants`; study 3: `r exp3_descriptives$justifications_n_participants`; study 4: `r exp4_descriptives$justifications_n_participants`) different participants to the open-ended questions on why they had rejected the scientific consensus on a particular question. Based on the answers, we created five categories. Table \@ref(tab:justifications) summarizes these answers by five categories. All answers can be read in the OSM.
 
-**RQ1: What is the average science knowledge score?**
+```{r justifications}
 
-**RQ2: What is the average acceptance of the scientific consensus**
+## make a common table of exp 2 and exp 3
+justifications <- bind_rows(exp2_justifications %>% 
+                              mutate(study = "study 2"), 
+                            exp3_justifications %>% 
+                              mutate(study = "study 3", 
+                                     final_coding = as.character(final_coding)),
+                            exp4_justifications %>% 
+                              mutate(study = "study 4"))
 
-**RQ3: What reasons do participants provide to justify their rejection of the scientific consensus?**
-
-**RQ4: In case they agree with the scientific consensus, do people feel that this is because of trust?**
-
-## Methods
-
-### Participants
-
-We recruited 200 participants from the US via prolific, of which none failed our attention check, resulting in a final sample of `r exp3_descriptives$n_subj` participants (`r exp3_descriptives$gender$female$n` female, `r exp3_descriptives$gender$male$n` male; $age_\text{mean}$: `r exp3_descriptives$age$mean`, $age_\text{sd}$: `r exp3_descriptives$age$sd`, $age_\text{median}$: `r exp3_descriptives$age$median`). Since we did not have any prior assumptions on effect sizes and our analyses were descriptive, we did not do a power analysis.
-
-However, due to a randomization mistake for our outcomes, participant answered only two of the three outcome measure blocs (trust in science, conspiracy thinking, and reason for accepting consensus). This leaves us with reduced sample sizes for all analyses concerning these outcomes (N = `r exp3_descriptives$n_subject_by_outcome$wgm_sciencegeneral` for trust in science, N = `r exp3_descriptives$n_subject_by_outcome$BCTI_avg` for conspiracy measures, N = `r exp3_descriptives$n_subject_by_outcome$reason_agreement` for reason for accepting consensus).
-
-### Procedure
-
-The procedure was mostly the same as in experiment 2. In addition, after each open-ended question on cases where participants rejected the scientific consensus, participants were also asked if they want to change their answer and accept the scientific consensus. Finally, at the end of the survey, we asked participants: "For the questions in which you agreed with the scientific consensus, would you say that...?" The answer options were: (i) "You mostly agree with the consensus because, on that question, you trust scientists", (ii) "You mostly agree with the consensus because you have been able to independently verify it", and (iii) "Other", with a text box for participants to explain. Participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, were asked the open-ended follow-up question: "Could you please tell us how you independently verified the information?".
-
-### Materials
-
-We relied on the same items as in experiment 2. We used a pre-registered categorization scheme for the open ended answers for why people reject the consensus. The categories were XX and XX. [Describe coding process, with independent reviewer etc.]
-
-## Results
-
-As in study 1 and 2, we find that participants answered on average `r exp3_descriptives$means$knowledge_mean` (sd = `r exp3_descriptives$means$knowledge_sd`) of the questions correctly, and initially accepted the scientific consensus on average for `r exp3_descriptives$means$acceptance_initial_mean` (sd = `r exp3_descriptives$means$acceptance_initial_sd`) of the questions (RQ2). The acceptance rate is even higher when accounting for opinion revisions towards acceptance of the consensus, after initial rejection (`r exp3_descriptives$means$acceptance_mean`, sd = `r exp3_descriptives$means$acceptance_sd`).
-
-Fig. \@ref(fig:exp3-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In most cases (`r exp3_descriptives$conditional_acceptance$false$acceptance_initial$Yes$share`), participants readily accepted the scientific consensus right after having given the wrong answer to a question. After providing the chance to revise the initial consensus rejection, this share is even larger (`r exp3_descriptives$conditional_acceptance$false$acceptance$Yes$share`). In very few cases (`r exp3_descriptives$conditional_acceptance$true$acceptance_initial$No$share`), participants who initially gave the correct response afterwards rejected the scientific consensus right after, thereby contradicting their own initial response. This share drops slightly after providing the chance to revise the initial consensus rejection (`r exp3_descriptives$conditional_acceptance$true$acceptance$No$share`).
-
-In the appendix XX we provide an analysis that this drop is statistically significant [TO DO].
-
-For all correlations, we include opinion revisions for measuring consensus acceptance. We find no statistically significant correlation between science knowledge and trust in science (r = `r exp3_descriptives$cor_trust_knowledge$estimate`, p `r exp3_descriptives$cor_trust_knowledge$p.value`), but a samll positive correlation between acceptance of scientific consensus and trust in science (r = `r exp3_descriptives$cor_trust_acceptance$estimate`, p `r exp3_descriptives$cor_trust_acceptance$p.value`). Again, these findings might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp3-plot), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates. We find no statistically significant correlation between conspiracy thinking and science knowledge (r = `r exp3_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp3_descriptives$cor_conspiracy_knowledge$p.value`), and between conspiracy thinking and acceptance of scientific consensus (r = `r exp3_descriptives$cor_conspiracy_acceptance`, p `r exp3_descriptives$cor_conspiracy_acceptance$p.value`).
-
-In Appendix \@ref(exp3), we show that these associations are statistically significant (except the last one?). We show that they are robust when using alternative measures of trust and conspiracy thinking. Appendix \@ref(exp3) also includes more descriptive statistics, such as knowledge and acceptance by science questions.
-
-Regarding RQ1, participants answered on average `r exp3_descriptives$means$knowledge_mean` (sd = `r exp3_descriptives$means$knowledge_sd`) of the questions correctly. For RQ3, we got `r exp3_descriptives$justifications_n` answers from `r exp3_descriptives$justifications_n_participants` different participants to the open-ended questions on why they had rejected the scientific consensus on a particular question. Table \@ref(tab:exp3-justifications) summarizes these answers by five categories.
-
-All answers can be read in the appendix.
-
-```{r exp3-justifications}
-exp3_justifications %>%
+justifications %>%
   group_by(category)%>%
   summarize(n = n(), 
             n_subjects = n_distinct(id)) %>%
@@ -900,29 +909,31 @@ exp3_justifications %>%
   mutate(Share = paste0(Share*100, "%")) %>% 
   arrange(desc(n)) %>% 
   select(category, n, Share, n_subjects) %>% 
-  rename(Category = category,
-         `N (instances)` = n, 
-         `Share (instances)` = Share, 
-         `N (unique participants)` = n_subjects
-         ) %>% 
-  apa_table(caption = "Justifications by category")
+  ungroup() %>% 
+  rename(
+    Category = category,
+    `N (instances)` = n, 
+    `Share (instances)` = Share, 
+    `N (unique participants)` = n_subjects
+  ) %>% 
+  apa_table(caption = "Justifications by category for data from studies 2, 3 and 4 combined.")
 ```
 
-For RQ4, we had `r exp3_descriptives$acceptance_n` participants answering the question. Of these `r exp3_descriptives$acceptance_by_reason[["trust in scientists"]]$share` said they accepted the scientific consensus because they trust scientists on this question, while `r exp3_descriptives$acceptance_by_reason[["independent verification"]]$share` said they independently verified the fact. `r exp3_descriptives$acceptance_by_reason[["other"]]$share` answered with other "other" and gave an open-ended explanation (see Appendix).
+Why did participants accept the scientific consensus? In studies 3 and 4, we had asked participants about cases where they agreed with the scientific consensus. A total of `r exp3_descriptives$acceptance_n + exp4_descriptives$acceptance_n` (study 3: `r exp3_descriptives$acceptance_n`; study 4: `r exp4_descriptives$acceptance_n`) participants answered this question. Of these, `r exp3_descriptives$acceptance_by_reason[["trust in scientists"]]$share` in study 3 and `r exp4_descriptives$acceptance_by_reason[["trust in scientists"]]$share` in study 4 said they accepted the scientific consensus because they trust scientists, while `r exp3_descriptives$acceptance_by_reason[["independent verification"]]$share` in study 3 and `r exp4_descriptives$acceptance_by_reason[["independent verification"]]$share` in study 4 said they independently verified the fact. We asked all participants who gave this answer to explain how they did it (answers can be found in the OSM). `r exp3_descriptives$acceptance_by_reason[["other"]]$share` in study 3 and `r exp4_descriptives$acceptance_by_reason[["other"]]$share` in study 4 answered with other "other" and gave an open-ended explanation (see OSM).
 
-We also asked all `r exp3_descriptives$reason_followup_n` participants who answered that they had independently verified the answer to explain how they did so. The open-ended answers are listed in Appendix XX.
+More detailed results addressing all our pre-registered research questions can be found in the OSM.
 
 # Discussion
 
-[We can draw some inspiration from the “Westwood et al 2021 Current research overstates American support for political violence” paper: we want to put in perspective the current rise (? discourse around?) in mistrust towards science]
+Survey data from the US suggests a decline of trust in science in recent years [@brianAmericansTrustScientists2023]. Across the globe, many people only trust science ‘some of the time’ , and a sizable minority doesn’t trust it [@wellcomeglobalmonitorWellcomeGlobalMonitor2018; @wellcomeglobalmonitorWellcomeGlobalMonitor2020]. This appears difficult to reconcile with the fact that, in many countries, most people nowadays receive at least a basic education [@ritchieGlobalEducation2023], and that science education has been found to be the most strongly associated variable with trust in science [@wellcomeglobalmonitorWellcomeGlobalMonitor2018].
 
-There is increasingly more talk of defiance towards science and towards experts more generally. In every population, many people only trust science ‘some of the time’, and a sizable minority doesn’t trust it. This appears difficult to reconcile with the fact that, in many countries, most people receive at least a basic science education, that science education (along with education more generally) is increasing, and that science education seems to be the main driver of trust in science.
+But how deep is distrust of science? In four studies, we have shown that almost every participant accepts almost all of basic science questions we included. Even when people do not know the correct answer to a science question, they tend to mostly accept the scientific consensus afterwards. That is true not only for basic science questions (studies 1-3), but also for more recent scientific findings that most people are unfamiliar with (study 4). In study 1 the acceptance rate after having given a wrong answer was considerably lower (`r exp1_descriptives$conditional_acceptance$false$No$share`) than in subsequent studies (study 2: `r exp2_descriptives$conditional_acceptance$false$Yes$share`; study 3: `r exp3_descriptives$conditional_acceptance$false$acceptance$Yes$share`; study 4: `r exp4_descriptives$conditional_acceptance$false$acceptance$Yes$share`). While this could be just sampling variation, it might be that adding explanations and/or sources convinced participants more than merely stating the consensus. In general, participants with lower trust in science and who believe more in conspiracy theories tended to both know less about science and accept the scientific consensus less.
 
-But how deep is distrust of science? In four studies, we have shown that almost every participant accepts almost all of basic science questions we included.
+Scholars have long interpreted the lack of basic science knowledge as the root cause of distrust in and more generally unfavorable attitudes towards science, an explanation known under the term "deficit-model" [@millerMeasurementCivicScientific1998a; @millerPublicUnderstandingAttitudes2004; @durantPublicUnderstandingScience1989]. In line with proponents of the deficit-model, we find that people indeed err even on very basic science questions. However, we also find that almost everyone instantly accepted the scientific consensus once informed about it. Moreover, the same was true for non-basic science questions. This calls into question the deficit model: If participants trust science on basic (and non-basic) questions—as suggests immediate acceptance of the scientific consensus—then unfavorable attitudes towards science must have other explanations than a mere lack of knowledge. This argument is supported by past research. In a seminal meta-analysis, \@allumScienceKnowledgeAttitudes2008 found correlations between science knowledge and general attitudes towards science to be at best small and largely context dependent [\@allumScienceKnowledgeAttitudes2008]. A more recent report by the National Academies of Sciences, Engineering, and Medicine states that science knowledge is "unlikely to substantially affect attitudes on scientific issues" [@nationalacademiesofsciencesCommunicatingScienceEffectively2017].
 
-Traditionally, people have interpreted people's lack of basic knowledge in light of the deficit-model. Here, we show that people readily accept the scientifically consensual answer to these questions.
+How to make sense of the detachment of basic science knowledge from attitudes towards science? One explanation might be that most scientific findings are very abstract. For example, to most people, it will not be relevant for their daily lives to know that the speed of light is 299'792'458 meters per second. It is therefor easy to simply accept it, all the more if it appears to be consensual within the population of scientists. In other words, people might hold on to most scientific findings as reflective beliefs—beliefs that have little effect on our behaviors [@mercierHowGoodAre2021]. It is probably when it becomes tangible that science shape's people's attitudes. This can happen, for example, when science appears to support conclusions in favor of certain policies or moral positions, as for example in the case of anthropogenic climate change or vaccines.
 
-“The dominant approach to conceptualizing and measuring science literacy in population surveys has arisen out of work by Jon D. Miller and Kenneth Prewitt in the United States (see Miller, 1983, 1998, 2004) alongside collabora- tors in Great Britain (see Durant et al., 1989). Underlying these efforts appears to have been widespread concern among policy makers and the scientific com- munity that nonscientists were becoming skeptical about the benefits of sci- ence and that such skepticism might result in cuts to science funding that would harm the scientific progress that many argue underpins both American and European economic development (Bauer et al., 2007). The results of the U.S. portion of this work have formed the core of a chapter of a biennial report called Science and Engineering Indicators (hereafter, Indicators) that the National Science Board provides to Congress and the Executive Branch. Scholars have also used the raw data collected for Indicators (which is made publicly available) for peer-reviewed research (e.g., Gauchat, 2012; Losh, 2010), and other countries have used many of the Indicators’ questions for their own national surveys (e.g., Bauer et al., 2012a; National Science Board, 2016).”
+It is tempting, especially for scientists, to explain mistrust in science with ignorance. After all, careful proof of objective truth is what makes science trustworthy—that is, for scientists. For most people, what shapes trust in science might not be so different from what shapes trust in other institutions, such as the government, banks or church.
 
 \FloatBarrier
 
@@ -946,4 +957,9 @@ Traditionally, people have interpreted people's lack of basic knowledge in light
 \clearpage
 
 ```{r child = "appendix_exp3.Rmd"}
+```
+
+\clearpage
+
+```{r child = "appendix_exp4.Rmd"}
 ```

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.23)  23 JUL 2024 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.14)  2 SEP 2024 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-05-27>
+L3 programming layer <2024-07-20>
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/apa6/apa6.cls
 Document Class: apa6 2023/08/07 v2.35 APA formatting (6th edition)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -179,7 +179,7 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
 \c@appendix=\count279
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2024/07/18 v4.3 Extensive control of page headers and footers
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip64
 \f@nch@O@elh=\skip65
 \f@nch@O@erh=\skip66
@@ -385,7 +385,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Failed to patch abstract.
 Failed to patch title.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.sty (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-05-27 L3 programming layer (loader) 
+Package: expl3 2024-07-20 L3 programming layer (loader) 
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count304
@@ -627,229 +627,221 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 203.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 203.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 218.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 218.
 
 
 [1
 
 {/Users/jan/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+[][][][]$\T1/lmr/m/n/9 https : / / www . pewresearch . org / short -[] reads / 2023 / 08 / 09 / what -[] the -[] data -[] says -[] about -[] americans -[] views -[] of -[]$
+ []
+
+
 
 [2]
 
-[3{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 295.
-[4]
+[3] [4]
 
 [5]
-
-LaTeX Warning: Reference `fig:exp1-plot' on page 6 undefined on input line 337.
-
+<output/figures/summary-plot.pdf, id=52, 722.7pt x 722.7pt>
+File: output/figures/summary-plot.pdf Graphic file (type pdf)
+<use output/figures/summary-plot.pdf>
+Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 317.
+(pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
 
 
 [6]
 
-[7]
-
-LaTeX Warning: Reference `fig:exp2-plot' on page 8 undefined on input line 389.
-
-
+[7 <./output/figures/summary-plot.pdf>]
 
 [8]
-<output/figures/summary-plot.pdf, id=96, 722.7pt x 722.7pt>
-File: output/figures/summary-plot.pdf Graphic file (type pdf)
-<use output/figures/summary-plot.pdf>
-Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 429.
-(pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
-
 
 [9]
 
-[10 <./output/figures/summary-plot.pdf>]
-
-LaTeX Warning: Reference `fig:exp3-plot' on page 11 undefined on input line 479.
-
-
+[10]
 
 [11]
 
-[12]
-
-[13]
-
-[14]
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 603.
+(hyperref)                removing `\\' on input line 462.
 
-<./figures/study1_question_example.png, id=200, 1927.2pt x 1084.05pt>
+<./figures/study1_question_example.png, id=155, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
-Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 613.
+Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 476.
 (pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 633.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 496.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[15{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figures/study1_question_example.png>]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 734--753
+[12{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figures/study1_question_example.png>]
+
+LaTeX Warning: Reference `fig:exp1-plot' on page 13 undefined on input line 541.
+
+
+
+[13]
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 615--634
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 765--784
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 646--665
  [][] 
  []
 
-<output/figures/exp1-questions-knowledge.pdf, id=217, 469.755pt x 325.215pt>
+
+
+[14]
+<output/figures/exp1-questions-knowledge.pdf, id=203, 469.755pt x 325.215pt>
 File: output/figures/exp1-questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/exp1-questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/exp1-questions-knowledge.pdf  used on input line 794.
+Package pdftex.def Info: output/figures/exp1-questions-knowledge.pdf  used on input line 675.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp1-questions-acceptance.pdf, id=218, 469.755pt x 325.215pt>
+<output/figures/exp1-questions-acceptance.pdf, id=204, 469.755pt x 325.215pt>
 File: output/figures/exp1-questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp1-questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp1-questions-acceptance.pdf  used on input line 804.
+Package pdftex.def Info: output/figures/exp1-questions-acceptance.pdf  used on input line 685.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp1-trust-scientists.pdf, id=219, 469.755pt x 325.215pt>
+<output/figures/exp1-trust-scientists.pdf, id=205, 469.755pt x 325.215pt>
 File: output/figures/exp1-trust-scientists.pdf Graphic file (type pdf)
 <use output/figures/exp1-trust-scientists.pdf>
-Package pdftex.def Info: output/figures/exp1-trust-scientists.pdf  used on input line 814.
+Package pdftex.def Info: output/figures/exp1-trust-scientists.pdf  used on input line 695.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp1-conspiracy-distribution.pdf, id=220, 469.755pt x 325.215pt>
+<output/figures/exp1-conspiracy-distribution.pdf, id=206, 469.755pt x 325.215pt>
 File: output/figures/exp1-conspiracy-distribution.pdf Graphic file (type pdf)
 <use output/figures/exp1-conspiracy-distribution.pdf>
-Package pdftex.def Info: output/figures/exp1-conspiracy-distribution.pdf  used on input line 826.
+Package pdftex.def Info: output/figures/exp1-conspiracy-distribution.pdf  used on input line 707.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-
-
-[16]
-<output/figures/exp1-conspiracy-items.pdf, id=242, 469.755pt x 325.215pt>
+<output/figures/exp1-conspiracy-items.pdf, id=207, 469.755pt x 325.215pt>
 File: output/figures/exp1-conspiracy-items.pdf Graphic file (type pdf)
 <use output/figures/exp1-conspiracy-items.pdf>
-Package pdftex.def Info: output/figures/exp1-conspiracy-items.pdf  used on input line 836.
+Package pdftex.def Info: output/figures/exp1-conspiracy-items.pdf  used on input line 717.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
 
-Overfull \hbox (44.80487pt too wide) in alignment at lines 842--911
+Overfull \hbox (44.80487pt too wide) in alignment at lines 723--792
  [] [] 
  []
 
-[17] [18]
-<output/figures/exp1-conditional-acceptance.pdf, id=259, 469.755pt x 325.215pt>
+
+
+[15] [16 <./output/figures/exp1-questions-knowledge.pdf>] [17]
+<output/figures/exp1-conditional-acceptance.pdf, id=238, 469.755pt x 325.215pt>
 File: output/figures/exp1-conditional-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp1-conditional-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp1-conditional-acceptance.pdf  used on input line 919.
+Package pdftex.def Info: output/figures/exp1-conditional-acceptance.pdf  used on input line 800.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp1-plot-overview.pdf, id=260, 722.7pt x 722.7pt>
+<output/figures/exp1-plot-overview.pdf, id=239, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 927.
+Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 808.
 (pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
 
 
-[19]
+[18]
 
-[20 <./output/figures/exp1-questions-knowledge.pdf>]
+[19 <./output/figures/exp1-questions-acceptance.pdf>]
 
-[21 <./output/figures/exp1-questions-acceptance.pdf>]
+[20 <./output/figures/exp1-trust-scientists.pdf>]
 
-[22 <./output/figures/exp1-trust-scientists.pdf>]
+[21 <./output/figures/exp1-conspiracy-distribution.pdf>]
 
-[23 <./output/figures/exp1-conspiracy-distribution.pdf>]
+[22 <./output/figures/exp1-conspiracy-items.pdf>]
 
-[24 <./output/figures/exp1-conspiracy-items.pdf>]
+[23 <./output/figures/exp1-conditional-acceptance.pdf>]
 
-[25 <./output/figures/exp1-conditional-acceptance.pdf>]
-
-[26 <./output/figures/exp1-plot-overview.pdf>]
+[24 <./output/figures/exp1-plot-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 933.
+(hyperref)                removing `\\' on input line 814.
 
-<./figures/study2_question_example.png, id=343, 1927.2pt x 1084.05pt>
+<./figures/study2_question_example.png, id=314, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
-Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 943.
+Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 854.
 (pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25
+
+]
+
+LaTeX Warning: Reference `fig:exp2-plot' on page 26 undefined on input line 863.
 
 
-Overfull \hbox (408.80476pt too wide) in paragraph at lines 1010--1037
+
+[26 <./figures/study2_question_example.png>]
+
+[27]
+Overfull \hbox (408.80476pt too wide) in paragraph at lines 959--986
  [] 
  []
 
 
-Underfull \vbox (badness 2376) has occurred while \output is active []
-
-
-
-[27
-
- <./figures/study2_question_example.png>]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1049--1068
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 998--1017
  [][] 
  []
 
-<output/figures/exp2-questions-knowledge.pdf, id=360, 469.755pt x 325.215pt>
+<output/figures/exp2-questions-knowledge.pdf, id=351, 469.755pt x 325.215pt>
 File: output/figures/exp2-questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/exp2-questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/exp2-questions-knowledge.pdf  used on input line 1078.
+Package pdftex.def Info: output/figures/exp2-questions-knowledge.pdf  used on input line 1027.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp2-questions-acceptance.pdf, id=361, 469.755pt x 325.215pt>
+<output/figures/exp2-questions-acceptance.pdf, id=352, 469.755pt x 325.215pt>
 File: output/figures/exp2-questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp2-questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp2-questions-acceptance.pdf  used on input line 1088.
+Package pdftex.def Info: output/figures/exp2-questions-acceptance.pdf  used on input line 1037.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp2-trust-scientists.pdf, id=362, 469.755pt x 325.215pt>
+<output/figures/exp2-trust-scientists.pdf, id=353, 469.755pt x 325.215pt>
 File: output/figures/exp2-trust-scientists.pdf Graphic file (type pdf)
 <use output/figures/exp2-trust-scientists.pdf>
-Package pdftex.def Info: output/figures/exp2-trust-scientists.pdf  used on input line 1098.
+Package pdftex.def Info: output/figures/exp2-trust-scientists.pdf  used on input line 1047.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp2-conspiracy-distribution.pdf, id=363, 469.755pt x 325.215pt>
+<output/figures/exp2-conspiracy-distribution.pdf, id=354, 469.755pt x 325.215pt>
 File: output/figures/exp2-conspiracy-distribution.pdf Graphic file (type pdf)
 <use output/figures/exp2-conspiracy-distribution.pdf>
-Package pdftex.def Info: output/figures/exp2-conspiracy-distribution.pdf  used on input line 1110.
-(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp2-conspiracy-items.pdf, id=364, 469.755pt x 325.215pt>
-File: output/figures/exp2-conspiracy-items.pdf Graphic file (type pdf)
-<use output/figures/exp2-conspiracy-items.pdf>
-Package pdftex.def Info: output/figures/exp2-conspiracy-items.pdf  used on input line 1120.
+Package pdftex.def Info: output/figures/exp2-conspiracy-distribution.pdf  used on input line 1059.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
 
 
 [28]
 
 [29 <./output/figures/exp2-questions-knowledge.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1179 \end{longtable}
-                       [30 <./output/figures/exp2-questions-acceptance.pdf>] [31]
-<output/figures/exp2-conditional-acceptance.pdf, id=411, 469.755pt x 325.215pt>
+<output/figures/exp2-conspiracy-items.pdf, id=383, 469.755pt x 325.215pt>
+File: output/figures/exp2-conspiracy-items.pdf Graphic file (type pdf)
+<use output/figures/exp2-conspiracy-items.pdf>
+Package pdftex.def Info: output/figures/exp2-conspiracy-items.pdf  used on input line 1069.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+[30 <./output/figures/exp2-questions-acceptance.pdf>] [31]
+<output/figures/exp2-conditional-acceptance.pdf, id=405, 469.755pt x 325.215pt>
 File: output/figures/exp2-conditional-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp2-conditional-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp2-conditional-acceptance.pdf  used on input line 1187.
+Package pdftex.def Info: output/figures/exp2-conditional-acceptance.pdf  used on input line 1136.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
 
 
@@ -864,85 +856,297 @@ Package pdftex.def Info: output/figures/exp2-conditional-acceptance.pdf  used on
 [36 <./output/figures/exp2-conditional-acceptance.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1196.
+(hyperref)                removing `\\' on input line 1145.
 
-<figures/study3_example_explanation.png, id=457, 724.95844pt x 508.14844pt>
+
+
+[37
+
+]
+<figures/study3_example_explanation.png, id=460, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
-Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1206.
+Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1187.
 (pdftex.def)             Requested size: 216.80336pt x 151.96497pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1286 \end{longtable}
-                       [37
+l.1267 \end{longtable}
+                       [38 <./figures/study3_example_explanation.png>] [39] [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- <./figures/study3_example_explanation.png>] [38] [39]
-Overfull \hbox (405.15477pt too wide) in paragraph at lines 1351--1378
+
+
+[41]
+
+LaTeX Warning: Reference `fig:exp3-plot' on page 42 undefined on input line 1276.
+
+
+
+[42]
+Overfull \hbox (405.15477pt too wide) in paragraph at lines 1372--1399
  [] 
  []
 
 
-
-[40]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1390--1409
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1411--1430
  [][] 
  []
 
-<output/figures/exp3-questions-knowledge.pdf, id=490, 469.755pt x 325.215pt>
+<output/figures/exp3-questions-knowledge.pdf, id=496, 469.755pt x 325.215pt>
 File: output/figures/exp3-questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/exp3-questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/exp3-questions-knowledge.pdf  used on input line 1419.
+Package pdftex.def Info: output/figures/exp3-questions-knowledge.pdf  used on input line 1440.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp3-questions-acceptance.pdf, id=491, 469.755pt x 325.215pt>
+<output/figures/exp3-questions-acceptance.pdf, id=497, 469.755pt x 325.215pt>
 File: output/figures/exp3-questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp3-questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp3-questions-acceptance.pdf  used on input line 1427.
+Package pdftex.def Info: output/figures/exp3-questions-acceptance.pdf  used on input line 1448.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp3-trust-scientists.pdf, id=492, 469.755pt x 325.215pt>
+<output/figures/exp3-trust-scientists.pdf, id=498, 469.755pt x 325.215pt>
 File: output/figures/exp3-trust-scientists.pdf Graphic file (type pdf)
 <use output/figures/exp3-trust-scientists.pdf>
-Package pdftex.def Info: output/figures/exp3-trust-scientists.pdf  used on input line 1437.
+Package pdftex.def Info: output/figures/exp3-trust-scientists.pdf  used on input line 1458.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp3-conspiracy-distribution.pdf, id=493, 469.755pt x 325.215pt>
+<output/figures/exp3-conspiracy-distribution.pdf, id=499, 469.755pt x 325.215pt>
 File: output/figures/exp3-conspiracy-distribution.pdf Graphic file (type pdf)
 <use output/figures/exp3-conspiracy-distribution.pdf>
-Package pdftex.def Info: output/figures/exp3-conspiracy-distribution.pdf  used on input line 1447.
+Package pdftex.def Info: output/figures/exp3-conspiracy-distribution.pdf  used on input line 1468.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp3-conspiracy-items.pdf, id=494, 469.755pt x 325.215pt>
+<output/figures/exp3-conspiracy-items.pdf, id=500, 469.755pt x 325.215pt>
 File: output/figures/exp3-conspiracy-items.pdf Graphic file (type pdf)
 <use output/figures/exp3-conspiracy-items.pdf>
-Package pdftex.def Info: output/figures/exp3-conspiracy-items.pdf  used on input line 1457.
+Package pdftex.def Info: output/figures/exp3-conspiracy-items.pdf  used on input line 1478.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-[41] [42] [43] [44] [45] [46] [47]
-<output/figures/exp3-conditional-acceptance.pdf, id=544, 469.755pt x 325.215pt>
+
+
+[43]
+
+[44] [45 <./output/figures/exp3-questions-knowledge.pdf>] [46] [47] [48] [49] [50] [51]
+<output/figures/exp3-conditional-acceptance.pdf, id=572, 469.755pt x 325.215pt>
 File: output/figures/exp3-conditional-acceptance.pdf Graphic file (type pdf)
 <use output/figures/exp3-conditional-acceptance.pdf>
-Package pdftex.def Info: output/figures/exp3-conditional-acceptance.pdf  used on input line 1674.
+Package pdftex.def Info: output/figures/exp3-conditional-acceptance.pdf  used on input line 1695.
 (pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
-<output/figures/exp3-plot-overview.pdf, id=545, 867.24pt x 867.24pt>
+<output/figures/exp3-plot-overview.pdf, id=573, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1682.
+Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1703.
 (pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
 
 
-[48]
+[52]
 
-[49 <./output/figures/exp3-questions-knowledge.pdf>]
+[53 <./output/figures/exp3-questions-acceptance.pdf>]
 
-[50 <./output/figures/exp3-questions-acceptance.pdf>]
+[54 <./output/figures/exp3-trust-scientists.pdf>]
 
-[51 <./output/figures/exp3-trust-scientists.pdf>]
+[55 <./output/figures/exp3-conspiracy-distribution.pdf>]
 
-[52 <./output/figures/exp3-conspiracy-distribution.pdf>]
+[56 <./output/figures/exp3-conspiracy-items.pdf>]
 
-[53 <./output/figures/exp3-conspiracy-items.pdf>]
+[57 <./output/figures/exp3-conditional-acceptance.pdf>]
 
-[54 <./output/figures/exp3-conditional-acceptance.pdf>]
+[58 <./output/figures/exp3-plot-overview.pdf>]
 
-[55 <./output/figures/exp3-plot-overview.pdf>] (./paper.aux)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 1709.
+
+
+Overfull \hbox (55.89326pt too wide) in paragraph at lines 1754--1755
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bedaquiline 
+ []
+
+
+Overfull \hbox (468.03534pt too wide) in paragraph at lines 1754--1755
+\T1/lmr/m/n/8 journals.onlinelibrary.wiley.com/doi/full/10.1111/jam.14478#:~:text=The%20drug%20bedaquiline%20was%20approved,%2DTB%20and%20XDR%2DTB|  
+ []
+
+
+Overfull \hbox (207.48604pt too wide) in paragraph at lines 1755--1756
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Large_Hadron_Collider#Findings_and_discoveries 
+ []
+
+
+Overfull \hbox (79.8382pt too wide) in paragraph at lines 1755--1756
+\T1/lmr/m/n/8 https://home.cern/news/news/accelerators/first- 
+ []
+
+
+Overfull \hbox (39.7221pt too wide) in paragraph at lines 1756--1757
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Kepler- 
+ []
+
+
+Overfull \hbox (30.36688pt too wide) in paragraph at lines 1756--1757
+\T1/lmr/m/n/8 https://science.nasa.gov/exoplanet- 
+ []
+
+
+Overfull \hbox (113.11198pt too wide) in paragraph at lines 1757--1758
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bomb_pulse#Applications 
+ []
+
+
+Overfull \hbox (62.43724pt too wide) in paragraph at lines 1757--1758
+\T1/lmr/m/n/8 https://ora.ox.ac.uk/objects/uuid:6c040460- 
+ []
+
+
+Overfull \hbox (102.77245pt too wide) in paragraph at lines 1758--1759
+\T1/lmr/m/n/8 https://onlinelibrary.wiley.com/doi/10.1002/cne.24040; 
+ []
+
+
+Overfull \hbox (89.12698pt too wide) in paragraph at lines 1758--1759
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Glia#Total_number|  
+ []
+
+
+Overfull \hbox (153.20612pt too wide) in paragraph at lines 1760--1761
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Gravity#Tests_of_general_relativity 
+ []
+
+
+Overfull \hbox (82.8043pt too wide) in paragraph at lines 1760--1761
+\T1/lmr/m/n/8 https://link.springer.com/article/10.1007/s11434- 
+ []
+
+
+Overfull \hbox (100.01013pt too wide) in paragraph at lines 1761--1762
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Higgs_boson#cite_ref- 
+ []
+
+
+Overfull \hbox (52.42789pt too wide) in paragraph at lines 1761--1762
+\T1/lmr/m/n/8 https://home.cern/science/physics/higgs- 
+ []
+
+
+Overfull \hbox (89.15677pt too wide) in paragraph at lines 1762--1763
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Oldest_dated_rocks 
+ []
+
+
+Overfull \hbox (93.88704pt too wide) in paragraph at lines 1762--1763
+\T1/lmr/m/n/8 https://www.pnas.org/doi/10.1073/pnas.1904573117|  
+ []
+
+
+Overfull \hbox (86.70244pt too wide) in paragraph at lines 1763--1764
+\T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Cloning#cite_note- 
+ []
+
+
+Overfull \hbox (182.3975pt too wide) in paragraph at lines 1763--1764
+\T1/lmr/m/n/8 https://academic.oup.com/biolreprod/article/83/6/929/2530195?login=false|  
+ []
+
+
+Overfull \hbox (5.58092pt too wide) in paragraph at lines 1764--1765
+\T1/lmr/m/n/8 https://phys.org/news/2024- 
+ []
+
+
+Overfull \hbox (106.83717pt too wide) in paragraph at lines 1764--1765
+\T1/lmr/m/n/8 https://www.sci.news/othersciences/geoscience/earliest- 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1766 \end{longtable}
+                       [59
+
+] [60]
+
+LaTeX Warning: Reference `fig:exp4-plot' on page 61 undefined on input line 1775.
+
+
+
+[61]
+Overfull \hbox (405.15477pt too wide) in paragraph at lines 1867--1894
+ [] 
+ []
+
+
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1906--1925
+ [][] 
+ []
+
+<output/figures/exp4-questions-knowledge.pdf, id=674, 469.755pt x 325.215pt>
+File: output/figures/exp4-questions-knowledge.pdf Graphic file (type pdf)
+<use output/figures/exp4-questions-knowledge.pdf>
+Package pdftex.def Info: output/figures/exp4-questions-knowledge.pdf  used on input line 1935.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+
+
+[62]
+
+[63]
+<output/figures/exp4-questions-acceptance.pdf, id=696, 469.755pt x 325.215pt>
+File: output/figures/exp4-questions-acceptance.pdf Graphic file (type pdf)
+<use output/figures/exp4-questions-acceptance.pdf>
+Package pdftex.def Info: output/figures/exp4-questions-acceptance.pdf  used on input line 1943.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+<output/figures/exp4-trust-scientists.pdf, id=697, 469.755pt x 325.215pt>
+File: output/figures/exp4-trust-scientists.pdf Graphic file (type pdf)
+<use output/figures/exp4-trust-scientists.pdf>
+Package pdftex.def Info: output/figures/exp4-trust-scientists.pdf  used on input line 1953.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+<output/figures/exp4-conspiracy-distribution.pdf, id=698, 469.755pt x 325.215pt>
+File: output/figures/exp4-conspiracy-distribution.pdf Graphic file (type pdf)
+<use output/figures/exp4-conspiracy-distribution.pdf>
+Package pdftex.def Info: output/figures/exp4-conspiracy-distribution.pdf  used on input line 1963.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+<output/figures/exp4-conspiracy-items.pdf, id=699, 469.755pt x 325.215pt>
+File: output/figures/exp4-conspiracy-items.pdf Graphic file (type pdf)
+<use output/figures/exp4-conspiracy-items.pdf>
+Package pdftex.def Info: output/figures/exp4-conspiracy-items.pdf  used on input line 1973.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2223 1
+        57 & orbit & Sure, it's a prediction and one that doesn't sound very... [64 <./output/figures/exp4-questions-knowledge.pdf>] [65] [66] [67] [68] [69] [70] [71] [72]
+pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2342 \end{longtable}
+                       [73]
+pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2465 \end{longtable}
+                       [74] [75] [76] [77]
+<output/figures/exp4-conditional-acceptance.pdf, id=776, 469.755pt x 325.215pt>
+File: output/figures/exp4-conditional-acceptance.pdf Graphic file (type pdf)
+<use output/figures/exp4-conditional-acceptance.pdf>
+Package pdftex.def Info: output/figures/exp4-conditional-acceptance.pdf  used on input line 2473.
+(pdftex.def)             Requested size: 433.62059pt x 300.19887pt.
+<output/figures/exp4-plot-overview.pdf, id=777, 867.24pt x 867.24pt>
+File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
+<use output/figures/exp4-plot-overview.pdf>
+Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 2481.
+(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+
+
+[78]
+
+[79 <./output/figures/exp4-questions-acceptance.pdf>]
+
+[80 <./output/figures/exp4-trust-scientists.pdf>]
+
+[81 <./output/figures/exp4-conspiracy-distribution.pdf>]
+
+[82 <./output/figures/exp4-conspiracy-items.pdf>]
+
+[83 <./output/figures/exp4-conditional-acceptance.pdf>]
+
+[84 <./output/figures/exp4-plot-overview.pdf>] (./paper.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
@@ -952,18 +1156,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16537 strings out of 475544
- 272964 string characters out of 5777023
- 1983905 words of memory out of 5000000
- 38664 multiletter control sequences out of 15000+600000
- 644090 words of font info for 112 fonts, out of 8000000 for 9000
+ 16723 strings out of 475539
+ 277759 string characters out of 5776923
+ 2029957 words of memory out of 5000000
+ 38783 multiletter control sequences out of 15000+600000
+ 650716 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,11n,93p,3188b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (55 pages, 756082 bytes).
+</Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on paper.pdf (84 pages, 910496 bytes).
 PDF statistics:
- 975 PDF objects out of 1000 (max. 8388607)
- 841 compressed objects within 9 object streams
- 224 named destinations out of 1000 (max. 500000)
- 785 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1258 PDF objects out of 1440 (max. 8388607)
+ 1078 compressed objects within 11 object streams
+ 292 named destinations out of 1000 (max. 500000)
+ 948 words of extra memory for PDF output out of 10000 (max. 10000000)
 
