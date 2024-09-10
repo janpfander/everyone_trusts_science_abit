@@ -331,11 +331,11 @@ d_long <- d_wide %>%
   mutate(acceptance = ifelse(is.na(acceptance_confirmation), acceptance_initial, acceptance_confirmation))
 ```
 
-Add knowledge and acceptance by-participant averages to wide format data.
+Add knowledge and acceptance by-participant averages to wide format data. Also add sum of link clicks. 
 
 
 ```r
-# make a version with averages per participant
+# make a version with averages per participant (and sum of link clicks)
 d_avg <- d_long %>% 
   # make numeric versions
   mutate(acceptance_num = ifelse(acceptance == "Yes", 1, 0), 
@@ -346,7 +346,8 @@ d_avg <- d_long %>%
   # calculate by-participant averages
   summarize(avg_acceptance  = sum(acceptance_num)/n(), 
             avg_knowledge = sum(knowledge_num)/n(),
-            avg_acceptance_initial  = sum(acceptance_initial_num)/n()
+            avg_acceptance_initial  = sum(acceptance_initial_num)/n(), 
+            sum_link_clicks = sum(link_clicks)
   )
 
 # make data frame with average participant data and wide format
@@ -435,14 +436,7 @@ justifications <- read_csv("data/justifications_coded.csv")
 ```r
 # Research questions
 justifications <- justifications %>%
-  mutate(category = case_when(final_coding == 1 ~ "No justification",
-                              final_coding == 2 ~  "Mistake",
-                              final_coding == 3 ~ "Not convinced",
-                              final_coding == 4 ~ "Personal convictions",
-                              final_coding == 5 ~ "Religious Beliefs",
-                              TRUE ~ NA_character_
-                              )
-         )
+  mutate(category = final_coding)
 
 write_csv(justifications, "data/justifications_clean.csv")
 ```

@@ -129,13 +129,16 @@ results_list_acceptance <- map(variables, ~ run_regression(standardized_variable
 # as data frame/output table
 results <- bind_rows(list(results_list_knowledge, results_list_acceptance))
 results %>% 
-  filter(term != "intercept") %>%
+filter(term != "intercept") %>%
+    mutate_if(is.numeric, round, digits = 2) %>% 
+  # make a combined variable of estimate and p.value
+  mutate(estimate = paste0(estimate, " (p", p.value, ")")) %>% 
+  select(outcome, term, estimate) %>% 
   pivot_wider(names_from = term, 
               values_from = estimate) %>% 
   rename(`Correlation with knowledge` = avg_knowledge, 
          `Correlation with acceptance` = avg_acceptance, 
          ) %>% 
-  mutate_if(is.numeric, round, digits = 2) %>% 
   mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
                              outcome == "CMQ_avg" ~ "CMQ", 
                              outcome == "SICBS" ~ "SICBS", 

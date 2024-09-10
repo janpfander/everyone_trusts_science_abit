@@ -24,7 +24,9 @@ We had the following research questions:
 
 ## Participants
 
-We recruited 200 participants from the US via prolific, of which two failed our attention check, resulting in a final sample of `r exp4_descriptives$n_subj` participants (`r exp4_descriptives$gender$female$n` female, `r exp4_descriptives$gender$male$n` male; $age_\text{mean}$: `r exp4_descriptives$age$mean`, $age_\text{sd}$: `r exp4_descriptives$age$sd`, $age_\text{median}$: `r exp4_descriptives$age$median`). Since we did not have any prior assumptions on effect sizes and our analyses were descriptive, we did not do a power analysis.
+We recruited a sample of participants holing vaccine-skeptic beliefs. Prolific Academic allows to filter out participants who have given specific answers to certain questions. We selected three available questions: 1. "Participants were asked the following question: Please describe your attitudes towards the COVID-19 (Coronavirus) vaccines: [For (I feel positively about the vaccines); Against (I feel negatively about the vaccines); Neutral (I don't have strong opinions either way); Prefer not to say"]. We selected particpants who answered "Against". 2. "Participants were asked the following question: Have you received a coronavirus (COVID-19) vaccination? [Yes (at least one dose); No; Prefer not to answer]". We select only people who answered "No". 3. "Participants were asked the following question: On a scale from 1-7, please rate to what extent you agree with the following statement: I believe that scheduled immunizations are safe for children. [1 (TOTALLY DISAGREEE); 2 (DISAGREE); 3 (SOMEWHAT DISAGREE); 4 (NEITHER AGREE NOR DISAGREE); 5 (SOMEWHAT AGREE); 6 (AGREE); 7 (TOTALLY AGREE); Rather not say"]. We select only people who answered "1", "2", or "3". 
+
+Based on these criteria, we recruited 200 participants from the US via prolific, of which two failed our attention check, resulting in a final sample of `r exp4_descriptives$n_subj` participants (`r exp4_descriptives$gender$female$n` female, `r exp4_descriptives$gender$male$n` male; $age_\text{mean}$: `r exp4_descriptives$age$mean`, $age_\text{sd}$: `r exp4_descriptives$age$sd`, $age_\text{median}$: `r exp4_descriptives$age$median`). Since we did not have any prior assumptions on effect sizes and our analyses were descriptive, we did not do a power analysis.
 
 ## Procedure
 
@@ -152,12 +154,15 @@ results_list_acceptance <- map(variables, ~ run_regression(standardized_variable
 results <- bind_rows(list(results_list_knowledge, results_list_acceptance))
 results %>% 
   filter(term != "intercept") %>%
+  mutate_if(is.numeric, round, digits = 2) %>% 
+  # make a combined variable of estimate and p.value
+  mutate(estimate = paste0(estimate, " (p", p.value, ")")) %>% 
+  select(outcome, term, estimate) %>% 
   pivot_wider(names_from = term, 
               values_from = estimate) %>% 
   rename(`Correlation with knowledge` = avg_knowledge, 
          `Correlation with acceptance` = avg_acceptance, 
   ) %>% 
-  mutate_if(is.numeric, round, digits = 2) %>% 
   mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
                              outcome == "CMQ_avg" ~ "CMQ", 
                              outcome == "SICBS" ~ "SICBS", 
