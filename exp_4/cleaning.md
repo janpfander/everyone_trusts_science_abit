@@ -140,8 +140,6 @@ There are 2 failed attention checks.
 d <- d %>% filter(attention_check == "Never 1")
 ```
 
-## Add demographics
-
 ## Recode demographics
 
 
@@ -160,6 +158,20 @@ d <- d %>%
                             .default = NA)
          ) %>% 
   rename(age = Age)
+```
+
+## Add survey duration
+
+
+```r
+d <- d %>%
+  mutate(
+    # Parse the datetime
+    StartDate = ymd_hms(StartDate, tz = "UTC"), 
+    EndDate = ymd_hms(EndDate, tz = "UTC"),
+    # Duration in minutes
+    duration_mins = as.numeric(difftime(EndDate, StartDate, units = "mins"))
+    )
 ```
 
 ## Clean and re-shape data
@@ -235,7 +247,8 @@ names(d)
 ## [123] "Ethnicity simplified"          "Country of birth"             
 ## [125] "Country of residence"          "Nationality"                  
 ## [127] "Language"                      "Student status"               
-## [129] "Employment status"             "gender"
+## [129] "Employment status"             "gender"                       
+## [131] "duration_mins"
 ```
 
 Clean wide format data.

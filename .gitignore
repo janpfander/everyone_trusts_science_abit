@@ -33,6 +33,7 @@ author_info*
 *.rtf
 
 # ignore folders
+output/
 liquin*/
 lou*/
 no_git*/
