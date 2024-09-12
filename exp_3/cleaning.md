@@ -130,8 +130,6 @@ There are % failed attention checks.
 d <- d %>% filter(attention_check == "Never 1")
 ```
 
-## Add demographics
-
 ## Recode demographics
 
 
@@ -150,6 +148,20 @@ d <- d %>%
                             .default = NA)
          ) %>% 
   rename(age = Age)
+```
+
+## Add survey duration
+
+
+```r
+d <- d %>%
+  mutate(
+    # Parse the datetime
+    StartDate = ymd_hms(StartDate, tz = "UTC"), 
+    EndDate = ymd_hms(EndDate, tz = "UTC"),
+    # Duration in minutes
+    duration_mins = as.numeric(difftime(EndDate, StartDate, units = "mins"))
+    )
 ```
 
 ## Clean and re-shape data
@@ -215,7 +227,8 @@ names(d)
 ## [103] "Ethnicity simplified"          "Country of birth"             
 ## [105] "Country of residence"          "Nationality"                  
 ## [107] "Language"                      "Student status"               
-## [109] "Employment status"             "gender"
+## [109] "Employment status"             "gender"                       
+## [111] "duration_mins"
 ```
 
 Clean wide format data.
@@ -317,9 +330,89 @@ d_avg <- d_long %>%
             avg_acceptance_initial  = sum(acceptance_initial_num)/n()
   )
 
-# make data frame with average particpant data and wide format
+# make data frame with average participant data and wide format
 d_wide <- left_join(d_wide, d_avg, 
                by = "id")
+```
+
+## Check NAs
+
+
+```r
+d_wide %>% 
+  summarize(across(c("wgm_scientists", "wgm_sciencegeneral", "pew", "reason_agreement", "BCTI_avg", "CMQ_avg", "SICBS", "avg_acceptance", "avg_knowledge"), 
+                   ~sum(is.na(.x))
+                   )
+            )
+```
+
+```
+## # A tibble: 1 × 9
+##   wgm_scientists wgm_sciencegeneral   pew reason_agreement BCTI_avg CMQ_avg
+##            <int>              <int> <int>            <int>    <int>   <int>
+## 1             60                 60    60               78       62      62
+## # ℹ 3 more variables: SICBS <int>, avg_acceptance <int>, avg_knowledge <int>
+```
+
+It's technically not possible to have NA's for trust in science and conspiracy questions, because we used forced responses on them. Checking the qualtrics, we know that we accidentally randomized people into two of three outcome measures: trust in science, conspiracy or reasons for accepting consensus. This leaves us with reduced sample sizes for all analyses concerning these outcomes (XX for trust in science question, XX for conspiracy measures, XX for accepting consensus). 
+
+
+```r
+d_wide %>% 
+  summarize(across(c("wgm_scientists", "wgm_sciencegeneral", "pew", "reason_agreement", "BCTI_avg", "CMQ_avg", "SICBS"), 
+                   ~sum(!is.na(.x))
+                   )
+            ) %>% 
+  pivot_longer(everything(), 
+               names_to = "outcome", 
+               values_to = "n_valid")
+```
+
+```
+## # A tibble: 7 × 2
+##   outcome            n_valid
+##   <chr>                <int>
+## 1 wgm_scientists         140
+## 2 wgm_sciencegeneral     140
+## 3 pew                    140
+## 4 reason_agreement       122
+## 5 BCTI_avg               138
+## 6 CMQ_avg                138
+## 7 SICBS                  138
+```
+
+## Clean justifications
+
+
+
+```r
+justifications <- read_csv("data/justifications_coded.csv")
+```
+
+```
+## Rows: 74 Columns: 6
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (2): Subject, Answer
+## dbl (4): id, Type, blind_coding, final_coding
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+```
+
+```r
+# Research questions
+justifications <- justifications %>%
+  mutate(category = case_when(final_coding == 1 ~ "No justification",
+                              final_coding == 2 ~  "Mistake",
+                              final_coding == 3 ~ "Not convinced",
+                              final_coding == 4 ~ "Personal convictions",
+                              final_coding == 5 ~ "Religious Beliefs",
+                              TRUE ~ NA_character_
+                              )
+         )
+
+write_csv(justifications, "data/justifications_clean.csv")
 ```
 
 

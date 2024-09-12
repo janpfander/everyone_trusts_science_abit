@@ -43,8 +43,6 @@ There are % failed attention checks.
 d <- d %>% filter(attention_check == "Never 1")
 ```
 
-## Add demographics
-
 ## Recode demographics
 
 ```{r, message=FALSE}
@@ -61,6 +59,19 @@ d <- d %>%
                             .default = NA)
          ) %>% 
   rename(age = Age)
+```
+
+## Add survey duration
+
+```{r}
+d <- d %>%
+  mutate(
+    # Parse the datetime
+    StartDate = ymd_hms(StartDate, tz = "UTC"), 
+    EndDate = ymd_hms(EndDate, tz = "UTC"),
+    # Duration in minutes
+    duration_mins = as.numeric(difftime(EndDate, StartDate, units = "mins"))
+    )
 ```
 
 ## Clean and re-shape data

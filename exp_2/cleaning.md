@@ -1,5 +1,5 @@
 ---
-title: "Data cleaning Study 1"
+title: "Data cleaning Study 2"
 output: 
   html_document: 
     keep_md: yes
@@ -44,16 +44,19 @@ names(d)
 ## [28] "lasers_know"           "lasers_accept"         "orbit_know"           
 ## [31] "orbit_accept"          "diamonds_know"         "diamonds_accept"      
 ## [34] "speed_know"            "speed_accept"          "salt_know"            
-## [37] "salt_accept"           "trees_know"            "trees_accept"         
-## [40] "water_know"            "water_accept"          "Q1...42"              
-## [43] "CMQ_1"                 "CMQ_2"                 "CMQ_3"                
-## [46] "CMQ_4"                 "CMQ_5"                 "SICBS"                
-## [49] "BCTI_intro"            "BCTI_apollo"           "BCTI_cancer"          
-## [52] "BCTI_viruses"          "BCTI_climatechange"    "BCTI_flatearth"       
-## [55] "BCTI_autism"           "BCTI_polio"            "BCTI_alien"           
-## [58] "BCTI_hydorxychlor"     "BCTI_evolution"        "wgm_scientists"       
-## [61] "wgm_sciencegeneral"    "pew"                   "Q1...63"              
-## [64] "education"             "comments"              "PROLIFIC_PID"
+## [37] "salt_accept"           "water_know"            "water_accept"         
+## [40] "electrons"             "antibiotics"           "continents"           
+## [43] "sex"                   "lasers"                "orbit"                
+## [46] "diamonds"              "speed"                 "salt"                 
+## [49] "water"                 "Q1...50"               "CMQ_1"                
+## [52] "CMQ_2"                 "CMQ_3"                 "CMQ_4"                
+## [55] "CMQ_5"                 "SICBS"                 "BCTI_intro"           
+## [58] "BCTI_apollo"           "BCTI_cancer"           "BCTI_viruses"         
+## [61] "BCTI_climatechange"    "BCTI_flatearth"        "BCTI_autism"          
+## [64] "BCTI_polio"            "BCTI_alien"            "BCTI_hydorxychlor"    
+## [67] "BCTI_evolution"        "wgm_scientists"        "wgm_sciencegeneral"   
+## [70] "pew"                   "Q1...71"               "education"            
+## [73] "comments"              "PROLIFIC_PID"
 ```
 
 
@@ -63,17 +66,17 @@ head(d) # you can also use View(d)
 ```
 
 ```
-## # A tibble: 6 × 66
+## # A tibble: 6 × 74
 ##   StartDate    EndDate Status IPAddress Progress Duration (in seconds…¹ Finished
 ##   <chr>        <chr>   <chr>  <chr>     <chr>    <chr>                  <chr>   
 ## 1 "Start Date" "End D… "Resp… "IP Addr… "Progre… "Duration (in seconds… "Finish…
 ## 2 "{\"ImportI… "{\"Im… "{\"I… "{\"Impo… "{\"Imp… "{\"ImportId\":\"dura… "{\"Imp…
-## 3 "2024-03-05… "2024-… "IP A… "75.82.1… "100"    "139"                  "True"  
-## 4 "2024-03-05… "2024-… "IP A… "68.252.… "100"    "152"                  "True"  
-## 5 "2024-03-05… "2024-… "IP A… "204.15.… "100"    "172"                  "True"  
-## 6 "2024-03-05… "2024-… "IP A… "98.233.… "100"    "141"                  "True"  
+## 3 "2024-04-03… "2024-… "IP A… "38.178.… "100"    "229"                  "True"  
+## 4 "2024-04-03… "2024-… "IP A… "173.91.… "100"    "163"                  "True"  
+## 5 "2024-04-03… "2024-… "IP A… "168.220… "100"    "330"                  "True"  
+## 6 "2024-04-03… "2024-… "IP A… "24.127.… "100"    "267"                  "True"  
 ## # ℹ abbreviated name: ¹​`Duration (in seconds)`
-## # ℹ 59 more variables: RecordedDate <chr>, ResponseId <chr>,
+## # ℹ 67 more variables: RecordedDate <chr>, ResponseId <chr>,
 ## #   RecipientLastName <chr>, RecipientFirstName <chr>, RecipientEmail <chr>,
 ## #   ExternalReference <chr>, LocationLatitude <chr>, LocationLongitude <chr>,
 ## #   DistributionChannel <chr>, UserLanguage <chr>, consent <chr>,
@@ -96,11 +99,11 @@ table(d$attention_check)
 
 ```
 ## 
-##       3       4       5 Never 1 Often 6 
-##       1       1       3     194       1
+##       2       3       4       5 Never 1 
+##       5       2       1       3     190
 ```
 
-There are 6 failed attention checks. 
+There are 11 failed attention checks. 
 
 
 ```r
@@ -144,7 +147,6 @@ d <- d %>%
     )
 ```
 
-
 ## Clean and re-shape data
 
 
@@ -172,32 +174,36 @@ names(d)
 ## [31] "orbit_accept"                  "diamonds_know"                
 ## [33] "diamonds_accept"               "speed_know"                   
 ## [35] "speed_accept"                  "salt_know"                    
-## [37] "salt_accept"                   "trees_know"                   
-## [39] "trees_accept"                  "water_know"                   
-## [41] "water_accept"                  "Q1...42"                      
-## [43] "CMQ_1"                         "CMQ_2"                        
-## [45] "CMQ_3"                         "CMQ_4"                        
-## [47] "CMQ_5"                         "SICBS"                        
-## [49] "BCTI_intro"                    "BCTI_apollo"                  
-## [51] "BCTI_cancer"                   "BCTI_viruses"                 
-## [53] "BCTI_climatechange"            "BCTI_flatearth"               
-## [55] "BCTI_autism"                   "BCTI_polio"                   
-## [57] "BCTI_alien"                    "BCTI_hydorxychlor"            
-## [59] "BCTI_evolution"                "wgm_scientists"               
-## [61] "wgm_sciencegeneral"            "pew"                          
-## [63] "Q1...63"                       "education"                    
-## [65] "comments"                      "PROLIFIC_PID"                 
-## [67] "Submission id"                 "Status.y"                     
-## [69] "Custom study tncs accepted at" "Started at"                   
-## [71] "Completed at"                  "Reviewed at"                  
-## [73] "Archived at"                   "Time taken"                   
-## [75] "Completion code"               "Total approvals"              
-## [77] "age"                           "Sex"                          
-## [79] "Ethnicity simplified"          "Country of birth"             
-## [81] "Country of residence"          "Nationality"                  
-## [83] "Language"                      "Student status"               
-## [85] "Employment status"             "gender"                       
-## [87] "duration_mins"
+## [37] "salt_accept"                   "water_know"                   
+## [39] "water_accept"                  "electrons"                    
+## [41] "antibiotics"                   "continents"                   
+## [43] "sex"                           "lasers"                       
+## [45] "orbit"                         "diamonds"                     
+## [47] "speed"                         "salt"                         
+## [49] "water"                         "Q1...50"                      
+## [51] "CMQ_1"                         "CMQ_2"                        
+## [53] "CMQ_3"                         "CMQ_4"                        
+## [55] "CMQ_5"                         "SICBS"                        
+## [57] "BCTI_intro"                    "BCTI_apollo"                  
+## [59] "BCTI_cancer"                   "BCTI_viruses"                 
+## [61] "BCTI_climatechange"            "BCTI_flatearth"               
+## [63] "BCTI_autism"                   "BCTI_polio"                   
+## [65] "BCTI_alien"                    "BCTI_hydorxychlor"            
+## [67] "BCTI_evolution"                "wgm_scientists"               
+## [69] "wgm_sciencegeneral"            "pew"                          
+## [71] "Q1...71"                       "education"                    
+## [73] "comments"                      "PROLIFIC_PID"                 
+## [75] "Submission id"                 "Status.y"                     
+## [77] "Custom study tncs accepted at" "Started at"                   
+## [79] "Completed at"                  "Reviewed at"                  
+## [81] "Archived at"                   "Time taken"                   
+## [83] "Completion code"               "Total approvals"              
+## [85] "age"                           "Sex"                          
+## [87] "Ethnicity simplified"          "Country of birth"             
+## [89] "Country of residence"          "Nationality"                  
+## [91] "Language"                      "Student status"               
+## [93] "Employment status"             "gender"                       
+## [95] "duration_mins"
 ```
 
 Clean wide format data.
@@ -279,6 +285,67 @@ d_wide <- left_join(d_wide %>%
                  select(-c(ends_with("know"), ends_with("accept"))), 
                d_avg, 
                by = "id")
+```
+
+## Justifications
+
+### Extract justifications
+
+
+```r
+# questions <- c("electrons", "antibiotics", "continents", "sex", "lasers", "orbit", "diamonds", "speed", "salt", "water")
+# 
+# justifications <- exp2_wide %>% 
+#   select(id, all_of(questions)) %>% 
+#   pivot_longer(all_of(questions), 
+#                names_to = "question", 
+#                values_to = "answer") %>% 
+#   drop_na(answer) %>% 
+#   arrange(id)
+# 
+# write_csv(justifications, "data/justifications.csv")
+```
+
+### Clean justifications
+
+Note that we had used the following coding scheme (where 4 would be the top-category for 5 and 6, i.e. 4 has never been coded):
+
+1	- no justification provided / no clear justification	
+2	- mistake, they actually accept the consensus	
+3	- not convinced by the explanation provided	
+4	- motivated rejection of the belief	
+5	-- do to personal convictions	
+6	-- for religious reasons	
+
+
+```r
+justifications <- read_csv("data/justifications_coded.csv")
+```
+
+```
+## Rows: 35 Columns: 4
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (2): question, answer
+## dbl (2): id, category
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+```
+
+```r
+# Research questions
+justifications <- justifications %>%
+  mutate(category = case_when(category == 1 ~ "No justification",
+                              category  == 2 ~  "Mistake",
+                              category  == 3 ~ "Not convinced",
+                              category  == 5 ~ "Personal convictions",
+                              category  == 6 ~ "Religious Beliefs",
+                              TRUE ~ NA_character_
+  )
+  )
+
+write_csv(justifications, "data/justifications_clean.csv")
 ```
 
 

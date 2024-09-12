@@ -63,6 +63,19 @@ d <- d %>%
   rename(age = Age)
 ```
 
+## Add survey duration
+
+```{r}
+d <- d %>%
+  mutate(
+    # Parse the datetime
+    StartDate = ymd_hms(StartDate, tz = "UTC"), 
+    EndDate = ymd_hms(EndDate, tz = "UTC"),
+    # Duration in minutes
+    duration_mins = as.numeric(difftime(EndDate, StartDate, units = "mins"))
+    )
+```
+
 ## Clean and re-shape data
 
 ```{r}
