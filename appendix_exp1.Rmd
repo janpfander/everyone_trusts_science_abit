@@ -31,43 +31,62 @@ knitr::include_graphics("./figures/study1_question_example.png")
 
 ### Conspiracy scales
 
-Beside Belief in Conspiracy Theory Inventory (BCTI) by @pennycookOverconfidentlyConspiratorialConspiracy2022 which report in the main study, we also assessed two other consipiracy thinking measures: 
+In addition to the Belief in Conspiracy Theory Inventory (BCTI) by @pennycookOverconfidentlyConspiratorialConspiracy2022 which report in the main study, we also assessed two other consipiracy thinking measures: The conspiracy mentality questionnaire (CMQ) by @bruderMeasuringIndividualDifferences2013 and the Single Item Conspiracy Beliefs Scale (SICBS) by @lantianMeasuringBeliefConspiracy2016 (Table \@ref(tab:overview-conspiracy-measures)).  
 
-1. The conspiracy mentality questionnaire (CMQ) by @bruderMeasuringIndividualDifferences2013:
-I think that . . .
+```{r overview-conspiracy-measures}
+# Create the data for the table
+conspiracy_measures <- data.frame(
+  Measure = c(
+    "Belief in Conspiracy Theory Inventory (BCTI)", 
+    "Conspiracy Mentality Questionnaire (CMQ)", 
+    "", "", "", "", "",
+    "Single Item Conspiracy Beliefs Scale (SICBS)"
+  ),
+  Description = c(
+    "By Pennycook et al., 2022, presented in the main article.", 
+    "By Bruder et al., 2013. Respondents are asked how much they agree with the following statements:", 
+    "- Many important things happen in the world, which the public is never informed about.",
+    "- Politicians usually do not tell us the true motives for their decisions.",
+    "- Government agencies closely monitor all citizens.",
+    "- Events which seem unrelated are often the result of secret activities.",
+    "- There are secret organizations that greatly influence political decisions.",
+    "By Lantian et al., 2016. The item is: 'I think that the official version of events given by the authorities very often hides the truth.'"
+  ),
+  Scale = c(
+    "1 - 9 (1 = Completely false, 5 = Unsure, 9 = Completely true)", 
+    "0% - 100% (0 = certainly not, 100 = certain)",
+    "", "", "", "", "",
+    "1 - 9 (1 = Completely false, 5 = Unsure, 9 = Completely true)"
+  )
+)
 
--   ... many very important things happen in the world, which the public is never informed about. - politicians usually do not tell us the true motives for their decisions.
--   ... government agencies closely monitor all citizens.
--   ... events which superficially seem to lack a connection are often the result of secret activities.
--   ... there are secret organizations that greatly influence political decisions.
+# # Create the table
+kbl(conspiracy_measures, booktabs = T, longtable = T,
+    caption = "Conspiracy measures", full_width = T) %>%
+  kable_styling(font_size = 8) %>% 
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "10em")
 
-[0% - 100%; 0 = certainly not, 100 = certain]
-
-2.  The Single Item Conspiracy Beliefs Scale (SICBS) by @lantianMeasuringBeliefConspiracy2016 :
-
--   I think that the official version of the events given by the authorities very often hides the truth. [1-9; 1 = Completely false, 5 = Unsure, 9 = Completely true]
-
-### Trust in science
-
-We rely on three items
-
-1. How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
-
-2. In general, would you say that you trust science a lot, some, not much, or not at all? [1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot]
-
-3. How much confidence do you have in scientists to act in the best interests of the public? [1-5; 1 = No confidence at all, 5 = A great deal of confidence]
+# Use apa_table to format the table
+# apa_table(
+#   conspiracy_measures,
+#   caption = "Overview of Conspiracy Thinking Measures",
+#   align = c("m{4cm}", "m{10cm}", "m{4cm}")
+# )
+```
 
 ## Results
 
 Regarding RQ1 and RQ2, participants answered on average `r exp1_descriptives$means$knowledge_mean` (sd = `r exp1_descriptives$means$knowledge_sd`) of the questions correctly, and accepted the scientific consensus on average for `r exp1_descriptives$means$acceptance_mean` (sd = `r exp1_descriptives$means$acceptance_sd`) of the questions.
 
-Fig. \@ref(fig:exp1-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In most cases (`r exp1_descriptives$conditional_acceptance$false$Yes$share`), participants readily accepted the scientific consensus after having given the wrong answer to a question. In very few cases (`r exp1_descriptives$conditional_acceptance$true$No$share`), participants who gave the correct response afterwards rejected the scientific consensus, thereby contradicting their own initial response. We believe this might have been due to inattention.
+In most cases (`r exp1_descriptives$conditional_acceptance$false$Yes$share`), participants readily accepted the scientific consensus after having given the wrong answer to a question. In very few cases (`r exp1_descriptives$conditional_acceptance$true$No$share`), participants who gave the correct response afterwards rejected the scientific consensus, thereby contradicting their own initial response. We believe this might have been due to inattention.
 
-For RQ3, we find a positive but small correlation between both science knowledge and trust in science (r = `r exp1_descriptives$cor_trust_knowledge$estimate`, p `r exp1_descriptives$cor_trust_knowledge$p.value`), and acceptance of scientific consensus and trust in science (r = `r exp1_descriptives$cor_trust_acceptance$estimate`, p `r exp1_descriptives$cor_trust_acceptance$p.value`). The more people are knowledgeable about science and the more they tend to accept the scientific consensus, the more they tend to trust science. These correlations are relatively weak, which might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp1-plot), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates.
+For RQ3, we find a positive but small correlation between both science knowledge and trust in science (r = `r exp1_descriptives$cor_trust_knowledge$estimate`, p `r exp1_descriptives$cor_trust_knowledge$p.value`), and acceptance of scientific consensus and trust in science (r = `r exp1_descriptives$cor_trust_acceptance$estimate`, p `r exp1_descriptives$cor_trust_acceptance$p.value`). The more people are knowledgeable about science and the more they tend to accept the scientific consensus, the more they tend to trust science. These correlations are relatively weak, which might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp1-plot-overview), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates.
 
 For RQ4, we find a negative correlation of similar magnitude between conspiracy thinking and science knowledge (r = `r exp1_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp1_descriptives$cor_conspiracy_knowledge$p.value`), and conspiracy thinking and acceptance of scientific consensus (r = `r exp1_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$cor_conspiracy_acceptance$p.value`).
 
-In Appendix \@ref(exp1), we show that these associations are robust when using alternative measures of trust and conspiracy thinking. Appendix \@ref(exp1) also includes more descriptive statistics, such as knowledge and acceptance by science questions.
+Below, we show that these associations are robust when using alternative measures of trust and conspiracy thinking. We also provide more descriptive statistics, such as knowledge and acceptance by science questions.
 
 Are trust in science and conspiracy thinking, respectively, associated with being more easily convinced of the scientific consensus? In our main analyses, we looked at correlations of acceptance across all observations. One possibility is that the associations between trust in science/conspiracy thinking and acceptance of scientific consensus are explained by science knowledge: People who give the right answer in the first place are more ready to accept the consensus, and trust in science/conspiracy thinking are mostly associated with this knowledge, but not with willingness to accept the consensus. To addressed this potential confound, in a non-preregistered analysis, we restricted our sample to cases where participants gave the wrong answer to the knowledge question. We then calculated the correlation between trust in science and average acceptance rate by participant. We find no statistically significant correlation of acceptance with neither conspiracy thinking (r = `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_conspiracy_acceptance$p.value`), nor with trust in science (r = `r exp1_descriptives$false_answers_cor_trust_acceptance$estimate`, p `r exp1_descriptives$false_answers_cor_trust_acceptance$p.value`).
 
@@ -173,151 +192,7 @@ modelsummary(results_list,
              caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") 
 ```
 
-## By-question variation
-
-```{r}
-# calculate share
-plot_data <- exp1_long %>% 
-  group_by(subject) %>% 
-  summarize(share_true = sum(knowledge == TRUE, na.rm = TRUE)/n(),
-            share_accepted = sum(acceptance == "Yes", na.rm = TRUE)/n()) 
-```
-
-### Knowledge
-
-(ref:exp1-questions-knowledge) Distribution of correct answers by question. 
-
-```{r exp1-questions-knowledge, fig.cap="(ref:exp1-questions-knowledge)"}
-# plot knowledge
-ggplot(plot_data, aes(x = reorder(subject, share_true), y = share_true)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Question", y = "Share of correct responses") +
-  coord_flip()
-```
-
-### Acceptance
-
-(ref:exp1-questions-acceptance) Distribution of consensus acceptance by question. 
-
-```{r exp1-questions-acceptance, fig.cap="(ref:exp1-questions-acceptance)"}
-# plot acceptance
-ggplot(plot_data, aes(x = reorder(subject, share_accepted), y = share_accepted)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Question", y = "Share of acceptance") +
-  coord_flip()
-```
-
-## Trust in science
-
-(ref:exp1-trust-scientists) Distribution of trust in scientists. 
-
-```{r exp1-trust-scientists, fig.cap="(ref:exp1-trust-scientists)"}
-# calculate share
-plot_data <- exp1_wide %>% 
-  group_by(wgm_scientists) %>% 
-  summarize(n = n()) %>% 
-  ungroup() %>% 
-  mutate(share = n/sum(n)) %>% 
-  rounded_numbers()
-
-# plot knowledge
-ggplot(plot_data, aes(x = wgm_scientists, y = share)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Trust in science", y = "Share of participants") +
-  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
-            position = position_dodge(width = 0.9),
-            vjust = -0.5, size = 3) 
-```
-
-## Conspiracy thinking
-
-### Distribution
-
-(ref:exp1-conspiracy-distribution) Distribution of conspiracy thinking. 
-
-```{r exp1-conspiracy-distribution, fig.cap="(ref:exp1-conspiracy-distribution)"}
-# plot knowledge
-ggplot(exp1_wide, aes(x = BCTI_avg)) +
-  geom_histogram() +
-  labs(x = "Average conspiracy thinking (BCTI)", y = "N")
-```
-
-### By-item variation
-
-(ref:exp1-conspiracy-items) Distribution of conspiracy thinking by item. 
-
-```{r exp1-conspiracy-items, fig.cap="(ref:exp1-conspiracy-items)"}
-BCTI_data <- exp1_long %>% 
-  # bring to long format
-  pivot_longer(cols = BCTI_apollo:BCTI_evolution, 
-               names_to = "BCTI_item", values_to = "score") %>% 
-  select(id, c(starts_with("BCTI"), score)) %>% 
-  group_by(BCTI_item) %>% 
-  summarize(avg_score = mean(score)) %>% 
-  ungroup()
-
-ggplot(BCTI_data, aes(x = reorder(BCTI_item, avg_score), y = avg_score)) +
-    geom_pointrange(aes(ymin = 1, ymax = avg_score),
-                  # Make the lines a little thicker and the dots a little bigger
-                  fatten = 2, size = 1) +
-  scale_y_continuous(limits = c(1, 9), breaks = seq(1, 9, 1)) +
-  labs(x = "Conspiracy item", y = "Average score") +
-  coord_cartesian(ylim = c(1, 9)) +
-  coord_flip()
-```
-
-## Open ended comments
-```{r}
-# levels(as.factor(exp1_wide$comments))
-table <- exp1_wide %>% 
-  drop_na(comments) %>% 
-  select(id, comments)
-
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus rejection") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "40em") 
-```
-
-## Additional plots
-
-(ref:exp1-conditional-acceptance) Acceptance rates of scientific consensus, based on whether the initial response to the knowledge question was false or true.
-
-```{r exp1-conditional-acceptance, fig.cap="(ref:exp1-conditional-acceptance)"}
-plot_data <- exp1_long %>% 
-  group_by(knowledge, acceptance) %>% 
-  count() %>% 
-  group_by(knowledge) %>% 
-  mutate (share = n/sum(n)) %>% 
-  mutate_if(is.numeric, round, digits = 3)
-
-absolute_numbers <- plot_data %>% 
-  group_by(knowledge) %>% 
-  summarise(n = sum(n))
-
-
-ggplot(plot_data, aes(x = knowledge, y = share, fill = acceptance)) +
-  geom_col(position = "dodge") +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
-            position = position_dodge(width = 0.9),
-            vjust = -0.5, size = 3) +
-  scale_fill_viridis_d(option = "cividis") +
-  labs(x = "Knowledge answer", fill = "Acceptance \nof consensus") +
-  plot_theme +
-  geom_bracket(data = absolute_numbers,
-               aes(xmin = as.numeric(factor(knowledge)) - 0.4, 
-                   xmax = as.numeric(factor(knowledge)) + 0.4, 
-                   y.position = 1.05, label =  paste0("n = ", n)),
-               inherit.aes = FALSE,
-               step.increase = 0)
-```
-
-(ref:exp1-plot-overview) **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus **B** Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus
+(ref:exp1-plot-overview) Summary plot for Study 1. **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus **B** Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus
 
 ```{r exp1-plot-overview, fig.cap="(ref:exp1-plot-overview)", fig.height= 10, fig.width=10}
 # Plot distributions of knowledge and acceptance and their mean
@@ -383,8 +258,7 @@ trust_acceptance <- ggplot(plot_data, aes(x = avg_acceptance, y = wgm_sciencegen
   scale_y_continuous(breaks = 1:5) +
   labs(x = "Average consensus Acceptance", 
        y = "Trust in science", 
-       fill = "N") +
-  theme(legend.position = "top")
+       fill = "N") 
 
 # Conspiracy Thinking plots
 
@@ -441,4 +315,19 @@ patchwork <- (distributions / trust / conspiracy) +
 
 patchwork
 
+```
+
+## Open ended comments
+
+```{r}
+# levels(as.factor(exp1_wide$comments))
+table <- exp1_wide %>% 
+  drop_na(comments) %>% 
+  select(id, comments)
+
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Comments of participants on Study 1") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2, width = "40em") 
 ```

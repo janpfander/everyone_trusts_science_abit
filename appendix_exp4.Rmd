@@ -67,9 +67,9 @@ kbl(items_cleaned, booktabs = T, longtable = TRUE,
 
 By contrast to previous studies on basic science knowledge, participants on average answered only  `r exp4_descriptives$means$knowledge_mean` (sd = `r exp4_descriptives$means$knowledge_sd`) of the questions correctly (RQ1). Similar with previous studies, however, they initially accepted the scientific consensus on average for `r exp4_descriptives$means$acceptance_initial_mean` (sd = `r exp4_descriptives$means$acceptance_initial_sd`) of the questions (RQ2). The acceptance rate is even higher when accounting for opinion revisions towards acceptance of the consensus, after initial rejection (`r exp4_descriptives$means$acceptance_mean`, sd = `r exp4_descriptives$means$acceptance_sd`).
 
-Fig. \@ref(fig:exp4-conditional-acceptance) illustrates the relationship between knowledge and acceptance. In most cases (`r exp4_descriptives$conditional_acceptance$false$acceptance_initial$Yes$share`), participants readily accepted the scientific consensus right after having given the wrong answer to a question. After providing the chance to revise the initial consensus rejection, this share is even larger (`r exp4_descriptives$conditional_acceptance$false$acceptance$Yes$share`). In few (but still perhaps surprisingly many) cases (`r exp4_descriptives$conditional_acceptance$true$acceptance_initial$No$share`), participants who initially gave the correct response afterwards rejected the scientific consensus right after, thereby contradicting their own initial response. This share drops slightly after providing the chance to revise the initial consensus rejection (`r exp4_descriptives$conditional_acceptance$true$acceptance$No$share`).
+In most cases (`r exp4_descriptives$conditional_acceptance$false$acceptance_initial$Yes$share`), participants readily accepted the scientific consensus right after having given the wrong answer to a question. After providing the chance to revise the initial consensus rejection, this share is even larger (`r exp4_descriptives$conditional_acceptance$false$acceptance$Yes$share`). In few (but still perhaps surprisingly many) cases (`r exp4_descriptives$conditional_acceptance$true$acceptance_initial$No$share`), participants who initially gave the correct response afterwards rejected the scientific consensus right after, thereby contradicting their own initial response. This share drops slightly after providing the chance to revise the initial consensus rejection (`r exp4_descriptives$conditional_acceptance$true$acceptance$No$share`).
 
-For all correlations, we include opinion revisions for measuring consensus acceptance. We find no statistically significant correlation between science knowledge and trust in science (r = `r exp4_descriptives$cor_trust_knowledge$estimate`, p `r exp4_descriptives$cor_trust_knowledge$p.value`), but a small positive correlation between acceptance of scientific consensus and trust in science (r = `r exp4_descriptives$cor_trust_acceptance$estimate`, p `r exp4_descriptives$cor_trust_acceptance$p.value`). Again, these findings might be partly due to ceiling effects: As illustrated in Fig. \@ref(fig:exp4-plot), (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates. We do not find a statistically significant correlation between neither conspiracy thinking and science knowledge (r = `r exp4_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp4_descriptives$cor_conspiracy_knowledge$p.value`), nor between conspiracy thinking and acceptance of scientific consensus (r = `r exp4_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp4_descriptives$cor_conspiracy_acceptance$p.value`).
+For all correlations, we include opinion revisions for measuring consensus acceptance. We find no statistically significant correlation between science knowledge and trust in science (r = `r exp4_descriptives$cor_trust_knowledge$estimate`, p `r exp4_descriptives$cor_trust_knowledge$p.value`), but a small positive correlation between acceptance of scientific consensus and trust in science (r = `r exp4_descriptives$cor_trust_acceptance$estimate`, p `r exp4_descriptives$cor_trust_acceptance$p.value`). Again, these findings might be partly due to ceiling effects: (i) most people do trust science, and (ii) that is true even among people with low knowledge or acceptance rates. We do not find a statistically significant correlation between neither conspiracy thinking and science knowledge (r = `r exp4_descriptives$cor_conspiracy_knowledge$estimate`, p `r exp4_descriptives$cor_conspiracy_knowledge$p.value`), nor between conspiracy thinking and acceptance of scientific consensus (r = `r exp4_descriptives$cor_conspiracy_acceptance$estimate`, p `r exp4_descriptives$cor_conspiracy_acceptance$p.value`).
 
 For RQ3, we got `r exp4_descriptives$justifications_n` answers from `r exp4_descriptives$justifications_n_participants` different participants to the open-ended questions on why they had rejected the scientific consensus on a particular question. Table \@ref(tab:exp4-justifications) summarizes these answers by five categories.
 
@@ -195,209 +195,7 @@ modelsummary(results_list,
              caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") 
 ```
 
-## By-question variation
-
-```{r}
-# calculate share
-plot_data <- exp4_long %>% 
-  group_by(subject) %>% 
-  summarize(share_true = sum(knowledge == TRUE, na.rm = TRUE)/n(),
-            share_accepted = sum(acceptance == "Yes", na.rm = TRUE)/n()) 
-```
-
-### Knowledge
-
-(ref:exp4-questions-knowledge) Distribution of correct answers by question. 
-
-```{r exp4-questions-knowledge, fig.cap="(ref:exp4-questions-knowledge)"}
-# plot knowledge
-ggplot(plot_data, aes(x = reorder(subject, share_true), y = share_true)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Question", y = "Share of correct responses") +
-  coord_flip()
-```
-
-(ref:exp4-questions-acceptance) Distribution of consensus acceptance by question. 
-
-```{r exp4-questions-acceptance, fig.cap="(ref:exp4-questions-acceptance)"}
-# plot acceptance
-ggplot(plot_data, aes(x = reorder(subject, share_accepted), y = share_accepted)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Question", y = "Share of acceptance") +
-  coord_flip()
-```
-
-## Trust in science
-
-(ref:exp4-trust-scientists) Distribution of trust in scientists. 
-
-```{r exp4-trust-scientists, fig.cap="(ref:exp4-trust-scientists)"}
-# calculate share
-plot_data <- exp4_wide %>% 
-  group_by(wgm_scientists) %>% 
-  summarize(n = n()) %>% 
-  ungroup() %>% 
-  mutate(share = n/sum(n)) %>% 
-  rounded_numbers()
-
-# plot knowledge
-ggplot(plot_data, aes(x = wgm_scientists, y = share)) +
-  geom_col() +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  labs(x = "Trust in science", y = "Share of participants") +
-  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
-            position = position_dodge(width = 0.9),
-            vjust = -0.5, size = 3) 
-```
-
-## Conspiracy thinking
-
-(ref:exp4-conspiracy-distribution) Distribution of conspiracy thinking. 
-
-```{r exp4-conspiracy-distribution, fig.cap="(ref:exp4-conspiracy-distribution)"}
-# plot knowledge
-ggplot(exp4_wide, aes(x = BCTI_avg)) +
-  geom_histogram() +
-  labs(x = "Average conspiracy thinking (BCTI)", y = "N")
-```
-
-### By-item variation
-
-(ref:exp4-conspiracy-items) Distribution of conspiracy thinking by item. 
-
-```{r exp4-conspiracy-items, fig.cap="(ref:exp4-conspiracy-items)"}
-BCTI_data <- exp4_long %>% 
-  # bring to long format
-  pivot_longer(cols = BCTI_apollo:BCTI_evolution, 
-               names_to = "BCTI_item", values_to = "score") %>% 
-  select(id, c(starts_with("BCTI"), score)) %>% 
-  group_by(BCTI_item) %>% 
-  summarize(avg_score = mean(score, na.rm=TRUE)) %>% 
-  ungroup()
-
-ggplot(BCTI_data, aes(x = reorder(BCTI_item, avg_score), y = avg_score)) +
-    geom_pointrange(aes(ymin = 1, ymax = avg_score),
-                  # Make the lines a little thicker and the dots a little bigger
-                  fatten = 2, size = 1) +
-  scale_y_continuous(limits = c(1, 9), breaks = seq(1, 9, 1)) +
-  labs(x = "Conspiracy item", y = "Average score") +
-  coord_cartesian(ylim = c(1, 9)) +
-  coord_flip()
-```
-
-## Reasons for consensus rejection
-
-### All raw answers
-
-```{r exp4-reasons-rejection}
-# store all variables
-reasons_rejection <- unique(exp4_long$subject)
-
-
-table <- exp4_wide %>% 
-  select(id, all_of(reasons_rejection)) %>% 
-  pivot_longer(all_of(reasons_rejection), 
-               names_to = "question",
-               values_to = "answer") %>% 
-  drop_na(answer) %>% 
-  arrange(id)
-
-# apa_table(table,
-#           align = c("m{1cm}", "m{3cm}", "m{10cm}"), 
-#           longtable = TRUE
-#           )
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus rejection") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2) %>%
-  column_spec(3, width = "30em") 
-
-```
-
-## Why do people accept the scientific consensus:
-
-### Participants who answered "other"
-
-```{r exp4-other-reasons-acceptance}
-# store all variables
-table <- exp4_wide %>% 
-  select(id, other_reason_agreement) %>% 
-  drop_na(other_reason_agreement) %>% 
-  arrange(id)
-
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus rejection") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "30em")
-```
-
-## How did participants independently verifiy?
-
-### Participants who answered "other"
-
-```{r exp4-independent-verification}
-# store all variables
-table <- exp4_wide %>% 
-  select(id, reason_followup) %>% 
-  drop_na(reason_followup) %>% 
-  arrange(id)
-
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus rejection") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "30em")
-```
-
-## Additional plots
-
-(ref:exp4-conditional-acceptance) Acceptance rates of scientific consensus, based on whether the initial response to the knowledge question was false or true.
-
-```{r exp4-conditional-acceptance, fig.cap="(ref:exp4-conditional-acceptance)"}
-plot_data <- exp4_long %>% 
-  pivot_longer(c(acceptance, acceptance_initial), 
-               names_to = "measure", 
-               values_to = "acceptance") %>% 
-  # give nicer names
-  mutate(measure = case_when(measure == "acceptance" ~ "Acceptance including revisions", 
-                             measure == "acceptance_initial" ~ "Initial acceptance"), 
-         # make a factor
-         measure = factor(measure, levels = unique(measure)[c(2, 1)])
-         ) %>% 
-  group_by(measure, knowledge, acceptance) %>% 
-  count() %>% 
-  group_by(measure, knowledge) %>% 
-  mutate (share = n/sum(n)) %>% 
-  mutate_if(is.numeric, round, digits = 3)
-
-absolute_numbers <- plot_data %>% 
-  group_by(measure, knowledge) %>% 
-  summarise(n = sum(n))
-
-
-ggplot(plot_data, aes(x = knowledge, y = share, fill = acceptance)) +
-  geom_col(position = "dodge") +
-  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
-  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
-            position = position_dodge(width = 0.9),
-            vjust = -0.5, size = 3) +
-  scale_fill_viridis_d(option = "cividis") +
-  labs(x = "Knowledge answer", fill = "Acceptance \nof consensus") +
-  plot_theme +
-  geom_bracket(data = absolute_numbers,
-               aes(xmin = as.numeric(factor(knowledge)) - 0.4, 
-                   xmax = as.numeric(factor(knowledge)) + 0.4, 
-                   y.position = 1.05, label =  paste0("n = ", n)),
-               inherit.aes = FALSE,
-               step.increase = 0) +
-  facet_wrap(~measure)
-```
-
-(ref:exp4-plot-overview) **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer **B** Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus
+(ref:exp4-plot-overview) Summary plot for Study 4. **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer **B** Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus
 
 ```{r exp4-plot-overview, fig.cap="(ref:exp4-plot-overview)", fig.height= 12, fig.width=12}
 # Plot distributions of knowledge and acceptance and their mean
@@ -520,6 +318,66 @@ patchwork <- (distributions / trust / conspiracy) +
   plot_annotation(tag_levels = 'A')  
 
 patchwork
+```
+
+## Reasons for consensus rejection
+
+```{r exp4-reasons-rejection}
+# store all variables
+reasons_rejection <- unique(exp4_long$subject)
+
+
+table <- exp4_wide %>% 
+  select(id, all_of(reasons_rejection)) %>% 
+  pivot_longer(all_of(reasons_rejection), 
+               names_to = "question",
+               values_to = "answer") %>% 
+  drop_na(answer) %>% 
+  arrange(id)
+
+# apa_table(table,
+#           align = c("m{1cm}", "m{3cm}", "m{10cm}"), 
+#           longtable = TRUE
+#           )
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Reasons for consensus rejection (raw answers)") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2) %>%
+  column_spec(3, width = "30em") 
+
+```
+
+## Reasons for consensus acceptance
+
+```{r exp4-other-reasons-acceptance}
+# store all variables
+table <- exp4_wide %>% 
+  select(id, other_reason_agreement) %>% 
+  drop_na(other_reason_agreement) %>% 
+  arrange(id)
+
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Reasons for consensus acceptance (participants who answered 'other')") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2, width = "30em")
+```
+
+## How did participants independently verifiy?
+
+```{r exp4-independent-verification}
+# store all variables
+table <- exp4_wide %>% 
+  select(id, reason_followup) %>% 
+  drop_na(reason_followup) %>% 
+  arrange(id)
+
+kbl(table, booktabs = T, longtable = TRUE,
+    caption = "Answers from participants saying they trusted the scientific consens because they verified independently on how they did so.") %>%
+  kable_paper(full_width = F) %>% 
+  column_spec(1) %>%
+  column_spec(2, width = "30em")
 ```
 
 

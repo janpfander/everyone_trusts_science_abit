@@ -1,0 +1,33 @@
+# Science knowledge {#knowledge}
+
+Figure \@ref(fig:knowledge-overview) shows the distributions of basic science knowledge across the four studies.
+
+(ref:knowledge-overview) Distributions of science knowledge.
+
+```{r knowledge-overview, fig.cap="(ref:knowledge-overview)", fig.width=8, fig.height=7}
+plot_data <- combined_data %>%
+  mutate(study = paste0("Study ", study)) %>% 
+  group_by(study, id) %>% 
+  summarize(n_correct = sum(knowledge)) %>% 
+  group_by(study, n_correct) %>% 
+  summarize(n = n_distinct(id)) %>% 
+  group_by(study) %>% 
+  mutate(share = n/sum(n)) %>% 
+  rounded_numbers() %>% 
+  ungroup()
+
+ggplot(plot_data, aes(x = n_correct, y = share)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1)) +
+  scale_x_continuous(breaks = seq(0, 10, 1)) +
+  labs(x = "Number of correct answers (out of 10 possible)", y = "Share of participants") +
+  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
+            position = position_dodge(width = 0.9),
+            vjust = -0.5, size = 3) +
+  plot_theme +
+  facet_wrap(~study)
+```
+
+
+
+
