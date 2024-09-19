@@ -60,20 +60,32 @@ conspiracy_measures <- data.frame(
   )
 )
 
-# # Create the table
-kbl(conspiracy_measures, booktabs = T, longtable = T,
-    caption = "Conspiracy measures", full_width = T) %>%
-  kable_styling(font_size = 8) %>% 
-  column_spec(1, width = "10em") %>%
-  column_spec(2, width = "20em") %>%
-  column_spec(3, width = "10em")
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_styling
+  table_output <- conspiracy_measures %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Conspiracy measures",
+      full_width = TRUE
+    ) %>%
+    kableExtra::kable_styling(font_size = 8) %>%
+    kableExtra::column_spec(1, width = "10em") %>%
+    kableExtra::column_spec(2, width = "20em") %>%
+    kableExtra::column_spec(3, width = "10em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(conspiracy_measures) %>%
+    flextable::set_caption(caption = "Conspiracy measures") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 1, width = 2) %>%
+    flextable::width(j = 2, width = 4) %>%
+    flextable::width(j = 3, width = 2) # Adjust widths as needed
+}
 
-# Use apa_table to format the table
-# apa_table(
-#   conspiracy_measures,
-#   caption = "Overview of Conspiracy Thinking Measures",
-#   align = c("m{4cm}", "m{10cm}", "m{4cm}")
-# )
+# Display the table
+table_output
 ```
 
 ## Results
@@ -325,9 +337,26 @@ table <- exp1_wide %>%
   drop_na(comments) %>% 
   select(id, comments)
 
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Comments of participants on Study 1") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "40em") 
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
+  table_output <- table %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Comments of participants on Study 1"
+    ) %>%
+    kableExtra::kable_paper(full_width = FALSE) %>%
+    kableExtra::column_spec(1) %>%
+    kableExtra::column_spec(2, width = "40em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(table) %>%
+    flextable::set_caption(caption = "Comments of participants on Study 1") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 2, width = 4.5) # Adjust column widths as needed
+}
+
+# Display the table
+table_output
 ```

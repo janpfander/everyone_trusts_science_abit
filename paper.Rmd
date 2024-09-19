@@ -30,7 +30,7 @@ tablelist         : no
 footnotelist      : no
 
 classoption       : "doc" # "doc" for nice look, "man" for manuscripty
-output            : papaja::apa6_pdf # "_doc" for word; however, note that some of the features of kableExtra are not available for word and will yield errors. For example to knit to word, you'll have to comment out all "add_header_above()" functions for model output tables, or e.g. set always allow html as true in the yaml heading
+output            : papaja::apa6_doc # "_doc" for word; however, note that some of the features of kableExtra are not available for word and will yield errors. For example to knit to word, you'll have to comment out all "add_header_above()" functions for model output tables, or e.g. set always allow html as true in the yaml heading
 
 always_allow_html: true
 
@@ -928,15 +928,38 @@ items_cleaned[11, 2] <- paste0("*",
   
 
 # Output the table
-knitr::kable(items_cleaned, booktabs = T, longtable = TRUE,
-    caption = "Science knowledge items", 
-    full_width = T, 
-    col.names = c("", "Study 1-3", "Study 4")) %>%
-  kable_styling(font_size = 8) %>%
-  column_spec(1, width = "2em") %>%
-  column_spec(2, width = "22em")%>%
-  column_spec(3, width = "22em") %>% 
-  footnote(symbol = "Only used in Study 1")
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kable, column_spec, and kable_styling
+  table_output <- items_cleaned %>%
+    knitr::kable(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Science knowledge items",
+      full_width = TRUE,
+      col.names = c("", "Study 1-3", "Study 4")
+    ) %>%
+    kableExtra::kable_styling(font_size = 8) %>%
+    kableExtra::column_spec(1, width = "2em") %>%
+    kableExtra::column_spec(2, width = "22em") %>%
+    kableExtra::column_spec(3, width = "22em") %>%
+    kableExtra::footnote(
+      symbol = "Only used in Study 1"
+    )
+} else {
+  # For Word: Use apa_table
+  table_output <- papaja::apa_table(
+    items_cleaned, 
+    caption = "Science knowledge items",
+    note = "*Only used in Study 1",
+    col.names = c("", "Study 1-3", "Study 4")
+    #,align = c("l", "m{8cm}", "m{8cm}")
+  )
+}
+
+# Display the table
+table_output
+
 ```
 
 ### Conspiracy beliefs
@@ -963,16 +986,38 @@ items <- c(
 
 conspiracy_items <- data.frame(id = 1:length(items), items = items)
 
-# Output the table
-kbl(conspiracy_items, booktabs = T, longtable = T, col.names = NULL,
-    caption = "Conspiracy items", full_width = T) %>%
-  kable_styling(font_size = 8) %>% 
-  column_spec(1, width = "3em") %>%
-  column_spec(2, width = "40em") %>% 
-  footnote(general = "Participants were asked to rate their belief in the conspiracy on a scale from 1 to 9, with the labels: `1 - completely false, 5 - unsure, 9 - completely true`.",
-           escape = FALSE,
-           footnote_as_chunk = TRUE,
-           threeparttable = TRUE)
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_styling
+  table_output <- conspiracy_items %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      col.names = NULL,
+      caption = "Conspiracy items",
+      full_width = TRUE
+    ) %>%
+    kableExtra::kable_styling(font_size = 8) %>%
+    kableExtra::column_spec(1, width = "3em") %>%
+    kableExtra::column_spec(2, width = "40em") %>%
+    kableExtra::footnote(
+      general = "Participants were asked to rate their belief in the conspiracy on a scale from 1 to 9, with the labels: `1 - completely false, 5 - unsure, 9 - completely true`.",
+      escape = FALSE,
+      footnote_as_chunk = TRUE,
+      threeparttable = TRUE
+    )
+} else {
+  # For Word: Use apa_table
+  table_output <- papaja::apa_table(
+    conspiracy_items, 
+    caption = "Conspiracy items",
+    note = "Participants were asked to rate their belief in the conspiracy on a scale from 1 to 9, with the labels: `1 - completely false, 5 - unsure, 9 - completely true`.",
+    col.names = c("", "") # Replace with specific column names if desired
+  )
+}
+
+# Display the table
+table_output
 ```
 
 ### Trust in science

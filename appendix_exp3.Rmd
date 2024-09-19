@@ -51,15 +51,34 @@ items <- read_csv("exp_3/materials/overview_questions.csv") %>%
   mutate(id = 1:nrow(.)) %>% 
   select(id, "Question", "Scientific consensus (Study 1)", "Explanation (Study 2 & 3)") 
 
-# Output the table
-kbl(items, booktabs = T, longtable = TRUE,
-    caption = "Science knowledge items", 
-    full_width = T) %>%
-  kable_styling(font_size = 8) %>% 
-  column_spec(1, width = "1em") %>%
-  column_spec(2, width = "10em") %>%
-  column_spec(3, width = "10em") %>%
-  column_spec(4, width = "23em") 
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_styling
+  table_output <- items %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Science knowledge items", 
+      full_width = TRUE
+    ) %>%
+    kableExtra::kable_styling(font_size = 8) %>%
+    kableExtra::column_spec(1, width = "1em") %>%
+    kableExtra::column_spec(2, width = "10em") %>%
+    kableExtra::column_spec(3, width = "10em") %>%
+    kableExtra::column_spec(4, width = "23em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(items) %>%
+    flextable::set_caption(caption = "Science knowledge items") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 1, width = 0.8) %>%
+    flextable::width(j = 2, width = 3) %>%
+    flextable::width(j = 3, width = 3) %>%
+    flextable::width(j = 4, width = 6) # Adjust column widths as needed
+}
+
+# Display the table
+table_output
 ```
 
 ## Results
@@ -336,16 +355,29 @@ table <- exp3_wide %>%
   drop_na(answer) %>% 
   arrange(id)
 
-# apa_table(table,
-#           align = c("m{1cm}", "m{3cm}", "m{10cm}"), 
-#           longtable = TRUE
-#           )
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus rejection (raw answers)") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2) %>%
-  column_spec(3, width = "30em") 
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
+  table_output <- table %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Reasons for consensus rejection (raw answers)"
+    ) %>%
+    kableExtra::kable_paper(full_width = FALSE) %>%
+    kableExtra::column_spec(1) %>%
+    kableExtra::column_spec(2) %>%
+    kableExtra::column_spec(3, width = "30em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(table) %>%
+    flextable::set_caption(caption = "Reasons for consensus rejection (raw answers)") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 3, width = 4.5) # Adjust column width for the third column
+}
+
+# Display the table
+table_output
 
 ```
 
@@ -358,11 +390,28 @@ table <- exp3_wide %>%
   drop_na(other_reason_agreement) %>% 
   arrange(id)
 
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Reasons for consensus acceptance (participants who answered 'other')") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "30em")
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
+  table_output <- table %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Reasons for consensus acceptance (participants who answered 'other')"
+    ) %>%
+    kableExtra::kable_paper(full_width = FALSE) %>%
+    kableExtra::column_spec(1) %>%
+    kableExtra::column_spec(2, width = "30em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(table) %>%
+    flextable::set_caption(caption = "Reasons for consensus acceptance (participants who answered 'other')") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
+}
+
+# Display the table
+table_output
 ```
 
 ## How did participants independently verifiy?
@@ -374,11 +423,28 @@ table <- exp3_wide %>%
   drop_na(reason_followup) %>% 
   arrange(id)
 
-kbl(table, booktabs = T, longtable = TRUE,
-    caption = "Answers from participants saying they trusted the scientific consens because they verified independently on how they did so.") %>%
-  kable_paper(full_width = F) %>% 
-  column_spec(1) %>%
-  column_spec(2, width = "30em")
+# Create the basic table
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
+  table_output <- table %>%
+    kbl(
+      booktabs = TRUE, 
+      longtable = TRUE,
+      caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so."
+    ) %>%
+    kableExtra::kable_paper(full_width = FALSE) %>%
+    kableExtra::column_spec(1) %>%
+    kableExtra::column_spec(2, width = "30em")
+} else {
+  # For Word: Use flextable for better Word compatibility
+  table_output <- flextable::flextable(table) %>%
+    flextable::set_caption(caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so.") %>%
+    flextable::autofit() %>%
+    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
+}
+
+# Display the table
+table_output
 ```
 
 

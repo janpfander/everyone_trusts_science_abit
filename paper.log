@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  19 SEP 2024 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  19 SEP 2024 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,57 +647,63 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [3]
 
-[4] [5]
+[4]
+Overfull \hbox (71.85045pt too wide) in paragraph at lines 285--312
+ [] 
+ []
 
-[6]
-<output/figures/summary-plot.pdf, id=76, 722.7pt x 722.7pt>
+<output/figures/summary-plot.pdf, id=58, 722.7pt x 722.7pt>
 File: output/figures/summary-plot.pdf Graphic file (type pdf)
 <use output/figures/summary-plot.pdf>
-Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 351.
+Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 368.
 (pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
 
+
+[5]
+
+[6]
 
 [7]
 
 [8 <./output/figures/summary-plot.pdf>]
 
-[9{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+[9]
 
-[10]
+[10{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [11]
-Underfull \hbox (badness 1253) in paragraph at lines 502--503
-[]\T1/lmr/m/n/10.95 Van Steke-len-burg, A., Schaap, G., Vel-ing, H., Van 'T Riet, J., & Bui-jzen, M.
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [12]
+Underfull \hbox (badness 1253) in paragraph at lines 519--520
+[]\T1/lmr/m/n/10.95 Van Steke-len-burg, A., Schaap, G., Vel-ing, H., Van 'T Riet, J., & Bui-jzen, M.
+ []
+
+
 
 [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 523.
+(hyperref)                removing `\\' on input line 540.
 
-<output/figures/acceptance-knowledge.pdf, id=220, 578.16pt x 542.025pt>
+<output/figures/acceptance-knowledge.pdf, id=219, 578.16pt x 542.025pt>
 File: output/figures/acceptance-knowledge.pdf Graphic file (type pdf)
 <use output/figures/acceptance-knowledge.pdf>
-Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 531.
+Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 548.
 (pdftex.def)             Requested size: 433.61893pt x 406.51775pt.
 
 
 [14 <./output/figures/acceptance-knowledge.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 537.
+(hyperref)                removing `\\' on input line 554.
 
-<output/figures/trust-overview.pdf, id=234, 578.16pt x 505.89pt>
+<output/figures/trust-overview.pdf, id=233, 578.16pt x 505.89pt>
 File: output/figures/trust-overview.pdf Graphic file (type pdf)
 <use output/figures/trust-overview.pdf>
-Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 545.
+Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 562.
 (pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
 
 
@@ -706,12 +712,12 @@ Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 5
  <./output/figures/trust-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 551.
+(hyperref)                removing `\\' on input line 568.
 
-<output/figures/conspiracy-thinking-overview.pdf, id=249, 578.16pt x 505.89pt>
+<output/figures/conspiracy-thinking-overview.pdf, id=248, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-thinking-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-thinking-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 559.
+Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 576.
 (pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
 
 
@@ -720,12 +726,12 @@ Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used o
  <./output/figures/conspiracy-thinking-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 565.
+(hyperref)                removing `\\' on input line 582.
 
-<output/figures/conspiracy-belief-overview.pdf, id=263, 578.16pt x 505.89pt>
+<output/figures/conspiracy-belief-overview.pdf, id=262, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-belief-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-belief-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 573.
+Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 590.
 (pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
 
 
@@ -734,12 +740,12 @@ Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on 
  <./output/figures/conspiracy-belief-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 579.
+(hyperref)                removing `\\' on input line 596.
 
-<output/figures/knowledge-overview.pdf, id=277, 578.16pt x 505.89pt>
+<output/figures/knowledge-overview.pdf, id=276, 578.16pt x 505.89pt>
 File: output/figures/knowledge-overview.pdf Graphic file (type pdf)
 <use output/figures/knowledge-overview.pdf>
-Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 587.
+Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 604.
 (pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
 
 
@@ -748,17 +754,17 @@ Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input li
  <./output/figures/knowledge-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 593.
+(hyperref)                removing `\\' on input line 610.
 
-<output/figures/questions-knowledge.pdf, id=292, 578.16pt x 578.16pt>
+<output/figures/questions-knowledge.pdf, id=291, 578.16pt x 578.16pt>
 File: output/figures/questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 601.
+Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 618.
 (pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
-<output/figures/questions-acceptance.pdf, id=293, 578.16pt x 578.16pt>
+<output/figures/questions-acceptance.pdf, id=292, 578.16pt x 578.16pt>
 File: output/figures/questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 609.
+Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 626.
 (pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
 
 
@@ -769,39 +775,34 @@ Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input 
 [20 <./output/figures/questions-acceptance.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 615.
+(hyperref)                removing `\\' on input line 632.
 
-<./figures/study1_question_example.png, id=318, 1927.2pt x 1084.05pt>
+<./figures/study1_question_example.png, id=317, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
-Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 629.
+Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 646.
 (pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.655 \end{longtable}
-                      [21
+[21
 
  <./figures/study1_question_example.png>]
 
 [22]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 738--757
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 755--774
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 769--788
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 786--805
  [][] 
  []
 
@@ -811,10 +812,10 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 769--788
 <output/figures/exp1-plot-overview.pdf, id=355, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 794.
+Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 811.
 (pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
 
-Overfull \hbox (44.80487pt too wide) in alignment at lines 800--869
+Overfull \hbox (44.80487pt too wide) in alignment at lines 817--886
  [] [] 
  []
 
@@ -825,20 +826,20 @@ Overfull \hbox (44.80487pt too wide) in alignment at lines 800--869
 [27 <./output/figures/exp1-plot-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 873.
+(hyperref)                removing `\\' on input line 890.
 
 <./figures/study2_question_example.png, id=390, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
-Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 913.
+Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 930.
 (pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--914
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--914
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 
  []
 
@@ -853,27 +854,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 913--914
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1018--1037
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1035--1054
  [] 
  []
 
 
 
 [30]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1049--1068
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1066--1085
  [][] 
  []
 
 <output/figures/exp2-plot-overview.pdf, id=423, 867.24pt x 867.24pt>
 File: output/figures/exp2-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp2-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1074.
+Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1091.
 (pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1127 \end{longtable}
+l.1144 \end{longtable}
                        [31] [32]
 
 [33]
@@ -883,7 +884,7 @@ l.1127 \end{longtable}
 [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1131.
+(hyperref)                removing `\\' on input line 1148.
 
 
 
@@ -893,7 +894,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 <figures/study3_example_explanation.png, id=470, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
-Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1175.
+Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1192.
 (pdftex.def)             Requested size: 216.80336pt x 151.96497pt.
 
 
@@ -901,25 +902,25 @@ Package pdftex.def Info: figures/study3_example_explanation.png  used on input l
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1255 \end{longtable}
+l.1272 \end{longtable}
                        [38] [39] [40]
 
 [41]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1360--1379
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1377--1396
  [] 
  []
 
 
 
 [42]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1391--1410
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1408--1427
  [][] 
  []
 
 <output/figures/exp3-plot-overview.pdf, id=517, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1416.
+Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1433.
 (pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
 [43] [44] [45] [46] [47] [48] [49]
 
@@ -928,109 +929,109 @@ Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input li
 [51 <./output/figures/exp3-plot-overview.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1623.
+(hyperref)                removing `\\' on input line 1640.
 
 
 
 [52
 
 ]
-Overfull \hbox (55.89326pt too wide) in paragraph at lines 1670--1671
+Overfull \hbox (55.89326pt too wide) in paragraph at lines 1687--1688
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bedaquiline 
  []
 
 
-Overfull \hbox (468.03534pt too wide) in paragraph at lines 1670--1671
+Overfull \hbox (468.03534pt too wide) in paragraph at lines 1687--1688
 \T1/lmr/m/n/8 journals.onlinelibrary.wiley.com/doi/full/10.1111/jam.14478#:~:text=The%20drug%20bedaquiline%20was%20approved,%2DTB%20and%20XDR%2DTB|  
  []
 
 
-Overfull \hbox (207.48604pt too wide) in paragraph at lines 1671--1672
+Overfull \hbox (207.48604pt too wide) in paragraph at lines 1688--1689
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Large_Hadron_Collider#Findings_and_discoveries 
  []
 
 
-Overfull \hbox (79.8382pt too wide) in paragraph at lines 1671--1672
+Overfull \hbox (79.8382pt too wide) in paragraph at lines 1688--1689
 \T1/lmr/m/n/8 https://home.cern/news/news/accelerators/first- 
  []
 
 
-Overfull \hbox (39.7221pt too wide) in paragraph at lines 1672--1673
+Overfull \hbox (39.7221pt too wide) in paragraph at lines 1689--1690
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Kepler- 
  []
 
 
-Overfull \hbox (30.36688pt too wide) in paragraph at lines 1672--1673
+Overfull \hbox (30.36688pt too wide) in paragraph at lines 1689--1690
 \T1/lmr/m/n/8 https://science.nasa.gov/exoplanet- 
  []
 
 
-Overfull \hbox (113.11198pt too wide) in paragraph at lines 1673--1674
+Overfull \hbox (113.11198pt too wide) in paragraph at lines 1690--1691
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bomb_pulse#Applications 
  []
 
 
-Overfull \hbox (62.43724pt too wide) in paragraph at lines 1673--1674
+Overfull \hbox (62.43724pt too wide) in paragraph at lines 1690--1691
 \T1/lmr/m/n/8 https://ora.ox.ac.uk/objects/uuid:6c040460- 
  []
 
 
-Overfull \hbox (102.77245pt too wide) in paragraph at lines 1674--1675
+Overfull \hbox (102.77245pt too wide) in paragraph at lines 1691--1692
 \T1/lmr/m/n/8 https://onlinelibrary.wiley.com/doi/10.1002/cne.24040; 
  []
 
 
-Overfull \hbox (89.12698pt too wide) in paragraph at lines 1674--1675
+Overfull \hbox (89.12698pt too wide) in paragraph at lines 1691--1692
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Glia#Total_number|  
  []
 
 
-Overfull \hbox (153.20612pt too wide) in paragraph at lines 1676--1677
+Overfull \hbox (153.20612pt too wide) in paragraph at lines 1693--1694
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Gravity#Tests_of_general_relativity 
  []
 
 
-Overfull \hbox (82.8043pt too wide) in paragraph at lines 1676--1677
+Overfull \hbox (82.8043pt too wide) in paragraph at lines 1693--1694
 \T1/lmr/m/n/8 https://link.springer.com/article/10.1007/s11434- 
  []
 
 
-Overfull \hbox (100.01013pt too wide) in paragraph at lines 1677--1678
+Overfull \hbox (100.01013pt too wide) in paragraph at lines 1694--1695
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Higgs_boson#cite_ref- 
  []
 
 
-Overfull \hbox (52.42789pt too wide) in paragraph at lines 1677--1678
+Overfull \hbox (52.42789pt too wide) in paragraph at lines 1694--1695
 \T1/lmr/m/n/8 https://home.cern/science/physics/higgs- 
  []
 
 
-Overfull \hbox (89.15677pt too wide) in paragraph at lines 1678--1679
+Overfull \hbox (89.15677pt too wide) in paragraph at lines 1695--1696
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Oldest_dated_rocks 
  []
 
 
-Overfull \hbox (93.88704pt too wide) in paragraph at lines 1678--1679
+Overfull \hbox (93.88704pt too wide) in paragraph at lines 1695--1696
 \T1/lmr/m/n/8 https://www.pnas.org/doi/10.1073/pnas.1904573117|  
  []
 
 
-Overfull \hbox (86.70244pt too wide) in paragraph at lines 1679--1680
+Overfull \hbox (86.70244pt too wide) in paragraph at lines 1696--1697
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Cloning#cite_note- 
  []
 
 
-Overfull \hbox (182.3975pt too wide) in paragraph at lines 1679--1680
+Overfull \hbox (182.3975pt too wide) in paragraph at lines 1696--1697
 \T1/lmr/m/n/8 https://academic.oup.com/biolreprod/article/83/6/929/2530195?login=false|  
  []
 
 
-Overfull \hbox (5.58092pt too wide) in paragraph at lines 1680--1681
+Overfull \hbox (5.58092pt too wide) in paragraph at lines 1697--1698
 \T1/lmr/m/n/8 https://phys.org/news/2024- 
  []
 
 
-Overfull \hbox (106.83717pt too wide) in paragraph at lines 1680--1681
+Overfull \hbox (106.83717pt too wide) in paragraph at lines 1697--1698
 \T1/lmr/m/n/8 https://www.sci.news/othersciences/geoscience/earliest- 
  []
 
@@ -1038,41 +1039,41 @@ Overfull \hbox (106.83717pt too wide) in paragraph at lines 1680--1681
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1682 \end{longtable}
+l.1699 \end{longtable}
                        [53]
 
 [54]
 
 [55]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1787--1806
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1804--1823
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1818--1837
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1835--1854
  [][] 
  []
 
 <output/figures/exp4-plot-overview.pdf, id=612, 867.24pt x 867.24pt>
 File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp4-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1843.
+Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1860.
 (pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2091 1
+l.2108 1
         57 & orbit & Sure, it's a prediction and one that doesn't sound very... [56] [57] [58] [59] [60] [61] [62] [63] [64]
 pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2208 \end{longtable}
+l.2225 \end{longtable}
                        [65]
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2329 \end{longtable}
+l.2346 \end{longtable}
                        [66] [67] [68] [69]
 
 [70]
@@ -1089,18 +1090,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16508 strings out of 475539
- 270302 string characters out of 5776923
- 786619 words of memory out of 5000000
- 38615 multiletter control sequences out of 15000+600000
- 654980 words of font info for 122 fonts, out of 8000000 for 9000
+ 16503 strings out of 475539
+ 270193 string characters out of 5776923
+ 786578 words of memory out of 5000000
+ 38608 multiletter control sequences out of 15000+600000
+ 650716 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,12n,93p,3188b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on paper.pdf (72 pages, 922532 bytes).
+</Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on paper.pdf (72 pages, 909303 bytes).
 PDF statistics:
- 1042 PDF objects out of 1200 (max. 8388607)
- 903 compressed objects within 10 object streams
- 243 named destinations out of 1000 (max. 500000)
+ 1038 PDF objects out of 1200 (max. 8388607)
+ 901 compressed objects within 10 object streams
+ 246 named destinations out of 1000 (max. 500000)
  684 words of extra memory for PDF output out of 10000 (max. 10000000)
 
