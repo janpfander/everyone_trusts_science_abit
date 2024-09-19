@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  19 SEP 2024 14:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  19 SEP 2024 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -650,7 +650,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [4] [5]
 
 [6]
-<output/figures/summary-plot.pdf, id=74, 722.7pt x 722.7pt>
+<output/figures/summary-plot.pdf, id=76, 722.7pt x 722.7pt>
 File: output/figures/summary-plot.pdf Graphic file (type pdf)
 <use output/figures/summary-plot.pdf>
 Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 351.
@@ -682,7 +682,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 523.
 
-<output/figures/acceptance-knowledge.pdf, id=218, 578.16pt x 542.025pt>
+<output/figures/acceptance-knowledge.pdf, id=220, 578.16pt x 542.025pt>
 File: output/figures/acceptance-knowledge.pdf Graphic file (type pdf)
 <use output/figures/acceptance-knowledge.pdf>
 Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 531.
@@ -694,7 +694,7 @@ Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 537.
 
-<output/figures/trust-overview.pdf, id=232, 578.16pt x 505.89pt>
+<output/figures/trust-overview.pdf, id=234, 578.16pt x 505.89pt>
 File: output/figures/trust-overview.pdf Graphic file (type pdf)
 <use output/figures/trust-overview.pdf>
 Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 545.
@@ -708,7 +708,7 @@ Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 5
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 551.
 
-<output/figures/conspiracy-thinking-overview.pdf, id=247, 578.16pt x 505.89pt>
+<output/figures/conspiracy-thinking-overview.pdf, id=249, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-thinking-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-thinking-overview.pdf>
 Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 559.
@@ -722,7 +722,7 @@ Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used o
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 565.
 
-<output/figures/conspiracy-belief-overview.pdf, id=261, 578.16pt x 505.89pt>
+<output/figures/conspiracy-belief-overview.pdf, id=263, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-belief-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-belief-overview.pdf>
 Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 573.
@@ -736,7 +736,7 @@ Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 579.
 
-<output/figures/knowledge-overview.pdf, id=275, 578.16pt x 505.89pt>
+<output/figures/knowledge-overview.pdf, id=277, 578.16pt x 505.89pt>
 File: output/figures/knowledge-overview.pdf Graphic file (type pdf)
 <use output/figures/knowledge-overview.pdf>
 Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 587.
@@ -750,12 +750,12 @@ Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input li
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 593.
 
-<output/figures/questions-knowledge.pdf, id=290, 578.16pt x 578.16pt>
+<output/figures/questions-knowledge.pdf, id=292, 578.16pt x 578.16pt>
 File: output/figures/questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/questions-knowledge.pdf>
 Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 601.
 (pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
-<output/figures/questions-acceptance.pdf, id=291, 578.16pt x 578.16pt>
+<output/figures/questions-acceptance.pdf, id=293, 578.16pt x 578.16pt>
 File: output/figures/questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/questions-acceptance.pdf>
 Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 609.
@@ -771,7 +771,7 @@ Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 615.
 
-<./figures/study1_question_example.png, id=316, 1927.2pt x 1084.05pt>
+<./figures/study1_question_example.png, id=318, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
 Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 629.
@@ -808,7 +808,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 769--788
 
 
 [23]
-<output/figures/exp1-plot-overview.pdf, id=353, 722.7pt x 722.7pt>
+<output/figures/exp1-plot-overview.pdf, id=355, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 794.
@@ -827,7 +827,7 @@ Overfull \hbox (44.80487pt too wide) in alignment at lines 800--869
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 873.
 
-<./figures/study2_question_example.png, id=388, 1927.2pt x 1084.05pt>
+<./figures/study2_question_example.png, id=390, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
 Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 913.
@@ -864,7 +864,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1049--1068
  [][] 
  []
 
-<output/figures/exp2-plot-overview.pdf, id=421, 867.24pt x 867.24pt>
+<output/figures/exp2-plot-overview.pdf, id=423, 867.24pt x 867.24pt>
 File: output/figures/exp2-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp2-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1074.
@@ -890,7 +890,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [36
 
 ]
-<figures/study3_example_explanation.png, id=468, 724.95844pt x 508.14844pt>
+<figures/study3_example_explanation.png, id=470, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
 Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1175.
@@ -916,7 +916,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1391--1410
  [][] 
  []
 
-<output/figures/exp3-plot-overview.pdf, id=515, 867.24pt x 867.24pt>
+<output/figures/exp3-plot-overview.pdf, id=517, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1416.
@@ -1053,7 +1053,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1818--1837
  [][] 
  []
 
-<output/figures/exp4-plot-overview.pdf, id=610, 867.24pt x 867.24pt>
+<output/figures/exp4-plot-overview.pdf, id=612, 867.24pt x 867.24pt>
 File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp4-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1843.
@@ -1097,10 +1097,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  83i,12n,93p,3188b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on paper.pdf (72 pages, 922388 bytes).
+Output written on paper.pdf (72 pages, 922532 bytes).
 PDF statistics:
- 1040 PDF objects out of 1200 (max. 8388607)
- 901 compressed objects within 10 object streams
+ 1042 PDF objects out of 1200 (max. 8388607)
+ 903 compressed objects within 10 object streams
  243 named destinations out of 1000 (max. 500000)
  684 words of extra memory for PDF output out of 10000 (max. 10000000)
 
