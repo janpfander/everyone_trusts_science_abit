@@ -5,7 +5,7 @@
 .Ruserdata
 
 # Ignore all elements in subfolders called "data"
-**/data/*
+#**/data/*
 
 # ignore all figures in .pdf format
 output*/figures/*.pdf
