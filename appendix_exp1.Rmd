@@ -201,7 +201,8 @@ results_list <- setNames(map(variables, ~ run_regression(standardized_variables,
 ```{r false-response-regression}
 modelsummary(results_list, 
              stars = TRUE,
-             caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") 
+             caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values", 
+             output = "kableExtra") 
 ```
 
 (ref:exp1-plot-overview) Summary plot for Study 1. **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus **B** Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus
