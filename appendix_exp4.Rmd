@@ -1,4 +1,4 @@
-# Experiment 4 {#exp4}
+# Study 4 {#exp4}
 
 Study 4 relies on broadly the same design as study 3, and is again run on a sample of participants with vaccine-skeptic beliefs. The main difference is that study 4 uses a set of science questions which, instead of being on well-established facts, we are about more recent discoveries (Table \@ref(tab:exp4-knowledge)). Our main question is whether participants will nevertheless readily accept the scientific consensus, as they did for the basic facts in previous studies.
 
@@ -30,7 +30,7 @@ Based on these criteria, we recruited 200 participants from the US via prolific,
 
 ## Procedure
 
-The procedure was identical to the one in experiment 3.
+The procedure was identical to the one in study 3.
 
 ## Materials
 
@@ -180,11 +180,11 @@ results %>%
   rename(`Correlation with knowledge` = avg_knowledge, 
          `Correlation with acceptance` = avg_acceptance, 
   ) %>% 
-  mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
+  mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI (main conspiracy measure)", 
                              outcome == "CMQ_avg" ~ "CMQ", 
                              outcome == "SICBS" ~ "SICBS", 
                              outcome == "wgm_scientists" ~ "WGM trust scientists",
-                             outcome == "wgm_sciencegeneral" ~ "WGM trust general \n(main trust measure)",
+                             outcome == "wgm_sciencegeneral" ~ "WGM trust general (main trust measure)",
                              outcome == "pew" ~ "PEW trust scientists",
                              )) %>% 
   apa_table(caption = "Correlations between knowledge and acceptance, respectively, and outcome variables")
@@ -207,10 +207,28 @@ results_list <- setNames(map(variables, ~ run_regression(standardized_variables,
 ```
 
 ```{r exp4-false-response-regression}
-modelsummary(results_list, 
-             stars = TRUE,
-             caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values", 
-             output = "kableExtra") 
+# modelsummary(results_list, 
+#              stars = TRUE,
+#              caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values", 
+#              output = "kableExtra") 
+
+# Generate the table with the correct format
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  modelsummary(results_list,
+               stars = TRUE,
+               caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values",
+               output = "kableExtra")
+
+} else {
+  modelsummary(results_list,
+               stars = TRUE,
+               caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values",
+               output = "flextable") %>%
+    flextable::set_caption("Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") %>%
+    flextable::autofit() %>%  # Ensure proper column width
+    flextable::theme_booktabs()  # Use a professional-looking theme
+  
+}
 ```
 
 (ref:exp4-plot-overview) Summary plot for Study 4. **A** Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer **B** Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus **C** Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus
@@ -336,112 +354,6 @@ patchwork <- (distributions / trust / conspiracy) +
   plot_annotation(tag_levels = 'A')  
 
 patchwork
-```
-
-## Reasons for consensus rejection
-
-```{r exp4-reasons-rejection}
-# store all variables
-reasons_rejection <- unique(exp4_long$subject)
-
-
-table <- exp4_wide %>% 
-  select(id, all_of(reasons_rejection)) %>% 
-  pivot_longer(all_of(reasons_rejection), 
-               names_to = "question",
-               values_to = "answer") %>% 
-  drop_na(answer) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Reasons for consensus rejection (raw answers)"
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2) %>%
-    kableExtra::column_spec(3, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Reasons for consensus rejection (raw answers)") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 3, width = 4.5) # Adjust column width for the third column
-}
-
-# Display the table
-table_output
-```
-
-## Reasons for consensus acceptance
-
-```{r exp4-other-reasons-acceptance}
-# store all variables
-table <- exp4_wide %>% 
-  select(id, other_reason_agreement) %>% 
-  drop_na(other_reason_agreement) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Reasons for consensus acceptance (participants who answered 'other')"
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Reasons for consensus acceptance (participants who answered 'other')") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
-}
-
-# Display the table
-table_output
-```
-
-## How did participants independently verifiy?
-
-```{r exp4-independent-verification}
-# store all variables
-table <- exp4_wide %>% 
-  select(id, reason_followup) %>% 
-  drop_na(reason_followup) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so."
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so.") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
-}
-
-# Display the table
-table_output
 ```
 
 

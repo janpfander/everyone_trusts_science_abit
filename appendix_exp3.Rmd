@@ -1,4 +1,4 @@
-# Experiment 3 {#exp3}
+# Study 3 {#exp3}
 
 Study 3 is essentially a replication-–with some minor modifications-–of study 2, but on a different type of sample. Both study 1 and 2 were run on convenience samples. For study 3, we recruited a sample of people holding anti-vaccination beliefs (see below). By contrast to study 2, after asking participants an open question about why they did not accept the consensus (in cases where they didn't), we provide them with an explicit opportunity to change their answer (Fig. \@ref(fig:exp3-explanation-example)). Based on the answers to the open-ended questions, we also pre-registered a categorization scheme of reasons why people rejected the consensus. Finally, we also ask participants about why they agree with the scientific consensus on certain questions, in case they do. We want to know if participants perceive that this is because of trust, or other factors.
 
@@ -32,7 +32,7 @@ However, due to a randomization mistake for our outcomes, participant answered o
 
 ## Procedure
 
-The procedure was mostly the same as in experiment 2. In addition, after each open-ended question on cases where participants rejected the scientific consensus, participants were also asked if they want to change their answer and accept the scientific consensus. Finally, at the end of the survey, we asked participants: "For the questions in which you agreed with the scientific consensus, would you say that...?" The answer options were: (i) "You mostly agree with the consensus because, on that question, you trust scientists", (ii) "You mostly agree with the consensus because you have been able to independently verify it", and (iii) "Other", with a text box for participants to explain. Participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, were asked the open-ended follow-up question: "Could you please tell us how you independently verified the information?".
+The procedure was mostly the same as in study 2. In addition, after each open-ended question on cases where participants rejected the scientific consensus, participants were also asked if they want to change their answer and accept the scientific consensus. Finally, at the end of the survey, we asked participants: "For the questions in which you agreed with the scientific consensus, would you say that...?" The answer options were: (i) "You mostly agree with the consensus because, on that question, you trust scientists", (ii) "You mostly agree with the consensus because you have been able to independently verify it", and (iii) "Other", with a text box for participants to explain. Participants who selected “You mostly agree with the consensus because you have been able to independently verify it”, were asked the open-ended follow-up question: "Could you please tell us how you independently verified the information?".
 
 ## Materials
 
@@ -181,11 +181,11 @@ filter(term != "intercept") %>%
   rename(`Correlation with knowledge` = avg_knowledge, 
          `Correlation with acceptance` = avg_acceptance, 
   ) %>% 
-  mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI \n(main conspiracy measure)", 
+  mutate(outcome = case_when(outcome == "BCTI_avg" ~ "BCTI (main conspiracy measure)", 
                              outcome == "CMQ_avg" ~ "CMQ", 
                              outcome == "SICBS" ~ "SICBS", 
                              outcome == "wgm_scientists" ~ "WGM trust scientists",
-                             outcome == "wgm_sciencegeneral" ~ "WGM trust general \n(main trust measure)",
+                             outcome == "wgm_sciencegeneral" ~ "WGM trust general (main trust measure)",
                              outcome == "pew" ~ "PEW trust scientists",
                              )) %>% 
   apa_table(caption = "Correlations between knowledge and acceptance, respectively, and outcome variables")
@@ -208,10 +208,28 @@ results_list <- setNames(map(variables, ~ run_regression(standardized_variables,
 ```
 
 ```{r exp3-false-response-regression}
-modelsummary(results_list, 
-             stars = TRUE,
-             caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values", 
-             output = "kableExtra") 
+# modelsummary(results_list, 
+#              stars = TRUE,
+#              caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values", 
+#              output = "kableExtra") 
+
+# Generate the table with the correct format
+if (knitr::is_latex_output() || knitr::is_html_output()) {
+  modelsummary(results_list,
+               stars = TRUE,
+               caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values",
+               output = "kableExtra")
+
+} else {
+  modelsummary(results_list,
+               stars = TRUE,
+               caption = "Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values",
+               output = "flextable") %>%
+    flextable::set_caption("Based on false response data only, correlations between acceptance and outcome variables based on linear regression models on standardized values") %>%
+    flextable::autofit() %>%  # Ensure proper column width
+    flextable::theme_booktabs()  # Use a professional-looking theme
+  
+}
 ```
 
 
@@ -340,112 +358,6 @@ patchwork <- (distributions / trust / conspiracy) +
 patchwork
 ```
 
-## Reasons for consensus rejection
 
-```{r exp3-reasons-rejection}
-# store all variables
-reasons_rejection <- c("electrons", "antibiotics", "continents", "sex", "lasers", 
-               "orbit", "diamonds", "speed", "salt", "water")
-
-
-table <- exp3_wide %>% 
-  select(id, all_of(reasons_rejection)) %>% 
-  pivot_longer(all_of(reasons_rejection), 
-               names_to = "question",
-               values_to = "answer") %>% 
-  drop_na(answer) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Reasons for consensus rejection (raw answers)"
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2) %>%
-    kableExtra::column_spec(3, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Reasons for consensus rejection (raw answers)") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 3, width = 4.5) # Adjust column width for the third column
-}
-
-# Display the table
-table_output
-
-```
-
-## Reasons for consensus acceptance
-
-```{r exp3-other-reasons-acceptance}
-# store all variables
-table <- exp3_wide %>% 
-  select(id, other_reason_agreement) %>% 
-  drop_na(other_reason_agreement) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Reasons for consensus acceptance (participants who answered 'other')"
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Reasons for consensus acceptance (participants who answered 'other')") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
-}
-
-# Display the table
-table_output
-```
-
-## How did participants independently verifiy?
-
-```{r exp3-independent-verification}
-# store all variables
-table <- exp3_wide %>% 
-  select(id, reason_followup) %>% 
-  drop_na(reason_followup) %>% 
-  arrange(id)
-
-# Create the basic table
-if (knitr::is_latex_output() || knitr::is_html_output()) {
-  # For LaTeX or HTML: Use kbl, column_spec, and kable_paper
-  table_output <- table %>%
-    kbl(
-      booktabs = TRUE, 
-      longtable = TRUE,
-      caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so."
-    ) %>%
-    kableExtra::kable_paper(full_width = FALSE) %>%
-    kableExtra::column_spec(1) %>%
-    kableExtra::column_spec(2, width = "30em")
-} else {
-  # For Word: Use flextable for better Word compatibility
-  table_output <- flextable::flextable(table) %>%
-    flextable::set_caption(caption = "Answers from participants saying they trusted the scientific consensus because they verified independently on how they did so.") %>%
-    flextable::autofit() %>%
-    flextable::width(j = 2, width = 4.5) # Adjust column width for the second column
-}
-
-# Display the table
-table_output
-```
 
 
