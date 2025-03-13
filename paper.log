@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.29)  11 MAR 2025 15:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.29)  13 MAR 2025 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,7 +668,7 @@ Underfull \vbox (badness 1178) has occurred while \output is active []
 [6]
 
 [7]
-<output/figures/summary-plot.pdf, id=82, 722.7pt x 722.7pt>
+<output/figures/summary-plot.pdf, id=81, 722.7pt x 722.7pt>
 File: output/figures/summary-plot.pdf Graphic file (type pdf)
 <use output/figures/summary-plot.pdf>
 Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 370.
@@ -714,7 +714,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [16]
 
 [17]
-<output/figures/acceptance-knowledge.pdf, id=303, 578.16pt x 542.025pt>
+<output/figures/acceptance-knowledge.pdf, id=302, 578.16pt x 542.025pt>
 File: output/figures/acceptance-knowledge.pdf Graphic file (type pdf)
 <use output/figures/acceptance-knowledge.pdf>
 Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 654.
@@ -722,7 +722,7 @@ Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input 
 
 
 [18 <./output/figures/acceptance-knowledge.pdf>]
-<output/figures/conspiracy-thinking-overview.pdf, id=317, 578.16pt x 505.89pt>
+<output/figures/conspiracy-thinking-overview.pdf, id=316, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-thinking-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-thinking-overview.pdf>
 Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 668.
@@ -732,7 +732,7 @@ Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used o
 [19
 
  <./output/figures/conspiracy-thinking-overview.pdf>]
-<output/figures/trust-overview.pdf, id=332, 578.16pt x 505.89pt>
+<output/figures/trust-overview.pdf, id=331, 578.16pt x 505.89pt>
 File: output/figures/trust-overview.pdf Graphic file (type pdf)
 <use output/figures/trust-overview.pdf>
 Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 682.
@@ -742,7 +742,7 @@ Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 6
 [20
 
  <./output/figures/trust-overview.pdf>]
-<output/figures/conspiracy-belief-overview.pdf, id=346, 578.16pt x 505.89pt>
+<output/figures/conspiracy-belief-overview.pdf, id=345, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-belief-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-belief-overview.pdf>
 Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 696.
@@ -752,7 +752,7 @@ Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on 
 [21
 
  <./output/figures/conspiracy-belief-overview.pdf>]
-<output/figures/knowledge-overview.pdf, id=362, 578.16pt x 505.89pt>
+<output/figures/knowledge-overview.pdf, id=361, 578.16pt x 505.89pt>
 File: output/figures/knowledge-overview.pdf Graphic file (type pdf)
 <use output/figures/knowledge-overview.pdf>
 Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 714.
@@ -764,12 +764,12 @@ Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input li
 ]
 
 [23 <./output/figures/knowledge-overview.pdf>]
-<output/figures/questions-knowledge.pdf, id=381, 578.16pt x 578.16pt>
+<output/figures/questions-knowledge.pdf, id=380, 578.16pt x 578.16pt>
 File: output/figures/questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/questions-knowledge.pdf>
 Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 728.
 (pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
-<output/figures/questions-acceptance.pdf, id=382, 578.16pt x 578.16pt>
+<output/figures/questions-acceptance.pdf, id=381, 578.16pt x 578.16pt>
 File: output/figures/questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/questions-acceptance.pdf>
 Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 736.
@@ -790,7 +790,7 @@ l.763 \end{longtable}
 [26
 
 ]
-<./figures/study1_question_example.png, id=413, 1927.2pt x 1084.05pt>
+<./figures/study1_question_example.png, id=412, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
 Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 782.
@@ -829,7 +829,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 896--915
 
 
 [28]
-<output/figures/exp1-plot-overview.pdf, id=442, 722.7pt x 722.7pt>
+<output/figures/exp1-plot-overview.pdf, id=441, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 921.
@@ -841,7 +841,7 @@ Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input li
 [30 <./output/figures/exp1-plot-overview.pdf>]
 
 [31]
-<./figures/study2_question_example.png, id=472, 1927.2pt x 1084.05pt>
+<./figures/study2_question_example.png, id=471, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
 Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 967.
@@ -878,7 +878,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1101--1120
  [][] 
  []
 
-<output/figures/exp2-plot-overview.pdf, id=507, 867.24pt x 867.24pt>
+<output/figures/exp2-plot-overview.pdf, id=506, 867.24pt x 867.24pt>
 File: output/figures/exp2-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp2-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1126.
@@ -894,7 +894,7 @@ Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input li
 [38
 
 ]
-<figures/study3_example_explanation.png, id=545, 724.95844pt x 508.14844pt>
+<figures/study3_example_explanation.png, id=544, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
 Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1176.
@@ -920,7 +920,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1390--1409
  [][] 
  []
 
-<output/figures/exp3-plot-overview.pdf, id=591, 867.24pt x 867.24pt>
+<output/figures/exp3-plot-overview.pdf, id=590, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1415.
@@ -1052,7 +1052,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 1614--1633
  [][] 
  []
 
-<output/figures/exp4-plot-overview.pdf, id=651, 867.24pt x 867.24pt>
+<output/figures/exp4-plot-overview.pdf, id=650, 867.24pt x 867.24pt>
 File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp4-plot-overview.pdf>
 Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1639.
@@ -1075,16 +1075,16 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  16685 strings out of 475178
  276534 string characters out of 5765639
- 718572 words of memory out of 5000000
+ 718585 words of memory out of 5000000
  39133 multiletter control sequences out of 15000+600000
  655748 words of font info for 122 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,12n,93p,3188b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on paper.pdf (53 pages, 894801 bytes).
+Output written on paper.pdf (53 pages, 894610 bytes).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
- 875 compressed objects within 9 object streams
+ 993 PDF objects out of 1000 (max. 8388607)
+ 874 compressed objects within 9 object streams
  245 named destinations out of 1000 (max. 500000)
  620 words of extra memory for PDF output out of 10000 (max. 10000000)
 
