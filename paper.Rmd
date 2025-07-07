@@ -24,9 +24,9 @@ tablelist         : no
 footnotelist      : no
 classoption       : "doc" # "doc" for nice look, "man" for manuscripty
 output: 
-  papaja::apa6_docx: default
   papaja::apa6_pdf: 
     keep_tex: true
+  papaja::apa6_docx: default
 always_allow_html: true
 appendix:
   - "appendix_acceptance_knowledge.Rmd"
