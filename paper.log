@@ -1,32 +1,32 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.29)  13 MAR 2025 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.21)  4 JUL 2025 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
-LaTeX2e <2024-11-01> patch level 1
-L3 programming layer <2024-12-25>
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-05-26>
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/apa6/apa6.cls
 Document Class: apa6 2023/08/07 v2.35 APA formatting (6th edition)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count196
-\c@section=\count197
-\c@subsection=\count198
-\c@subsubsection=\count199
-\c@paragraph=\count266
-\c@subparagraph=\count267
-\c@figure=\count268
-\c@table=\count269
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen141
+\bibindent=\dimen148
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count270
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count283
 )
 Class apa6 Info: No bibliography package was specified; defaulting to (but not loading) Biblatex on input line 213.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
@@ -64,7 +64,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 116.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -78,20 +78,20 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count271
-\Gm@cntv=\count272
-\c@Gm@tempcnt=\count273
-\Gm@bindingoffset=\dimen142
-\Gm@wd@mp=\dimen143
-\Gm@odd@mp=\dimen144
-\Gm@even@mp=\dimen145
-\Gm@layoutwidth=\dimen146
-\Gm@layoutheight=\dimen147
-\Gm@layouthoffset=\dimen148
-\Gm@layoutvoffset=\dimen149
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
@@ -103,8 +103,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen150
-\Gin@req@width=\dimen151
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
@@ -115,26 +115,26 @@ Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen152
-\lightrulewidth=\dimen153
-\cmidrulewidth=\dimen154
-\belowrulesep=\dimen155
-\belowbottomsep=\dimen156
-\aboverulesep=\dimen157
-\abovetopsep=\dimen158
-\cmidrulesep=\dimen159
-\cmidrulekern=\dimen160
-\defaultaddspace=\dimen161
-\@cmidla=\count274
-\@cmidlb=\count275
-\@aboverulesep=\dimen162
-\@belowrulesep=\dimen163
-\@thisruleclass=\count276
-\@lastruleclass=\count277
-\@thisrulewidth=\dimen164
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen171
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box52
+\@tempboxb=\box53
 )
 \b@level@one@skip=\skip51
 \e@level@one@skip=\skip52
@@ -150,23 +150,23 @@ Package: threeparttable 2003/06/13  v 3.0
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen165
-\captionmargin=\dimen166
-\caption@leftmargin=\dimen167
-\caption@rightmargin=\dimen168
-\caption@width=\dimen169
-\caption@indent=\dimen170
-\caption@parindent=\dimen171
-\caption@hangindent=\dimen172
+\caption@tempdima=\dimen172
+\captionmargin=\dimen173
+\caption@leftmargin=\dimen174
+\caption@rightmargin=\dimen175
+\caption@width=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count278
-\c@continuedfloat=\count279
+\c@caption@flags=\count291
+\c@continuedfloat=\count292
 Package caption Info: threeparttable package is loaded.
 )
-\c@APAenum=\count280
+\c@APAenum=\count293
 \@text@par@indent=\skip61
-\gr@box=\box53
+\gr@box=\box54
 \gr@boxwidth=\skip62
 \gr@boxheight=\skip63
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty
@@ -177,9 +177,9 @@ Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
-\c@appendix=\count281
+\c@appendix=\count294
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2025/01/07 v5.1.1 Extensive control of page headers and footers
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip64
 \f@nch@offset@elh=\skip65
 \f@nch@offset@erh=\skip66
@@ -196,69 +196,69 @@ Package: fancyhdr 2025/01/07 v5.1.1 Extensive control of page headers and footer
 \f@nch@widthR=\skip77
 \@temptokenb=\toks19
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2024/11/05 v2.17t AMS math features
+Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip78
 For additional information on amsmath, use the `?' option.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2021/08/26 v2.01 AMS text
+Package: amstext 2024/11/17 v2.01 AMS text
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
-\ex@=\dimen173
+\ex@=\dimen180
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 LaTeX Info: Redefining \boldsymbol on input line 28.
-\pmbraise@=\dimen174
+\pmbraise@=\dimen181
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count282
+\inf@bad=\count295
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count283
-\leftroot@=\count284
+\uproot@=\count296
+\leftroot@=\count297
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count285
-\DOTSCASE@=\count286
+\classnum@=\count298
+\DOTSCASE@=\count299
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box54
-\strutbox@=\box55
+\Mathstrutbox@=\box55
+\strutbox@=\box56
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen175
+\big@size=\dimen182
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count287
+\macc@depth=\count300
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count288
+\c@MaxMatrixCols=\count301
 \dotsspace@=\muskip17
-\c@parentequation=\count289
-\dspbrk@lvl=\count290
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
 \tag@help=\toks21
-\row@=\count291
-\column@=\count292
-\maxfields@=\count293
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
 \andhelp@=\toks22
-\eqnshift@=\dimen176
-\alignsep@=\dimen177
-\tagshift@=\dimen178
-\tagwidth@=\dimen179
-\totwidth@=\dimen180
-\lineht@=\dimen181
+\eqnshift@=\dimen183
+\alignsep@=\dimen184
+\tagshift@=\dimen185
+\tagwidth@=\dimen186
+\totwidth@=\dimen187
+\lineht@=\dimen188
 \@envbody=\toks23
 \multlinegap=\skip79
 \multlinetaggap=\skip80
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -269,7 +269,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks25
@@ -297,36 +297,44 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
+\pandoc@box=\box57
 \cslhangindent=\skip81
 \csllabelwidth=\skip82
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count294
-\calc@Bcount=\count295
-\calc@Adimen=\dimen182
-\calc@Bdimen=\dimen183
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen189
+\calc@Bdimen=\dimen190
 \calc@Askip=\skip83
 \calc@Bskip=\skip84
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count296
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count309
 \calc@Cskip=\skip85
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2025/01/25 v25.2 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
-\babel@savecnt=\count297
-\U@D=\dimen184
-\l@unhyphenated=\language5
+Package: babel 2025/06/10 v25.10 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count310
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2043.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2048.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2049.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2076.
+\U@D=\dimen191
+\l@unhyphenated=\language3
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count298
+\bbl@dirlevel=\count311
 Package babel Info: You haven't specified a language as a class or package
-(babel)             option. I'll load 'nil'. Reported on input line 4188.
+(babel)             option. I'll load 'nil'. Reported on input line 4266.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2025/01/25 v25.2 Nil language
-\l@nil=\language6
+Language: nil 2025/06/10 v25.10 Nil language
+\l@nil=\language4
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 117.
+(babel)             from babel-en.ini. Reported on input line 119.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
 Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
@@ -334,49 +342,49 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \LTleft=\skip86
 \LTright=\skip87
 \LTpre=\skip88
 \LTpost=\skip89
-\LTchunksize=\count299
-\LTcapwidth=\dimen185
-\LT@head=\box56
-\LT@firsthead=\box57
-\LT@foot=\box58
-\LT@lastfoot=\box59
-\LT@gbox=\box60
-\LT@cols=\count300
-\LT@rows=\count301
-\c@LT@tables=\count302
-\c@LT@chunks=\count303
+\LTchunksize=\count312
+\LTcapwidth=\dimen192
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count313
+\LT@rows=\count314
+\c@LT@tables=\count315
+\c@LT@chunks=\count316
 \LT@p@ftn=\toks27
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip90
-\multirow@cntb=\count304
+\multirow@cntb=\count317
 \multirow@dima=\skip91
-\bigstrutjot=\dimen186
+\bigstrutjot=\dimen193
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
-\col@sep=\dimen187
-\ar@mcellbox=\box61
-\extrarowheight=\dimen188
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen194
+\ar@mcellbox=\box63
+\extrarowheight=\dimen195
 \NC@list=\toks28
 \extratabsurround=\skip92
 \backup@length=\skip93
-\ar@cellbox=\box62
+\ar@cellbox=\box64
 )
-\TX@col@width=\dimen189
-\TX@old@table=\dimen190
-\TX@old@col=\dimen191
-\TX@target=\dimen192
-\TX@delta=\dimen193
-\TX@cols=\count305
+\TX@col@width=\dimen196
+\TX@old@table=\dimen197
+\TX@old@col=\dimen198
+\TX@target=\dimen199
+\TX@delta=\dimen256
+\TX@cols=\count318
 \TX@ftn=\toks29
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
@@ -391,23 +399,22 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Failed to patch abstract.
 Failed to patch title.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.sty (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-12-25 L3 programming layer (loader) 
+Package: expl3 2025-05-26 L3 programming layer (loader) 
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box63
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count319
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count307
-\csq@gtype=\count308
-\csq@glevel=\count309
-\csq@qlevel=\count310
-\csq@maxlvl=\count311
-\csq@tshold=\count312
+\csq@reset=\count320
+\csq@gtype=\count321
+\csq@glevel=\count322
+\csq@qlevel=\count323
+\csq@maxlvl=\count324
+\csq@tshold=\count325
 \csq@ltx@everypar=\toks30
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -421,7 +428,7 @@ Package: placeins 2005/04/18  v 2.2
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+Package: hyperref 2025-06-21 v7.01n Hypertext links for LaTeX
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -437,88 +444,80 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count326
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen194
-\Hy@linkcounter=\count314
-\Hy@pagecounter=\count315
+\@linkdim=\dimen257
+\Hy@linkcounter=\count327
+\Hy@pagecounter=\count328
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2025-06-21 v7.01n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count316
+\Hy@SavedSpaceFactor=\count329
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2025-06-21 v7.01n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4040.
-Package hyperref Info: Hyper figures OFF on input line 4157.
-Package hyperref Info: Link nesting OFF on input line 4162.
-Package hyperref Info: Hyper index ON on input line 4165.
-Package hyperref Info: Plain pages OFF on input line 4172.
-Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Option `unicode' set `true' on input line 4052.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count317
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count330
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen195
+LaTeX Info: Redefining \url on input line 4787.
+\XeTeXLinkMargin=\dimen258
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count318
-\Field@Width=\dimen196
-\Fld@charsize=\dimen197
-Package hyperref Info: Hyper figures OFF on input line 6042.
-Package hyperref Info: Link nesting OFF on input line 6047.
-Package hyperref Info: Hyper index ON on input line 6050.
-Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring OFF on input line 6062.
-Package hyperref Info: Link coloring with OCG OFF on input line 6067.
-Package hyperref Info: PDF/A mode OFF on input line 6072.
-(/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
-\Hy@abspage=\count319
-\c@Item=\count320
-\c@Hfootnote=\count321
+\Fld@menulength=\count331
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
+Package hyperref Info: Hyper figures OFF on input line 6066.
+Package hyperref Info: Link nesting OFF on input line 6071.
+Package hyperref Info: Hyper index ON on input line 6074.
+Package hyperref Info: backreferencing OFF on input line 6081.
+Package hyperref Info: Link coloring OFF on input line 6086.
+Package hyperref Info: Link coloring with OCG OFF on input line 6091.
+Package hyperref Info: PDF/A mode OFF on input line 6096.
+\Hy@abspage=\count332
+\c@Item=\count333
+\c@Hfootnote=\count334
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-(/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
-with kernel methods
-)
-\Fld@listcount=\count322
-\c@bookmark@seq@number=\count323
+File: hpdftex.def 2025-06-21 v7.01n Hyperref driver for pdfTeX
+\Fld@listcount=\count335
+\c@bookmark@seq@number=\count336
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip96
 ) (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count324
+\BKM@id=\count337
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -534,24 +533,24 @@ LaTeX Warning: Label `exp1' multiply defined.
 )
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 218.
-LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 220.
+LaTeX Font Info:    ... okay on input line 220.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -601,44 +600,44 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 218.
+Package hyperref Info: Link coloring OFF on input line 220.
 Using title for running head
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 220.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 220.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 220.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 220.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 220.
+(Font)              <14.4> on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 220.
+(Font)              <10> on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 220.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 220.
+(Font)              <7> on input line 222.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 220.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 222.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 220.
+(Font)              <10.95> on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 220.
+(Font)              <8> on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 220.
+(Font)              <6> on input line 222.
 
 
 [1
@@ -646,50 +645,39 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/Users/jan/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
 
 [2]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 241.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 243.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 [3{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 271.
+(Font)              <9> on input line 275.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 271.
+(Font)              <5> on input line 275.
 
 
 [4]
 
-[5]
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
-
-
-[6]
+[5] [6]
 
 [7]
 <output/figures/summary-plot.pdf, id=81, 722.7pt x 722.7pt>
 File: output/figures/summary-plot.pdf Graphic file (type pdf)
 <use output/figures/summary-plot.pdf>
-Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 370.
-(pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
+Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 374.
+(pdftex.def)             Requested size: 722.69823pt x 722.69823pt.
 
 
 [8]
 
 [9 <./output/figures/summary-plot.pdf>]
 
-[10{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+[10]
 
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[11{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [12]
-Underfull \vbox (badness 6575) has occurred while \output is active []
-
-
 
 [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -702,61 +690,61 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [15]
-Underfull \hbox (badness 1253) in paragraph at lines 614--615
-[]\T1/lmr/m/n/10.95 Van Steke-len-burg, A., Schaap, G., Vel-ing, H., Van 'T Riet, J., & Bui-jzen, M.
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [16]
+Underfull \hbox (badness 1253) in paragraph at lines 628--629
+[]\T1/lmr/m/n/10.95 Van Steke-len-burg, A., Schaap, G., Vel-ing, H., Van 'T Riet, J., & Bui-jzen, M.
+ []
+
+
 
 [17]
-<output/figures/acceptance-knowledge.pdf, id=302, 578.16pt x 542.025pt>
+<output/figures/acceptance-knowledge.pdf, id=311, 578.16pt x 542.025pt>
 File: output/figures/acceptance-knowledge.pdf Graphic file (type pdf)
 <use output/figures/acceptance-knowledge.pdf>
-Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 654.
-(pdftex.def)             Requested size: 433.61893pt x 406.51775pt.
+Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 668.
+(pdftex.def)             Requested size: 578.15858pt x 542.02367pt.
 
 
 [18 <./output/figures/acceptance-knowledge.pdf>]
-<output/figures/conspiracy-thinking-overview.pdf, id=316, 578.16pt x 505.89pt>
+<output/figures/conspiracy-thinking-overview.pdf, id=325, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-thinking-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-thinking-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 668.
-(pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
+Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 682.
+(pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
 [19
 
  <./output/figures/conspiracy-thinking-overview.pdf>]
-<output/figures/trust-overview.pdf, id=331, 578.16pt x 505.89pt>
+<output/figures/trust-overview.pdf, id=340, 578.16pt x 505.89pt>
 File: output/figures/trust-overview.pdf Graphic file (type pdf)
 <use output/figures/trust-overview.pdf>
-Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 682.
-(pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
+Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 696.
+(pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
 [20
 
  <./output/figures/trust-overview.pdf>]
-<output/figures/conspiracy-belief-overview.pdf, id=345, 578.16pt x 505.89pt>
+<output/figures/conspiracy-belief-overview.pdf, id=355, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-belief-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-belief-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 696.
-(pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
+Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 710.
+(pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
 [21
 
  <./output/figures/conspiracy-belief-overview.pdf>]
-<output/figures/knowledge-overview.pdf, id=361, 578.16pt x 505.89pt>
+<output/figures/knowledge-overview.pdf, id=370, 578.16pt x 505.89pt>
 File: output/figures/knowledge-overview.pdf Graphic file (type pdf)
 <use output/figures/knowledge-overview.pdf>
-Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 714.
-(pdftex.def)             Requested size: 433.61893pt x 379.41655pt.
+Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 728.
+(pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
 [22
@@ -764,16 +752,16 @@ Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input li
 ]
 
 [23 <./output/figures/knowledge-overview.pdf>]
-<output/figures/questions-knowledge.pdf, id=380, 578.16pt x 578.16pt>
+<output/figures/questions-knowledge.pdf, id=389, 578.16pt x 578.16pt>
 File: output/figures/questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 728.
-(pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
-<output/figures/questions-acceptance.pdf, id=381, 578.16pt x 578.16pt>
+Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 742.
+(pdftex.def)             Requested size: 578.15858pt x 578.15858pt.
+<output/figures/questions-acceptance.pdf, id=390, 578.16pt x 578.16pt>
 File: output/figures/questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 736.
-(pdftex.def)             Requested size: 433.61893pt x 433.61893pt.
+Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 750.
+(pdftex.def)             Requested size: 578.15858pt x 578.15858pt.
 
 
 [24
@@ -784,24 +772,19 @@ Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input 
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.763 \end{longtable}
+l.777 \end{longtable}
                      
 
 [26
 
 ]
-<./figures/study1_question_example.png, id=412, 1927.2pt x 1084.05pt>
+<./figures/study1_question_example.png, id=421, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
-Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 782.
-(pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
+Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 796.
+(pdftex.def)             Requested size: 433.62pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
 
  []
 
@@ -817,23 +800,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 867--884
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 881--898
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 896--915
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 910--929
  [][] 
  []
 
 
 
 [28]
-<output/figures/exp1-plot-overview.pdf, id=441, 722.7pt x 722.7pt>
+<output/figures/exp1-plot-overview.pdf, id=450, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 921.
-(pdftex.def)             Requested size: 433.62334pt x 433.62334pt.
+Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 935.
+(pdftex.def)             Requested size: 722.69823pt x 722.69823pt.
 
 
 [29]
@@ -841,18 +824,13 @@ Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input li
 [30 <./output/figures/exp1-plot-overview.pdf>]
 
 [31]
-<./figures/study2_question_example.png, id=471, 1927.2pt x 1084.05pt>
+<./figures/study2_question_example.png, id=481, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
-Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 967.
-(pdftex.def)             Requested size: 433.6013pt x 243.90073pt.
+Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 981.
+(pdftex.def)             Requested size: 433.62pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 967--968
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 967--968
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
 
  []
 
@@ -867,22 +845,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 967--968
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1072--1089
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1086--1103
  [] 
  []
 
 
 
 [34]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1101--1120
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1115--1134
  [][] 
  []
 
-<output/figures/exp2-plot-overview.pdf, id=506, 867.24pt x 867.24pt>
+<output/figures/exp2-plot-overview.pdf, id=515, 867.24pt x 867.24pt>
 File: output/figures/exp2-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp2-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1126.
-(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1140.
+(pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
 [35]
@@ -894,37 +872,37 @@ Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input li
 [38
 
 ]
-<figures/study3_example_explanation.png, id=544, 724.95844pt x 508.14844pt>
+<figures/study3_example_explanation.png, id=553, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
-Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1176.
-(pdftex.def)             Requested size: 216.80336pt x 151.96497pt.
+Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1190.
+(pdftex.def)             Requested size: 216.81pt x 151.96497pt.
 
 
 [39 <./figures/study3_example_explanation.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1256 \end{longtable}
+l.1270 \end{longtable}
                        [40] [41] [42]
 
 [43]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1361--1378
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1375--1392
  [] 
  []
 
 
 
 [44]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1390--1409
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1404--1423
  [][] 
  []
 
-<output/figures/exp3-plot-overview.pdf, id=590, 867.24pt x 867.24pt>
+<output/figures/exp3-plot-overview.pdf, id=599, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1415.
-(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1429.
+(pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
 [45]
@@ -934,102 +912,102 @@ Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input li
 [47
 
 ]
-Overfull \hbox (55.89326pt too wide) in paragraph at lines 1468--1469
+Overfull \hbox (55.89326pt too wide) in paragraph at lines 1482--1483
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bedaquiline 
  []
 
 
-Overfull \hbox (468.03534pt too wide) in paragraph at lines 1468--1469
+Overfull \hbox (468.03534pt too wide) in paragraph at lines 1482--1483
 \T1/lmr/m/n/8 journals.onlinelibrary.wiley.com/doi/full/10.1111/jam.14478#:~:text=The%20drug%20bedaquiline%20was%20approved,%2DTB%20and%20XDR%2DTB|  
  []
 
 
-Overfull \hbox (207.48604pt too wide) in paragraph at lines 1469--1470
+Overfull \hbox (207.48604pt too wide) in paragraph at lines 1483--1484
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Large_Hadron_Collider#Findings_and_discoveries 
  []
 
 
-Overfull \hbox (79.8382pt too wide) in paragraph at lines 1469--1470
+Overfull \hbox (79.8382pt too wide) in paragraph at lines 1483--1484
 \T1/lmr/m/n/8 https://home.cern/news/news/accelerators/first- 
  []
 
 
-Overfull \hbox (39.7221pt too wide) in paragraph at lines 1470--1471
+Overfull \hbox (39.7221pt too wide) in paragraph at lines 1484--1485
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Kepler- 
  []
 
 
-Overfull \hbox (30.36688pt too wide) in paragraph at lines 1470--1471
+Overfull \hbox (30.36688pt too wide) in paragraph at lines 1484--1485
 \T1/lmr/m/n/8 https://science.nasa.gov/exoplanet- 
  []
 
 
-Overfull \hbox (113.11198pt too wide) in paragraph at lines 1471--1472
+Overfull \hbox (113.11198pt too wide) in paragraph at lines 1485--1486
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bomb_pulse#Applications 
  []
 
 
-Overfull \hbox (62.43724pt too wide) in paragraph at lines 1471--1472
+Overfull \hbox (62.43724pt too wide) in paragraph at lines 1485--1486
 \T1/lmr/m/n/8 https://ora.ox.ac.uk/objects/uuid:6c040460- 
  []
 
 
-Overfull \hbox (102.77245pt too wide) in paragraph at lines 1472--1473
+Overfull \hbox (102.77245pt too wide) in paragraph at lines 1486--1487
 \T1/lmr/m/n/8 https://onlinelibrary.wiley.com/doi/10.1002/cne.24040; 
  []
 
 
-Overfull \hbox (89.12698pt too wide) in paragraph at lines 1472--1473
+Overfull \hbox (89.12698pt too wide) in paragraph at lines 1486--1487
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Glia#Total_number|  
  []
 
 
-Overfull \hbox (153.20612pt too wide) in paragraph at lines 1474--1475
+Overfull \hbox (153.20612pt too wide) in paragraph at lines 1488--1489
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Gravity#Tests_of_general_relativity 
  []
 
 
-Overfull \hbox (82.8043pt too wide) in paragraph at lines 1474--1475
+Overfull \hbox (82.8043pt too wide) in paragraph at lines 1488--1489
 \T1/lmr/m/n/8 https://link.springer.com/article/10.1007/s11434- 
  []
 
 
-Overfull \hbox (100.01013pt too wide) in paragraph at lines 1475--1476
+Overfull \hbox (100.01013pt too wide) in paragraph at lines 1489--1490
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Higgs_boson#cite_ref- 
  []
 
 
-Overfull \hbox (52.42789pt too wide) in paragraph at lines 1475--1476
+Overfull \hbox (52.42789pt too wide) in paragraph at lines 1489--1490
 \T1/lmr/m/n/8 https://home.cern/science/physics/higgs- 
  []
 
 
-Overfull \hbox (89.15677pt too wide) in paragraph at lines 1476--1477
+Overfull \hbox (89.15677pt too wide) in paragraph at lines 1490--1491
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Oldest_dated_rocks 
  []
 
 
-Overfull \hbox (93.88704pt too wide) in paragraph at lines 1476--1477
+Overfull \hbox (93.88704pt too wide) in paragraph at lines 1490--1491
 \T1/lmr/m/n/8 https://www.pnas.org/doi/10.1073/pnas.1904573117|  
  []
 
 
-Overfull \hbox (86.70244pt too wide) in paragraph at lines 1477--1478
+Overfull \hbox (86.70244pt too wide) in paragraph at lines 1491--1492
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Cloning#cite_note- 
  []
 
 
-Overfull \hbox (182.3975pt too wide) in paragraph at lines 1477--1478
+Overfull \hbox (182.3975pt too wide) in paragraph at lines 1491--1492
 \T1/lmr/m/n/8 https://academic.oup.com/biolreprod/article/83/6/929/2530195?login=false|  
  []
 
 
-Overfull \hbox (5.58092pt too wide) in paragraph at lines 1478--1479
+Overfull \hbox (5.58092pt too wide) in paragraph at lines 1492--1493
 \T1/lmr/m/n/8 https://phys.org/news/2024- 
  []
 
 
-Overfull \hbox (106.83717pt too wide) in paragraph at lines 1478--1479
+Overfull \hbox (106.83717pt too wide) in paragraph at lines 1492--1493
 \T1/lmr/m/n/8 https://www.sci.news/othersciences/geoscience/earliest- 
  []
 
@@ -1037,26 +1015,26 @@ Overfull \hbox (106.83717pt too wide) in paragraph at lines 1478--1479
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1480 \end{longtable}
+l.1494 \end{longtable}
                        [48]
 
 [49]
 
 [50]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1585--1602
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1599--1616
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1614--1633
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1628--1647
  [][] 
  []
 
-<output/figures/exp4-plot-overview.pdf, id=650, 867.24pt x 867.24pt>
+<output/figures/exp4-plot-overview.pdf, id=659, 867.24pt x 867.24pt>
 File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp4-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1639.
-(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1653.
+(pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
 [51]
@@ -1065,7 +1043,7 @@ Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input li
 
 [53] (./paper.aux)
  ***********
-LaTeX2e <2024-11-01> patch level 1
+LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 
@@ -1073,18 +1051,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16685 strings out of 475178
- 276534 string characters out of 5765639
- 718585 words of memory out of 5000000
- 39133 multiletter control sequences out of 15000+600000
- 655748 words of font info for 122 fonts, out of 8000000 for 9000
+ 16692 strings out of 469867
+ 276039 string characters out of 5483848
+ 727048 words of memory out of 5000000
+ 44451 multiletter control sequences out of 15000+600000
+ 723736 words of font info for 126 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,12n,93p,3188b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,93p,3188b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on paper.pdf (53 pages, 894610 bytes).
+Output written on paper.pdf (53 pages, 896478 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 874 compressed objects within 9 object streams
- 245 named destinations out of 1000 (max. 500000)
+ 1003 PDF objects out of 1200 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 249 named destinations out of 1000 (max. 500000)
  620 words of extra memory for PDF output out of 10000 (max. 10000000)
 

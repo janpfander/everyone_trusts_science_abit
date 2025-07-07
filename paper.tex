@@ -38,15 +38,17 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -118,6 +120,9 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage[english]{selnolig} % disable illegal ligatures
+\fi
 % Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -187,9 +192,6 @@
 \usepackage{csquotes}
 \usepackage{placeins} 
 
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -210,7 +212,7 @@
 \affiliation{\vspace{0.5cm}\textsuperscript{} }
 
 \abstract{%
-Many people report a low degree of trust in science, or endorse conspiracy theories that violate basic scientific knowledge. This might indicate a wholesale rejection of science in substantial segments of the population. In four studies, we asked 782 US participants questions about trust in science, conspiracy beliefs, and basic science (e.g.~the relative size of electrons and atoms). Participants were provided with the scientifically consensual answer to the basic science questions, and asked whether they accept it. Acceptance of the scientific consensus was very high in the sample as a whole (95.1\%), but also in every sub-sample (e.g., no trust in science: 87.3\%; complete endorsement of flat Earth theory: 87.2\%). This quasi-universal acceptance of basic science suggests that people are motivated to reject specific scientific beliefs, and not science as a whole. This could be leveraged in science communication.
+Substantial segments of the population report a low degree of trust in science, or endorse conspiracy theories that violate basic scientific knowledge. This might indicate a wholesale rejection of science. In four studies, we asked 782 US participants questions about trust in science, conspiracy beliefs, and basic science (e.g.~the relative size of electrons and atoms). Participants were provided with the scientifically consensual answer to the basic science questions, and asked whether they accept it. Acceptance of the scientific consensus was very high in the sample as a whole (95.1\%), but also in every sub-sample (e.g., no trust in science: 87.3\%; complete endorsement of flat Earth theory: 87.2\%). This quasi-universal acceptance of basic science suggests that people are motivated to reject specific scientific beliefs, and not science as a whole. This could be leveraged in science communication.
 }
 
 
@@ -222,9 +224,9 @@ Many people report a low degree of trust in science, or endorse conspiracy theor
 
 Trust in science is related to many desirable outcomes, from acceptance of anthropogenic climate change (Cologna \& Siegrist, 2020) or vaccination (Lindholt, Jørgensen, Bor, \& Petersen, 2021; Sturgis, Brunton-Smith, \& Jackson, 2021) to following recommendations during COVID (Algan, Cohen, Davoine, Foucault, \& Stantcheva, 2021, which suggests that trust in science was the most important predictor of these behaviors).
 
-Although recent global evidence shows that trust in science is moderately high (Cologna et al., 2024), it is far from being at ceiling. Large-scale polls have shown that people who report a high degree of trust in science are a minority in most countries, and they are outnumbered by people who have low trust in science in many areas, e.g., most of Africa and significant parts of Asia (Wellcome Global Monitor, 2018, 2020). Moreover, trust in science has recently been declining in some countries (Algan et al., 2021; Brian \& Tyson, 2023; although see Wellcome Global Monitor, 2021; and Funk \& Kennedy, 2020) and in the US it is increasingly polarizing (Gauchat, 2012; Krause, Brossard, Scheufele, Xenos, \& Franke, 2019; Li \& Qian, 2022).
+Although recent global evidence shows that trust in science is moderately high (Cologna et al., 2025), it is far from being at ceiling. Large-scale polls have shown that people who report a high degree of trust in science are a minority in most countries, and they are outnumbered by people who have low trust in science in many areas, e.g., most of Africa and significant parts of Asia (Wellcome Global Monitor, 2018, 2020). Moreover, trust in science has recently been declining in some countries (Algan et al., 2021; Brian \& Tyson, 2023; although see Wellcome Global Monitor, 2021; and Funk \& Kennedy, 2020) and in the US it is increasingly polarizing (Gauchat, 2012; Krause, Brossard, Scheufele, Xenos, \& Franke, 2019; Li \& Qian, 2022).
 
-Besides low answers on general trust in science questions, another indicator of distrust in science is the belief in conspiracy theories that question the scientific consensus on issues such as vaccination, climate change, and even the shape of the Earth. Conspiracy theories--in the realm of science or elsewhere--typically accuse a small group of powerful people to pursue nefarious goals in secrecy (Douglas et al., 2019; Mede \& Schäfer, 2020). Some of these conspiracy theories are widespread (Rutjens \& Većkalov, 2022). In 2023, a survey in eight different countries found that up to 24\% of respondents agreed that ``climate change is a hoax and scientists touting its existence are lying'' (Stockemer \& Bordeleau, 2024). Similarly, in 2021, 40\% of Americans believed that ``the dangers of genetically-modified foods are being hidden from the public'' (down from 45\% in 2020, Uscinski et al., 2022). People who hold such views not only reject the relevant scientifically consensual facts, but also tend to believe in other conspiracy theories (Hornsey, Harris, \& Fielding, 2018b, 2018a; Lewandowsky, Gignac, \& Oberauer, 2013), and tend to say that they distrust science more generally (Stockemer \& Bordeleau, 2024; Vranic, Hromatko, \& Tonković, 2022). In spite of these correlations, the causal relationship between declaring general distrust in science and believing in one or several anti-science conspiracy theories is not clear. Although conspiracy thinking has been identified as a ``root cause'' of anti-science attitudes (Hornsey \& Fielding, 2017) in the past, these claims rest largely on observational data.
+Besides low answers on general trust in science questions, another indicator of distrust in science is the belief in conspiracy theories that question the scientific consensus on issues such as vaccination, climate change, and even the shape of the Earth. Conspiracy theories--in the realm of science or elsewhere--typically accuse a small group of powerful people to pursue nefarious goals in secrecy (Douglas et al., 2019; Mede \& Schäfer, 2020). Some of these conspiracy theories are widespread (Rutjens \& Većkalov, 2022). Data from the European Social Survey between 2020 and 2022 suggests that in several European countries, relatively large minorities of the population believed that COVID-19 was a result of deliberate and concealed efforts of some government or organisations: around 30\% in Spain and Portugal, 22\% in the UK, and 25\% in Poland (Jabkowski, Domaradzki, \& Baranowski, 2023). In 2023, a survey in eight different countries found that up to 24\% of respondents agreed that ``climate change is a hoax and scientists touting its existence are lying'' (Stockemer \& Bordeleau, 2024). Similarly, in 2021, 40\% of Americans believed that ``the dangers of genetically-modified foods are being hidden from the public'' (down from 45\% in 2020, Uscinski et al., 2022). People who hold such views not only reject the relevant scientifically consensual facts, but also tend to believe in other conspiracy theories (Hornsey, Harris, \& Fielding, 2018b, 2018a; Lewandowsky, Gignac, \& Oberauer, 2013; Littrell et al., 2025), and tend to say that they distrust science more generally (Stockemer \& Bordeleau, 2024; Vranic, Hromatko, \& Tonković, 2022). In spite of these correlations, the causal relationship between declaring general distrust in science and believing in one or several anti-science conspiracy theories is not clear. Although conspiracy thinking has been identified as a ``root cause'' of anti-science attitudes (Hornsey \& Fielding, 2017) in the past, these claims rest largely on observational data.
 
 What does this apparent lack of trust in science actually entail? Do people who say they do not trust science, or who believe in conspiracy theories at odds with well-established science, reject most of science? Or, on the contrary, do they object to a few specific facets of science, while still accepting the overwhelming majority of basic science?
 
@@ -254,7 +256,9 @@ In Studies 3 and 4, we attempted to understand how some people who say they do n
 
 \subsubsection{Samples}\label{samples}
 
-Studies 1 and 2 were conducted on the standard sample of US participants recruited on the platform Prolific Academic. In order to increase the share of participants with low trust in science, and who endorse conspiracy theories, Studies 3 and 4 used the same platform, but only recruited participants who had declared previously being skeptical of vaccination.
+The surveys were hosted via Qualtrics and participants were recruited via Prolific Academic, a crowdsourcing platform that allows researchers to pre-screen and invite eligible participants from their participant pool. Studies 1 and 2 were conducted on the standard sample of US participants. In order to increase the share of participants with low trust in science, and who endorse conspiracy theories, Studies 3 and 4 used the same platform, but only recruited participants who had declared previously being skeptical of vaccination.
+
+Because recruitment was conducted through Prolific's system, we do not have access to the number of individuals who viewed the study invitation but chose not to participate. As such, it is not possible for us to calculate response rates (the proportion of invited participants who completed the survey) for the studies. However, we employed attention checks and, for each study, we report exclusions based on these checks.
 
 \subsubsection{Hypotheses}\label{hypotheses}
 
@@ -359,7 +363,7 @@ For all results presented here, we used the four-item conspiracy mentality quest
 
 \subsubsection{Trust in science}\label{trust-in-science}
 
-In all analyses reported in the main paper, we measure trust in science via a question selected from the Wellcome Global Monitor surveys (Wellcome Global Monitor, 2018, 2020): ``In general, would you say that you trust science a lot, some, not much, or not at all? {[}1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot{]}''. We chose this question as it seemed to be the most general one. In the ESM (sections \ref{exp1} to \ref{exp4}), we additionally report results for two alternative measures of trust included in our studies: Another from the WGM surveys (``How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? {[}1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot{]}''), and one from the Pew Research Center (e.g. Funk, Johnson, \& Hefferon, 2019) (``How much confidence do you have in scientists to act in the best interests of the public? {[}1-5; 1 = No confidence at all, 5 = A great deal of confidence{]}''), the latter having been used in a recent international study on trust in science (Cologna et al., 2024). We selected these items so that we could compare the answers in our sample to global survey results. We find that all three items are highly correlated throughout all studies, and that our results reported here generally replicate when using either of the alternatives measures\footnote{With two exceptions: In Study 3, we find no correlation between acceptance and the Pew question; In Study 4, we find a correlation between knowledge and both alternative trust measures, but not with our main measure; see ESM, sections \ref{exp3} and \ref{exp4}} (see ESM).
+In all analyses reported in the main paper, we measure trust in science via a question selected from the Wellcome Global Monitor surveys (Wellcome Global Monitor, 2018, 2020): ``In general, would you say that you trust science a lot, some, not much, or not at all? {[}1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot{]}''. We chose this question as it seemed to be the most general one. In the ESM (sections \ref{exp1} to \ref{exp4}), we additionally report results for two alternative measures of trust included in our studies: Another from the WGM surveys (``How much do you trust scientists in this country? Do you trust them a lot, some, not much, or not at all? {[}1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot{]}''), and one from the Pew Research Center (e.g. Funk, Johnson, \& Hefferon, 2019) (``How much confidence do you have in scientists to act in the best interests of the public? {[}1-5; 1 = No confidence at all, 5 = A great deal of confidence{]}''), the latter having been used in a recent international study on trust in science (Cologna et al., 2025). We selected these items so that we could compare the answers in our sample to global survey results. We find that all three items are highly correlated throughout all studies, and that our results reported here generally replicate when using either of the alternatives measures\footnote{With two exceptions: In Study 3, we find no correlation between acceptance and the Pew question; In Study 4, we find a correlation between knowledge and both alternative trust measures, but not with our main measure; see ESM, sections \ref{exp3} and \ref{exp4}} (see ESM).
 
 \section{Results}\label{results}
 
@@ -367,7 +371,7 @@ In all analyses reported in the main paper, we measure trust in science via a qu
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/summary-plot.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/summary-plot.pdf}}
 \caption{\label{fig:summary-plot}Points represent the average share of acceptance and numbers the absolute count of participants as a function of: \textbf{A} the level of trust in science (``In general, would you say that you trust science a lot, some, not much, or not at all? {[}1 = Not at all, 2 = Not much, 3 = Some, 4 = A lot{]}''); \textbf{B} the average conspiracy thinking (CMQ, five items on a scale from 0 to 100); \textbf{C} the belief in specific conspiracy theories (i.e.~participants who answered 9, ``completely true'', for a given theory, see Table \ref{tab:conspiracy} for the list of the theories).}
 \end{figure}
 
@@ -386,10 +390,6 @@ How do knowledge and acceptance relate to declared general trust in science and 
 Regarding H1, we find a consistent association between trust in science and acceptance of the scientific consensus (Studies 1: r = 0.27, p \textless{} .001; 2: r = 0.30, p \textless{} .001; 3: r = 0.20, p = 0.019; 4: r = 0.16, p = 0.029), but a less consistent relation between trust in science and science knowledge (Studies 1: r = 0.29, p \textless{} .001; 2: r = 0.28, p \textless{} .001; 3: r = 0.14, p = 0.100; 4: r = 0.10, p = 0.144).
 
 Regarding H2, the results are mixed for the relation of conspiracy beliefs (measured as the average acceptance of all the conspiracy beliefs) with both acceptance of the scientific consensus (Studies 1: r = -0.33, p \textless{} .001; 2: r = -0.37, p \textless{} .001; 3: r = -0.02, p = 0.788; 4: r = -0.05, p = 0.498) and science knowledge (Studies 1: r = -0.38, p \textless{} .001; 2: r = -0.40, p \textless{} .001; 3: r = -0.16, p = 0.055; 4: r = -0.02, p = 0.742).
-
-n an exploratory analysis, we find that
-
-While actual acceptance of scientific knowledge is only weakly correlated with trust in science,
 
 Why did participants reject the scientific consensus? We collected a total of 364 answers (Studies 2: 35; 3: 74; 4: 255) from 167 (Studies 2: 25; 3: 47; 4: 95) participants to the open-ended questions on why they had rejected the scientific consensus on a particular question. Based on the answers, we created five categories (Table \ref{tab:justifications}). All individual answers can be accessed in cleaned data sheets via the OSF project page.
 
@@ -438,9 +438,11 @@ By contrast, our findings align with a motivated reasoning account of trust in s
 
 Some of the present results also speak to the alienation model (Gauchat, 2011), and more specifically to the need for epistemic autonomy (Fricker, 2006). Declaring not trusting science, or endorsing conspiracy theories (Harris, 2023) might reflect a desire to maintain epistemic autonomy and not appear to `blindly' accept epistemic authority. Such a need to appear epistemically autonomous could be reconciled with the acceptance of basic science facts if it was thought to stem from independent evaluation instead of trust. The majority of participants in Studies 3 and 4, two samples of vaccine-skeptical participants who scored high across a range of different conspiracy beliefs (see ESM), tended to claim that they had accepted the scientific consensus based on their own evaluation, however implausible that might be: it is not clear how participants could independently verify, say, the ratio of glial cells to neurons. These participants did also not engage (more than others) in simple forms of verification, i.e.~clicking on sources provided in the answers. This result aligns with other results on conspiracy thinking: Recent studies have shown that, although they claim not to be, conspiracy theorists are in fact just as susceptible to social influence as others (Altay, Nera, Ejaz, Schöpfer, \& Tomas, 2023; Pummerer, Fock, Winter, \& Sassenberg, 2024).
 
-In applied terms, the present results have implications for science communication. Across various domains of science knowledge such as climate change (Većkalov et al., 2024) or vaccination (Salmon, Dudley, Glanz, \& Omer, 2015), researchers have observed a consensus gap: a gap between the scientific consensus and public opinion. Some of the most worrying consensus gaps relate to climate change, as substantial segments of the population disagree with scientists on what is happening and what to do about it (e.g., Egan \& Mullin, 2017). Yet, we found that for much of basic, non-contentious science, such consensus gaps are absent: The vast majority of our participants--including two vaccine-skeptical samples (Studies 3 and 4)--did not appear to have general grounds for distrusting science, which should have led them to reject most or all of the science knowledge presented to them. Since even people who say they distrust science, or who reject specific scientific facts appear to accept most of basic science, stressing the basic science components of publicly controversial fields, from GMOs to climate change, might help reduce the consensus gaps observed in these domains (on climate change, see, e.g. Ranney \& Clark, 2016).
+In applied terms, the present results have implications for science communication. Across various domains of science knowledge such as climate change (Većkalov et al., 2024) or vaccination (Salmon, Dudley, Glanz, \& Omer, 2015), researchers have observed a consensus gap: a gap between the scientific consensus and public opinion. Some of the most worrying consensus gaps relate to climate change, as substantial segments of the population disagree with scientists on what is happening and what to do about it (e.g., Egan \& Mullin, 2017). Yet, we found that for much of basic, non-contentious science, such consensus gaps are absent: The vast majority of our participants--including two vaccine-skeptical samples (Studies 3 and 4)--did not appear to have general grounds for distrusting science, which should have led them to reject most or all of the science knowledge presented to them. Since even people who say they distrust science, or who reject specific scientific facts appear to accept most of basic science, stressing the basic science components of publicly controversial fields, from GMOs to climate change, might help reduce the consensus gaps observed in these domains (on climate change, see, e.g. Ranney \& Clark, 2016). Past research has shown that arguments building on specific scientific findings are more convincing even to populists who are generally skeptical towards expertise (Peresman, Larsen, Mazepus, \& Petersen, 2025).
 
-The present studies have a number of limitations, in particular the lack of representative samples, and the focus on a single country. While our results support motivated reasoning accounts of trust in science, they leave important questions unaddressed, in particular: Why do people reject specific scientific findings but not others? Suggestions have already been made for a number of issues such as vaccination (Miton \& Mercier, 2015), GMOs (Blancke, Van Breusegem, De Jaeger, Braeckman, \& Van Montagu, 2015), or nuclear energy (Hacquin, Altay, Aarøe, \& Mercier, 2021). However, research is still needed to better understand what motivates these rejections (see e.g., Hornsey, 2020). Moreover, rejection of scientific facts can manifest in various ways, for example calling into question the integrity of scientists (Mede, 2023; Mede, Schäfer, Metag, \& Klinger, 2022), or denying the very possibility of scientifically investigating certain issues (Munro, 2010). The classification of justifications we present here does not address these processes in detail. Finally, by design, most of the basic science knowledge presented in this study didn't directly relate to anything controversial for most people. Future studies could look at basic science that does relate to scientific topics which are the object of public and policy-relevant debates (e.g.~GM food, climate science, vaccines), or scientific findings for which there is a more obvious potential conflict of interest (e.g.~non-publicly funded medical research).
+Why do most people (in the US) trust most of basic science? Based on the present studies, we can only speculate. But if this trust has a rational basis, then education is the most plausible candidate for explaining it. Large-scale surveys have identified education, and in particular science education, as one of the strongest correlates of trust in science (Noy \& O'Brien, 2019; Wellcome Global Monitor, 2018) but not consistently so (see e.g., Cologna et al., 2025 who only find a small positive relationship between tertiary education and trust in science). If these studies were to assess trust in scientific knowledge, rather than assessing trust more broadly, we might expect effects to be more strongly and more coherently positive. Differentiating the impact of education on different facets of trust would be an interesting avenue for future research.
+
+The present studies have a number of limitations, in particular the lack of representative samples, and the focus on a single country. The use of online samples recruited via Prolific Academic does not allow us to calculate response rates and thus estimate non-response bias. However, by targeting vaccine-skeptic samples in some of the studies, we made an effort in recruiting those participants that can be assumed to be most reluctant to partake in a study confronting them with science facts. While our results support motivated reasoning accounts of trust in science, they leave important questions unaddressed, in particular: Why do people reject specific scientific findings but not others? Suggestions have already been made for a number of issues such as vaccination (Miton \& Mercier, 2015), GMOs (Blancke, Van Breusegem, De Jaeger, Braeckman, \& Van Montagu, 2015), or nuclear energy (Hacquin, Altay, Aarøe, \& Mercier, 2021). However, research is still needed to better understand what motivates these rejections (see e.g., Hornsey, 2020). Moreover, rejection of scientific facts can manifest in various ways, for example calling into question the integrity of scientists (Mede, 2023; Mede, Schäfer, Metag, \& Klinger, 2022), or denying the very possibility of scientifically investigating certain issues (Munro, 2010). The classification of justifications we present here does not address these processes in detail. Finally, by design, most of the basic science knowledge presented in this study didn't directly relate to anything controversial for most people. Future studies could look at basic science that does relate to scientific topics which are the object of public and policy-relevant debates (e.g.~GM food, climate science, vaccines), or scientific findings for which there is a more obvious potential conflict of interest (e.g.~non-publicly funded medical research).
 
 \FloatBarrier
 
@@ -475,8 +477,8 @@ Brian, K., \& Tyson, A. (2023). \emph{Americans{'} trust in scientists, positive
 \bibitem[\citeproctext]{ref-bruderMeasuringIndividualDifferences2013}
 Bruder, M., Haffke, P., Neave, N., Nouripanah, N., \& Imhoff, R. (2013). Measuring individual differences in generic beliefs in conspiracy theories across cultures: Conspiracy mentality questionnaire. \emph{Frontiers in Psychology}, \emph{4}. Retrieved from \url{https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225}
 
-\bibitem[\citeproctext]{ref-colognaTrustScientistsTheir2024}
-Cologna, V., Mede, N. G., Berger, S., Besley, J., Brick, C., Joubert, M., \ldots{} Linden, D. S. van der. (2024). \emph{Trust in scientists and their role in society across 67 countries}. \url{https://doi.org/10.31219/osf.io/6ay7s}
+\bibitem[\citeproctext]{ref-colognaTrustScientistsTheir2025}
+Cologna, V., Mede, N. G., Berger, S., Besley, J., Brick, C., Joubert, M., \ldots{} Zwaan, R. A. (2025). Trust in scientists and their role in society across 68 countries. \emph{Nature Human Behaviour}, 1--18. \url{https://doi.org/10.1038/s41562-024-02090-5}
 
 \bibitem[\citeproctext]{ref-colognaRoleTrustClimate2020}
 Cologna, V., \& Siegrist, M. (2020). The role of trust for climate change mitigation and adaptation behaviour: A meta-analysis. \emph{Journal of Environmental Psychology}, \emph{69}, 101428. \url{https://doi.org/10.1016/j.jenvp.2020.101428}
@@ -538,6 +540,9 @@ Hornsey, M. J., Harris, E. A., \& Fielding, K. S. (2018b). The psychological roo
 \bibitem[\citeproctext]{ref-intemannScienceCommunicationPublic2023}
 Intemann, K. (2023). Science communication and public trust in science. \emph{Interdisciplinary Science Reviews}, \emph{48}(2), 350--365. \url{https://doi.org/10.1080/03080188.2022.2152244}
 
+\bibitem[\citeproctext]{ref-jabkowskiExploringCOVID19Conspiracy2023}
+Jabkowski, P., Domaradzki, J., \& Baranowski, M. (2023). Exploring COVID-19 conspiracy theories: education, religiosity, trust in scientists, and political orientation in 26 European countries. \emph{Scientific Reports}, \emph{13}(1), 18116. \url{https://doi.org/10.1038/s41598-023-44752-w}
+
 \bibitem[\citeproctext]{ref-krauseTrendsAmericansTrust2019a}
 Krause, N. M., Brossard, D., Scheufele, D. A., Xenos, M. A., \& Franke, K. (2019). Trends{\textemdash}americans{'} trust in science and scientists. \emph{Public Opinion Quarterly}, \emph{83}(4), 817--836. \url{https://doi.org/10.1093/poq/nfz041}
 
@@ -555,6 +560,9 @@ Li, N., \& Qian, Y. (2022). Polarization of public trust in scientists between 1
 
 \bibitem[\citeproctext]{ref-lindholtPublicAcceptanceCOVID192021}
 Lindholt, M. F., Jørgensen, F., Bor, A., \& Petersen, M. B. (2021). Public acceptance of COVID-19 vaccines: cross-national evidence on levels and individual-level predictors using observational data. \emph{BMJ Open}, \emph{11}(6), e048172. \url{https://doi.org/10.1136/bmjopen-2020-048172}
+
+\bibitem[\citeproctext]{ref-littrellBeliefScienceRelatedConspiracy2025}
+Littrell, S., Diekman, A., Seelig, M., Premaratne, K., Wuchty, S., Verdear, D., \ldots{} Uscinski, J. (2025). Belief in Science{-}Related Conspiracy Theories. \emph{Journal of Social Issues}, \emph{81}(1), e70004. \url{https://doi.org/10.1111/josi.70004}
 
 \bibitem[\citeproctext]{ref-mayerIntegrativeModelOrganizational1995a}
 Mayer, R. C., Davis, J. H., \& Schoorman, F. D. (1995). An Integrative Model of Organizational Trust. \emph{The Academy of Management Review}, \emph{20}(3), 709. \url{https://doi.org/10.2307/258792}
@@ -583,8 +591,14 @@ Nadelson, L. S., \& Hardy, K. K. (2015). Trust in science and scientists and the
 \bibitem[\citeproctext]{ref-nationalacademiesofsciencesengineeringandmedicineScienceLiteracyConcepts2016}
 National Academies of Sciences, Engineering, and Medicine. (2016). \emph{Science Literacy: Concepts, Contexts, and Consequences} (C. E. Snow \& K. A. Dibner, Eds.). Washington, D.C.: National Academies Press. \url{https://doi.org/10.17226/23595}
 
+\bibitem[\citeproctext]{ref-noyScienceGoodEffects2019}
+Noy, S., \& O'Brien, T. L. (2019). Science for good? The effects of education and national context on perceptions of science. \emph{Public Understanding of Science}, \emph{28}(8), 897--916. \url{https://doi.org/10.1177/0963662519863575}
+
 \bibitem[\citeproctext]{ref-pennycookOverconfidentlyConspiratorialConspiracy2022}
 Pennycook, G., Binnendyk, J., \& Rand, D. (2022). \emph{Overconfidently conspiratorial: Conspiracy believers are dispositionally overconfident and massively overestimate how much others agree with them}. \url{https://doi.org/10.31234/osf.io/d5fz2}
+
+\bibitem[\citeproctext]{ref-peresmanPopulistsListenExpertise2025}
+Peresman, A., Larsen, L. T., Mazepus, H., \& Petersen, M. B. (2025). Do Populists Listen to Expertise? A Five-Country Study of Authority, Arguments, and Expert Sources. \emph{Political Studies}, 00323217251323402. \url{https://doi.org/10.1177/00323217251323402}
 
 \bibitem[\citeproctext]{ref-pummererConspiracyBeliefsMajority2024}
 Pummerer, L., Fock, L., Winter, K., \& Sassenberg, K. (2024). Conspiracy beliefs and majority influence. \emph{The Journal of Social Psychology}, 1--16. \url{https://doi.org/10.1080/00224545.2024.2397491}
@@ -651,7 +665,7 @@ Did participants who gave a wrong answer change their minds towards the scientif
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/acceptance-knowledge.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/acceptance-knowledge.pdf}}
 \caption{\label{fig:acceptance-knowledge}Acceptance/Rejection rate of scientific consensus, based on whether the initial response to the knowledge question was false or true.}
 \end{figure}
 
@@ -665,7 +679,7 @@ Figure \ref{fig:conspiracy-thinking-overview} shows the distributions of conspir
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/conspiracy-thinking-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/conspiracy-thinking-overview.pdf}}
 \caption{\label{fig:conspiracy-thinking-overview}Distributions of conspiracy thinking.}
 \end{figure}
 
@@ -679,7 +693,7 @@ Figure \ref{fig:trust-overview} shows the distributions of our main trust in sci
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/trust-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/trust-overview.pdf}}
 \caption{\label{fig:trust-overview}Distributions of trust in science.}
 \end{figure}
 
@@ -693,7 +707,7 @@ Figure \ref{fig:conspiracy-belief-overview} shows the average belief in each of 
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/conspiracy-belief-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/conspiracy-belief-overview.pdf}}
 \caption{\label{fig:conspiracy-belief-overview}Average belief in conspiracy theories.}
 \end{figure}
 
@@ -711,7 +725,7 @@ As visualized in Figure \ref{fig:knowledge-overview}, for Studies 1, 2, and 3, t
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/knowledge-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/knowledge-overview.pdf}}
 \caption{\label{fig:knowledge-overview}Distributions of science knowledge.}
 \end{figure}
 
@@ -725,7 +739,7 @@ Figure \ref{fig:knowledge-overview} shows the share of correct answers, and Figu
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/questions-knowledge.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/questions-knowledge.pdf}}
 \caption{\label{fig:questions-knowledge}Share of correct answers by question.}
 \end{figure}
 
@@ -733,7 +747,7 @@ Figure \ref{fig:knowledge-overview} shows the share of correct answers, and Figu
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/questions-acceptance.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/questions-acceptance.pdf}}
 \caption{\label{fig:questions-acceptance}Acceptance rate of consensus by question.}
 \end{figure}
 
@@ -918,7 +932,7 @@ RMSE & 0.99 & 1.00 & 1.00 & 0.99 & 1.00 & 1.00\\
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/exp1-plot-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/exp1-plot-overview.pdf}}
 \caption{\label{fig:exp1-plot-overview}Summary plot for Study 1. \textbf{A} Shows the distribution of science knowledge (left) and acceptance of scientific consensus \textbf{B} Shows the relationship between trust in science and science knowledge/acceptance of scientific consensus \textbf{C} Shows the relationship between conspiracy thinking and science knowledge/acceptance of scientific consensus}
 \end{figure}
 
@@ -1123,7 +1137,7 @@ RMSE & 0.97 & 0.97 & 0.98 & 0.99 & 0.98 & 0.99\\
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/exp2-plot-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/exp2-plot-overview.pdf}}
 \caption{\label{fig:exp2-plot-overview}Summary plot for Study 2. \textbf{A} Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer \textbf{B} Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus \textbf{C} Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus}
 \end{figure}
 
@@ -1412,7 +1426,7 @@ RMSE & 0.99 & 1.00 & 1.00 & 0.99 & 1.00 & 0.99\\
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/exp3-plot-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/exp3-plot-overview.pdf}}
 \caption{\label{fig:exp3-plot-overview}Summary plot for Study 3. \textbf{A} Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer \textbf{B} Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus \textbf{C} Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus}
 \end{figure}
 
@@ -1636,7 +1650,7 @@ RMSE & 1.00 & 0.99 & 0.99 & 0.97 & 0.99 & 0.98\\
 
 \begin{figure}
 \centering
-\includegraphics{output/figures/exp4-plot-overview.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{output/figures/exp4-plot-overview.pdf}}
 \caption{\label{fig:exp4-plot-overview}Summary plot for Study 4. \textbf{A} Shows the distribution of science knowledge (left) and acceptance of scientific consensus for participants who gave the wrong answer \textbf{B} Shows the relationship between trust in science and science knowledge/acceptance (if wrong at first, rounded to the first digit) of scientific consensus \textbf{C} Shows the relationship between conspiracy thinking and science knowledge/acceptance (if wrong at first) of scientific consensus}
 \end{figure}
 

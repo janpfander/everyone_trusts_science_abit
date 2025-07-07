@@ -138,7 +138,7 @@ Why does it matter whether trust in science is or is not related to trust in spe
 
 ## The present studies
 
-In a series of four pre-registered online studies (total n = 782), we asked US participants questions about well-established, consensual scientific facts. For each question, we asked participants what they thought the correct answer was (testing their knowledge of science), we informed them of the scientifically accepted answer, and asked them whether they accepted it (measuring their trust in basic science). We also measured participants’ trust in science using standard measures, as well as their beliefs in various conspiracy theories and their tendency to engage in conspiratorial thinking. The four studies, including materials, hypotheses, and analyses, were pre-registered and all materials and data are accessible via the Open Science Framework (<https://osf.io/8utsj/?view_only=364478f01fc548d0a42b9962918d871d>). The differences between the four studies are summarized presently, and the methods are detailed below.
+In a series of four pre-registered online studies (total n = 782), we asked US participants questions about well-established, consensual scientific facts. For each question, we asked participants what they thought the correct answer was (testing their knowledge of science), we informed them of the scientifically accepted answer, and asked them whether they accepted it (measuring their trust in basic science). We also measured participants’ trust in science using standard measures, as well as their beliefs in various conspiracy theories and their tendency to engage in conspiratorial thinking. The four studies, including materials, hypotheses, and analyses, were pre-registered and all materials and data are accessible via the Open Science Framework (<https://osf.io/8utsj/>). The differences between the four studies are summarized presently, and the methods are detailed below.
 
 ### Materials
 
@@ -1324,6 +1324,19 @@ Some of the present results also speak to the alienation model [@gauchatCultural
 In applied terms, the present results have implications for science communication. Across various domains of science knowledge such as climate change [@veckalov27countryTestCommunicating2024] or vaccination [@salmonVaccineHesitancyCauses2015], researchers have observed a consensus gap: a gap between the scientific consensus and public opinion. Some of the most worrying consensus gaps relate to climate change, as substantial segments of the population disagree with scientists on what is happening and what to do about it [e.g., @eganClimateChangeUS2017]. Yet, we found that for much of basic, non-contentious science, such consensus gaps are absent: The vast majority of our participants--including two vaccine-skeptical samples (Studies 3 and 4)--did not appear to have general grounds for distrusting science, which should have led them to reject most or all of the science knowledge presented to them. Since even people who say they distrust science, or who reject specific scientific facts appear to accept most of basic science, stressing the basic science components of publicly controversial fields, from GMOs to climate change, might help reduce the consensus gaps observed in these domains [on climate change, see, e.g. @ranneyClimateChangeConceptual2016].
 
 The present studies have a number of limitations, in particular the lack of representative samples, and the focus on a single country. While our results support motivated reasoning accounts of trust in science, they leave important questions unaddressed, in particular: Why do people reject specific scientific findings but not others? Suggestions have already been made for a number of issues such as vaccination [@mitonCognitiveObstaclesProVaccination2015], GMOs [@blanckeFatalAttractionIntuitive2015], or nuclear energy [@hacquinDisgustSensitivityPublic2021]. However, research is still needed to better understand what motivates these rejections [see e.g., @hornseyWhyFactsAre2020]. Moreover, rejection of scientific facts can manifest in various ways, for example calling into question the integrity of scientists [@medeSciencerelatedPopulismConceptualization2023a; @medeWhoSupportsSciencerelated2022], or denying the very possibility of scientifically investigating certain issues [@munroScientificImpotenceExcuse2010]. The classification of justifications we present here does not address these processes in detail. Finally, by design, most of the basic science knowledge presented in this study didn't directly relate to anything controversial for most people. Future studies could look at basic science that does relate to scientific topics which are the object of public and policy-relevant debates (e.g. GM food, climate science, vaccines), or scientific findings for which there is a more obvious potential conflict of interest (e.g. non-publicly funded medical research).
+
+### Data availability
+
+Data for all experiments and the simulations is available on the OSF project page (https://osf.io/8utsj/). 
+
+### Code availability
+
+The code used to create all results (including tables and figures) of this manuscript is also available on the OSF project page (https://osf.io/8utsj/).
+
+### Competing interest
+
+The authors declare having no competing interests.
+
 
 \FloatBarrier
 
