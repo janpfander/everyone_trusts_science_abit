@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.21)  12 JUL 2025 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.21)  17 JUL 2025 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,24 +533,24 @@ LaTeX Warning: Label `exp1' multiply defined.
 )
 \openout1 = `preprint.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -600,48 +600,48 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 227.
+Package hyperref Info: Link coloring OFF on input line 231.
 Using title for running head
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 229.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 229.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 229.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 229.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 229.
+(Font)              <14.4> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 229.
+(Font)              <10> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 229.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 229.
+(Font)              <7> on input line 233.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 229.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 233.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 229.
+(Font)              <10.95> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 229.
+(Font)              <8> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 229.
+(Font)              <6> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 229.
+(Font)              <9> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 229.
+(Font)              <5> on input line 233.
 
 
 [1
@@ -649,7 +649,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/Users/jan/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/jan/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
 
 [2]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 250.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 254.
 (/Users/jan/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -662,7 +662,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <output/figures/summary-plot.pdf, id=83, 722.7pt x 722.7pt>
 File: output/figures/summary-plot.pdf Graphic file (type pdf)
 <use output/figures/summary-plot.pdf>
-Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 381.
+Package pdftex.def Info: output/figures/summary-plot.pdf  used on input line 385.
 (pdftex.def)             Requested size: 722.69823pt x 722.69823pt.
 
 
@@ -692,7 +692,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [16]
-Underfull \hbox (badness 1253) in paragraph at lines 647--648
+Underfull \hbox (badness 1253) in paragraph at lines 651--652
 []\T1/lmr/m/n/10.95 Van Steke-len-burg, A., Schaap, G., Vel-ing, H., Van 'T Riet, J., & Bui-jzen, M.
  []
 
@@ -707,7 +707,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <output/figures/acceptance-knowledge.pdf, id=326, 578.16pt x 542.025pt>
 File: output/figures/acceptance-knowledge.pdf Graphic file (type pdf)
 <use output/figures/acceptance-knowledge.pdf>
-Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 687.
+Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input line 691.
 (pdftex.def)             Requested size: 578.15858pt x 542.02367pt.
 
 
@@ -715,7 +715,7 @@ Package pdftex.def Info: output/figures/acceptance-knowledge.pdf  used on input 
 <output/figures/conspiracy-thinking-overview.pdf, id=341, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-thinking-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-thinking-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 701.
+Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used on input line 705.
 (pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
@@ -725,7 +725,7 @@ Package pdftex.def Info: output/figures/conspiracy-thinking-overview.pdf  used o
 <output/figures/trust-overview.pdf, id=356, 578.16pt x 505.89pt>
 File: output/figures/trust-overview.pdf Graphic file (type pdf)
 <use output/figures/trust-overview.pdf>
-Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 715.
+Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 719.
 (pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
@@ -735,7 +735,7 @@ Package pdftex.def Info: output/figures/trust-overview.pdf  used on input line 7
 <output/figures/conspiracy-belief-overview.pdf, id=370, 578.16pt x 505.89pt>
 File: output/figures/conspiracy-belief-overview.pdf Graphic file (type pdf)
 <use output/figures/conspiracy-belief-overview.pdf>
-Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 729.
+Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on input line 733.
 (pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
@@ -745,7 +745,7 @@ Package pdftex.def Info: output/figures/conspiracy-belief-overview.pdf  used on 
 <output/figures/knowledge-overview.pdf, id=385, 578.16pt x 505.89pt>
 File: output/figures/knowledge-overview.pdf Graphic file (type pdf)
 <use output/figures/knowledge-overview.pdf>
-Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 747.
+Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input line 751.
 (pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
 
@@ -757,12 +757,12 @@ Package pdftex.def Info: output/figures/knowledge-overview.pdf  used on input li
 <output/figures/questions-knowledge.pdf, id=404, 578.16pt x 578.16pt>
 File: output/figures/questions-knowledge.pdf Graphic file (type pdf)
 <use output/figures/questions-knowledge.pdf>
-Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 761.
+Package pdftex.def Info: output/figures/questions-knowledge.pdf  used on input line 765.
 (pdftex.def)             Requested size: 578.15858pt x 578.15858pt.
 <output/figures/questions-acceptance.pdf, id=405, 578.16pt x 578.16pt>
 File: output/figures/questions-acceptance.pdf Graphic file (type pdf)
 <use output/figures/questions-acceptance.pdf>
-Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 769.
+Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input line 773.
 (pdftex.def)             Requested size: 578.15858pt x 578.15858pt.
 
 
@@ -774,7 +774,7 @@ Package pdftex.def Info: output/figures/questions-acceptance.pdf  used on input 
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.796 \end{longtable}
+l.800 \end{longtable}
                      
 
 [27
@@ -783,10 +783,10 @@ l.796 \end{longtable}
 <./figures/study1_question_example.png, id=436, 1927.2pt x 1084.05pt>
 File: ./figures/study1_question_example.png Graphic file (type png)
 <use ./figures/study1_question_example.png>
-Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 815.
+Package pdftex.def Info: ./figures/study1_question_example.png  used on input line 819.
 (pdftex.def)             Requested size: 433.62pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
+Underfull \hbox (badness 10000) in paragraph at lines 819--820
 
  []
 
@@ -802,12 +802,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 900--917
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 904--921
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 929--948
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 933--952
  [][] 
  []
 
@@ -817,7 +817,7 @@ Overfull \hbox (80.59267pt too wide) in paragraph at lines 929--948
 <output/figures/exp1-plot-overview.pdf, id=465, 722.7pt x 722.7pt>
 File: output/figures/exp1-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp1-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 954.
+Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input line 958.
 (pdftex.def)             Requested size: 722.69823pt x 722.69823pt.
 
 
@@ -829,10 +829,10 @@ Package pdftex.def Info: output/figures/exp1-plot-overview.pdf  used on input li
 <./figures/study2_question_example.png, id=496, 1927.2pt x 1084.05pt>
 File: ./figures/study2_question_example.png Graphic file (type png)
 <use ./figures/study2_question_example.png>
-Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 1000.
+Package pdftex.def Info: ./figures/study2_question_example.png  used on input line 1004.
 (pdftex.def)             Requested size: 433.62pt x 243.90073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
 
  []
 
@@ -847,21 +847,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1105--1122
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1109--1126
  [] 
  []
 
 
 
 [35]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1134--1153
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1138--1157
  [][] 
  []
 
 <output/figures/exp2-plot-overview.pdf, id=530, 867.24pt x 867.24pt>
 File: output/figures/exp2-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp2-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1159.
+Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input line 1163.
 (pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
@@ -877,7 +877,7 @@ Package pdftex.def Info: output/figures/exp2-plot-overview.pdf  used on input li
 <figures/study3_example_explanation.png, id=568, 724.95844pt x 508.14844pt>
 File: figures/study3_example_explanation.png Graphic file (type png)
 <use figures/study3_example_explanation.png>
-Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1209.
+Package pdftex.def Info: figures/study3_example_explanation.png  used on input line 1213.
 (pdftex.def)             Requested size: 216.81pt x 151.96497pt.
 
 
@@ -885,25 +885,25 @@ Package pdftex.def Info: figures/study3_example_explanation.png  used on input l
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1289 \end{longtable}
+l.1293 \end{longtable}
                        [41] [42] [43]
 
 [44]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1394--1411
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1398--1415
  [] 
  []
 
 
 
 [45]
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1423--1442
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1427--1446
  [][] 
  []
 
 <output/figures/exp3-plot-overview.pdf, id=615, 867.24pt x 867.24pt>
 File: output/figures/exp3-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp3-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1448.
+Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input line 1452.
 (pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
@@ -914,102 +914,102 @@ Package pdftex.def Info: output/figures/exp3-plot-overview.pdf  used on input li
 [48
 
 ]
-Overfull \hbox (55.89326pt too wide) in paragraph at lines 1501--1502
+Overfull \hbox (55.89326pt too wide) in paragraph at lines 1505--1506
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bedaquiline 
  []
 
 
-Overfull \hbox (468.03534pt too wide) in paragraph at lines 1501--1502
+Overfull \hbox (468.03534pt too wide) in paragraph at lines 1505--1506
 \T1/lmr/m/n/8 journals.onlinelibrary.wiley.com/doi/full/10.1111/jam.14478#:~:text=The%20drug%20bedaquiline%20was%20approved,%2DTB%20and%20XDR%2DTB|  
  []
 
 
-Overfull \hbox (207.48604pt too wide) in paragraph at lines 1502--1503
+Overfull \hbox (207.48604pt too wide) in paragraph at lines 1506--1507
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Large_Hadron_Collider#Findings_and_discoveries 
  []
 
 
-Overfull \hbox (79.8382pt too wide) in paragraph at lines 1502--1503
+Overfull \hbox (79.8382pt too wide) in paragraph at lines 1506--1507
 \T1/lmr/m/n/8 https://home.cern/news/news/accelerators/first- 
  []
 
 
-Overfull \hbox (39.7221pt too wide) in paragraph at lines 1503--1504
+Overfull \hbox (39.7221pt too wide) in paragraph at lines 1507--1508
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Kepler- 
  []
 
 
-Overfull \hbox (30.36688pt too wide) in paragraph at lines 1503--1504
+Overfull \hbox (30.36688pt too wide) in paragraph at lines 1507--1508
 \T1/lmr/m/n/8 https://science.nasa.gov/exoplanet- 
  []
 
 
-Overfull \hbox (113.11198pt too wide) in paragraph at lines 1504--1505
+Overfull \hbox (113.11198pt too wide) in paragraph at lines 1508--1509
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Bomb_pulse#Applications 
  []
 
 
-Overfull \hbox (62.43724pt too wide) in paragraph at lines 1504--1505
+Overfull \hbox (62.43724pt too wide) in paragraph at lines 1508--1509
 \T1/lmr/m/n/8 https://ora.ox.ac.uk/objects/uuid:6c040460- 
  []
 
 
-Overfull \hbox (102.77245pt too wide) in paragraph at lines 1505--1506
+Overfull \hbox (102.77245pt too wide) in paragraph at lines 1509--1510
 \T1/lmr/m/n/8 https://onlinelibrary.wiley.com/doi/10.1002/cne.24040; 
  []
 
 
-Overfull \hbox (89.12698pt too wide) in paragraph at lines 1505--1506
+Overfull \hbox (89.12698pt too wide) in paragraph at lines 1509--1510
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Glia#Total_number|  
  []
 
 
-Overfull \hbox (153.20612pt too wide) in paragraph at lines 1507--1508
+Overfull \hbox (153.20612pt too wide) in paragraph at lines 1511--1512
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Gravity#Tests_of_general_relativity 
  []
 
 
-Overfull \hbox (82.8043pt too wide) in paragraph at lines 1507--1508
+Overfull \hbox (82.8043pt too wide) in paragraph at lines 1511--1512
 \T1/lmr/m/n/8 https://link.springer.com/article/10.1007/s11434- 
  []
 
 
-Overfull \hbox (100.01013pt too wide) in paragraph at lines 1508--1509
+Overfull \hbox (100.01013pt too wide) in paragraph at lines 1512--1513
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Higgs_boson#cite_ref- 
  []
 
 
-Overfull \hbox (52.42789pt too wide) in paragraph at lines 1508--1509
+Overfull \hbox (52.42789pt too wide) in paragraph at lines 1512--1513
 \T1/lmr/m/n/8 https://home.cern/science/physics/higgs- 
  []
 
 
-Overfull \hbox (89.15677pt too wide) in paragraph at lines 1509--1510
+Overfull \hbox (89.15677pt too wide) in paragraph at lines 1513--1514
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Oldest_dated_rocks 
  []
 
 
-Overfull \hbox (93.88704pt too wide) in paragraph at lines 1509--1510
+Overfull \hbox (93.88704pt too wide) in paragraph at lines 1513--1514
 \T1/lmr/m/n/8 https://www.pnas.org/doi/10.1073/pnas.1904573117|  
  []
 
 
-Overfull \hbox (86.70244pt too wide) in paragraph at lines 1510--1511
+Overfull \hbox (86.70244pt too wide) in paragraph at lines 1514--1515
 \T1/lmr/m/n/8 https://en.wikipedia.org/wiki/Cloning#cite_note- 
  []
 
 
-Overfull \hbox (182.3975pt too wide) in paragraph at lines 1510--1511
+Overfull \hbox (182.3975pt too wide) in paragraph at lines 1514--1515
 \T1/lmr/m/n/8 https://academic.oup.com/biolreprod/article/83/6/929/2530195?login=false|  
  []
 
 
-Overfull \hbox (5.58092pt too wide) in paragraph at lines 1511--1512
+Overfull \hbox (5.58092pt too wide) in paragraph at lines 1515--1516
 \T1/lmr/m/n/8 https://phys.org/news/2024- 
  []
 
 
-Overfull \hbox (106.83717pt too wide) in paragraph at lines 1511--1512
+Overfull \hbox (106.83717pt too wide) in paragraph at lines 1515--1516
 \T1/lmr/m/n/8 https://www.sci.news/othersciences/geoscience/earliest- 
  []
 
@@ -1017,25 +1017,25 @@ Overfull \hbox (106.83717pt too wide) in paragraph at lines 1511--1512
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1513 \end{longtable}
+l.1517 \end{longtable}
                        [49]
 
 [50]
 
 [51]
-Overfull \hbox (68.56035pt too wide) in paragraph at lines 1618--1635
+Overfull \hbox (68.56035pt too wide) in paragraph at lines 1622--1639
  [] 
  []
 
 
-Overfull \hbox (80.59267pt too wide) in paragraph at lines 1647--1666
+Overfull \hbox (80.59267pt too wide) in paragraph at lines 1651--1670
  [][] 
  []
 
 <output/figures/exp4-plot-overview.pdf, id=674, 867.24pt x 867.24pt>
 File: output/figures/exp4-plot-overview.pdf Graphic file (type pdf)
 <use output/figures/exp4-plot-overview.pdf>
-Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1672.
+Package pdftex.def Info: output/figures/exp4-plot-overview.pdf  used on input line 1676.
 (pdftex.def)             Requested size: 867.2379pt x 867.2379pt.
 
 
@@ -1055,13 +1055,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  16703 strings out of 469867
  276212 string characters out of 5483848
- 727807 words of memory out of 5000000
+ 728156 words of memory out of 5000000
  44457 multiletter control sequences out of 15000+600000
  723736 words of font info for 126 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,12n,93p,3191b,696s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/jan/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on preprint.pdf (54 pages, 923809 bytes).
+Output written on preprint.pdf (54 pages, 926232 bytes).
 PDF statistics:
  1034 PDF objects out of 1200 (max. 8388607)
  911 compressed objects within 10 object streams

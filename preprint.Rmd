@@ -1,16 +1,14 @@
 ---
 title             : "Quasi-universal acceptance of basic science in the US"
-shorttitle        : "Does anyone mistrust basic science?"
+shorttitle        : "Quasi-universal acceptance of basic science in the US"
 header-includes:  | # to prevent floats from moving past certain points (for the appendix)
   \usepackage{placeins} 
   
 author: 
   - name          : "Jan Pfänder"
     affiliation   : "1"
-    #role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
   - name          : "Lou Kerzreho"
     affiliation   : "1"
-    #role:         
   - name          : "Hugo Mercier"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
@@ -23,6 +21,12 @@ affiliation:
 abstract: |
   
   Substantial minorities of the population report a low degree of trust in science, or endorse conspiracy theories that violate basic scientific knowledge. This might indicate a wholesale rejection of science. In four studies, we asked 782 US participants questions about trust in science, conspiracy beliefs, and basic science (e.g. the relative size of electrons and atoms). Participants were provided with the scientifically consensual answer to the basic science questions, and asked whether they accept it. Acceptance of the scientific consensus was very high in the sample as a whole (95.1%), but also in every sub-sample (e.g., no trust in science: 87.3%; complete endorsement of flat Earth theory: 87.2%). This quasi-universal acceptance of basic science suggests that people are motivated to reject specific scientific beliefs, and not science as a whole. This could be leveraged in science communication.
+  
+authornote: |
+  Jan Pfänder is a PhD candidate in psychology, working on misinformation and trust in science. 
+  Lou Kerzreho is a Master’s student in cognitive science.
+  Hugo Mercier is a research director at the CNRS, whose work has focused on two main topics: the function and workings of reasoning, and how we evaluate communicated information.
+  
 keywords          : Trust in science; conspiracy theories; conspiracy thinking; science knowledge.
 floatsintext      : yes
 linenumbers       : no 
