@@ -1,0 +1,124 @@
+---
+title: "Additional figures"
+format: html
+---
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(gt)
+library(kableExtra)
+library(readxl)
+library(wesanderson) # colours
+library(gghalves)
+library(broom)
+library(broom.mixed)
+library(ggpubr)
+```
+
+```{r functions}
+# load plot theme
+source("../functions/plot_theme.R") 
+
+# load other functions
+source("../functions/own_functions.R")
+```
+
+```{r}
+# read data
+exp1_long <- read_csv("../exp_1/data/cleaned_long.csv")
+exp2_long <- read_csv("../exp_2/data/cleaned_long.csv")
+exp3_long <- read_csv("../exp_3/data/cleaned_long.csv")
+exp4_long <- read_csv("../exp_4/data/cleaned_long.csv")
+
+## combine data of all three studies
+combined_data <- bind_rows(exp1_long %>% 
+                             mutate(study = "1"), 
+                           exp2_long %>% 
+                             mutate(study = "2"), 
+                           exp3_long %>% 
+                             mutate(study = "3"),
+                           exp4_long %>% 
+                             mutate(study = "4")
+                           ) %>% 
+  ## make a unique id variable
+  mutate(id = paste0("study", study, "_", id))
+```
+
+```{r}
+# make plot data for acceptance
+plot_data_acceptance <- combined_data |> 
+  drop_na(wgm_sciencegeneral, acceptance) |> 
+  # make a labels version of trust in science
+  mutate(wgm_sciencegeneral = case_when(
+    wgm_sciencegeneral == 1 ~ "1 (Not at all)",
+    wgm_sciencegeneral == 2 ~ "2 (Not much)",
+    wgm_sciencegeneral == 3 ~ "3 (Some)",
+    wgm_sciencegeneral == 4 ~ "4 (A lot)",
+    TRUE ~ as.character(wgm_sciencegeneral)  # Handle any other cases (optional)
+  )) |> 
+  group_by(wgm_sciencegeneral, acceptance) |> 
+  summarize(n = n()) |> 
+  group_by(wgm_sciencegeneral) |> 
+  mutate (share = n/sum(n)) |> 
+  mutate_if(is.numeric, round, digits = 3) |> 
+  filter(acceptance == "Yes") |> 
+  select(-acceptance) |> 
+  mutate(outcome = "Acceptance")
+
+# make plot data for knowledge
+plot_data_knowledge <- combined_data |> 
+  drop_na(wgm_sciencegeneral, knowledge) |> 
+  # make a labels version of trust in science
+  mutate(wgm_sciencegeneral = case_when(
+    wgm_sciencegeneral == 1 ~ "1 (Not at all)",
+    wgm_sciencegeneral == 2 ~ "2 (Not much)",
+    wgm_sciencegeneral == 3 ~ "3 (Some)",
+    wgm_sciencegeneral == 4 ~ "4 (A lot)",
+    TRUE ~ as.character(wgm_sciencegeneral)  # Handle any other cases (optional)
+  )) |> 
+  group_by(wgm_sciencegeneral, knowledge) |> 
+  summarize(n = n()) |> 
+  group_by(wgm_sciencegeneral) |> 
+  mutate (share = n/sum(n)) |> 
+  mutate_if(is.numeric, round, digits = 3) |> 
+  filter(knowledge == TRUE) |> 
+  select(-knowledge) |> 
+  mutate(outcome = "Knowledge")
+
+# combine all data
+plot_data <- bind_rows(plot_data_acceptance, plot_data_knowledge) |> 
+  mutate(outcome = factor(outcome, levels = c("Knowledge", "Acceptance")
+                          )
+         )
+
+absolute_numbers <- combined_data %>% 
+  group_by(wgm_sciencegeneral) %>% 
+  summarise(n = n(), 
+            n_participants = n_distinct(id))
+```
+
+```{r}
+ggplot(plot_data |> 
+         mutate(outcome = factor(ifelse(outcome == "Acceptance", "Acceptance", "Knowledge"),
+                                 levels = c("Knowledge", "Acceptance"))), 
+       aes(x = wgm_sciencegeneral, y = share, fill = outcome)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::percent_format(), breaks = seq(0, 1, 0.1), limits = c(0, 1.1)) +
+  geom_text(aes(label = paste0(round(share * 100, 1), "%")),
+            position = position_dodge(width = 0.9),
+            vjust = -0.5, size = 3) +
+  scale_fill_viridis_d(option = "cividis") +
+  labs(x = "Trust in science", fill = "Share of", y = "") +
+  plot_theme +
+  geom_bracket(data = absolute_numbers,
+               aes(xmin = as.numeric(factor(wgm_sciencegeneral)) - 0.4, 
+                   xmax = as.numeric(factor(wgm_sciencegeneral)) + 0.4, 
+                   y.position = 1.05, label =  paste0("n = ", n_participants)),
+               inherit.aes = FALSE,
+               step.increase = 0) +
+  theme(legend.position = "top")
+```
+
+
